@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>24 Six</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/scss/app.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo-horiz-yellow.svg" alt="logo-horiz">
+        </a>
+        <button class="navbar-toggler hamburger hamburger--spring" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item d-md-none">
+                        <a class="nav-link active" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plans">Pricing</a>
+                    </li>
+                </ul>
+                <div class="d-md-flex align-items-center">
+                    <p class="nav-text d-md-none d-lg-block">For artists & content creators</p>
+                    <button class="btn moda-btn" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">
+                        Join the waitlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-8 col-md-6 align-self-center">
+                <p class="section__above-title"><span>Music.</span> Videos. <span>Podcasts.</span></p>
+                <h1 class="hero-title">
+                    Hit play without thinking twice
+                </h1>
+                <p class="main-text">The first on-demand entertainment platform for the Jewish family. Enjoy the most
+                    popular Jewish entertainment, custom-filtered by you.</p>
+                <div class="btn-wrapper">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">
+                        Join the waitlist
+                    </button>
+                    <a href="#video" class="btn btn-outline-light">Watch video</a>
+                </div>
+                <div class="btn-wrapper d-none d-lg-flex">
+                    <p>Available soon on</p>
+                    <a href="#" class="download-link">
+                        <img src="assets/img/download_on_the_app_store_badge.svg" alt="download_on_the_app"
+                             class="img-fluid">
+                    </a>
+                    <a href="#" class="download-link">
+                        <img src="assets/img/google_play_store_badge_EN.svg" alt="google_play" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-6 text-center">
+                <img src="assets/img/phones-hero.png" alt="phones" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="testimonials">
+        <div class="container-fluid">
+            <h2 class="section-title">
+                You’ve tried everything <br>
+                to keep your entertainment wholesome
+            </h2>
+            <p class="main-text">
+                And you’re frustrated with the limited options.
+            </p>
+            <div class="swiper testimonials-carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonials-card">
+                            <p class="testimonials-card__text">
+                                “Please can I use your phone to listen to music?”
+                            </p>
+                            <div class="user-info">
+                                <div>
+                                    <p class="user-info__name">Chayala</p>
+                                    <p class="user-info__age">11 y.o.</p>
+                                </div>
+                                <div class="user-info__avatar">
+                                    <img src="assets/img/chayala-avatar.svg" alt="avatar" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonials-card">
+                            <p class="testimonials-card__text">
+                                “I just got 3 USBs from yeshiva — can you just upload all 259 songs onto my MP3?”
+                            </p>
+                            <div class="user-info">
+                                <div>
+                                    <p class="user-info__name">Shloime</p>
+                                    <p class="user-info__age">15 y.o.</p>
+                                </div>
+                                <div class="user-info__avatar">
+                                    <img src="assets/img/shloime-avatar.svg" alt="avatar" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonials-card">
+                            <p class="testimonials-card__text">
+                                “Can I get an iPod for my birthday? Or Afikomen present? Or Chanukah present?”
+                            </p>
+                            <div class="user-info">
+                                <div>
+                                    <p class="user-info__name">Avi</p>
+                                    <p class="user-info__age">12 y.o.</p>
+                                </div>
+                                <div class="user-info__avatar">
+                                    <img src="assets/img/avi-avatar.svg" alt="avatar" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonials-card">
+                            <p class="testimonials-card__text">
+                                “I want to enjoy my favorite podcast, but I don’t want to see or hear anything below my
+                                standards.”
+                            </p>
+                            <div class="user-info">
+                                <div>
+                                    <p class="user-info__name">Baruch</p>
+                                    <p class="user-info__age">35 y.o.</p>
+                                </div>
+                                <div class="user-info__avatar">
+                                    <img src="assets/img/baruch-avatar.svg" alt="avatar" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <button class="btn btn-warning d-none d-xl-block mx-auto" data-bs-toggle="modal"
+                    data-bs-target="#joinWaitListModal">
+                Join the waitlist
+            </button>
+            <div class="bg-wrapper">
+                <img src="assets/img/bg/testimonials.svg" alt="" class="bg-img">
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container-fluid">
+            <h2 class="section-title d-none d-md-block">
+                The entertainment platform built for the Jewish family, customized by you
+            </h2>
+            <div class="row">
+                <div class="col-12 col-sm-8 col-md-6 col-xxl-5 align-self-center">
+                    <h3 class="section-subtitle">
+                        Have your values. And your music, too.
+                    </h3>
+                    <p class="main-text">24Six is the only vetted media streaming platform for Jewish families worldwide
+                        — with features that give you the reins. </p>
+                    <ul class="feature-list list-unstyled">
+                        <li class="feature-list__item">
+                            <span>
+                                <img src="assets/img/user.svg" alt="user">
+                            </span>
+                            <span>Create personalized entertainment experiences for each family member.</span>
+                        </li>
+                        <li class="feature-list__item">
+                            <span>
+                                <img src="assets/img/status-offline.svg" alt="status-offline">
+                            </span>
+                            <span>Listen anytime, anywhere — no internet connection needed.</span>
+                        </li>
+                        <li class="feature-list__item">
+                            <span>
+                                <img src="assets/img/heart.svg" alt="heart">
+                            </span>
+                            <span>Enjoy your entertainment…according to your values.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-4 col-md-6 col-xxl-7 text-center position-relative">
+                    <img src="assets/img/iPhone-12-Pro-Max.png" alt="iPhone-12" class="img-fluid">
+                    <div class="bg-wrapper">
+                        <img src="assets/img/bg/about-1.svg" alt="" class="bg-img">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-xxl-5 align-self-center order-md-2">
+                    <h3 class="section-subtitle">
+                        All the entertainment you want. <br>
+                        All the control you need.
+                    </h3>
+                    <p class="main-text">Jewish families need a kosher, headache-free entertainment experience. They
+                        need a place where they can access all the most popular Jewish music, videos and podcasts,
+                        filtered according to their values. So they can hit play on their favorite song without thinking
+                        twice.</p>
+                    <ul class="feature-list list-unstyled">
+                        <li class="feature-list__item">
+                            <span>
+                                <img src="assets/img/lightning-bolt.svg" alt="lightning-bolt">
+                            </span>
+                            <span>24Six gives you that control — so you can finally enjoy streaming entertainment in a totally kosher environment.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-7 text-center order-md-1 d-flex align-items-center">
+                    <div class="about__left-side">
+                        <img src="assets/img/iPhone-12-pro-max-2.png" alt="iPhone-12" class="img-fluid">
+                        <div class="pulse__wrapper">
+                            <div class="pulse">
+                                <img src="assets/img/user-2.png" alt="user-2" class="pulse__user">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__right-side">
+                        <img src="assets/img/iPhone-12-pro-max-3.png" alt="iPhone-12" class="img-fluid">
+                        <div class="pulse__wrapper">
+                            <div class="pulse">
+                                <img src="assets/img/user-1.png" alt="user-1" class="pulse__user">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-wrapper">
+                        <img src="assets/img/bg/about-2.svg" alt="" class="bg-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="video" class="video">
+        <div class="container-fluid">
+            <h2 class="section-title">How does the filter work?</h2>
+            <p class="main-text">
+                Everything is vetted before it’s uploaded to 24Six. In addition, you can create personalized filters for
+                each member of the family
+            </p>
+            <div class="row">
+                <div class="col-12 col-md-10 mx-auto">
+                    <div class="ratio ratio-16x9">
+                        <img src='/assets/img/video-card-image.png' alt="video-card-img" class="img-fluid">
+                        <div class="play-btn">
+                            <img src="/assets/img/play.svg" alt="play icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="features">
+        <div class="container-fluid">
+            <p class="section__above-title">
+                Features
+            </p>
+            <h2 class="section-title">
+                Your family. Your values.<br>
+                Your control.
+            </h2>
+            <div class="row">
+                <div class="col-12 order-2 order-md-1 col-md-6 col-lg-5">
+                    <div class="swiper features-slider-text">
+                        <div class="swiper-pagination"></div>
+                        <p id="slide-item__number"></p>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <div class="slide-item__body">
+                                            <h4 class="slide-item__title">Multimedia Library</h4>
+                                            <p class="slide-item__text main-text">Enjoy your favorite music, videos and
+                                                podcasts. All in one app. With one subscription. <i>And no unwanted
+                                                    material mixed in.</i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <div class="slide-item__body">
+                                            <h4 class="slide-item__title">Custom Filters</h4>
+                                            <p class="slide-item__text main-text">Add or remove content to suit your
+                                                family’s standards. Create filters for different users. (So Sarah has
+                                                her filter and Chaim has his.) You can choose to filter by female-only
+                                                content, parenting and marriage topics and more.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <div class="slide-item__body">
+                                            <h4 class="slide-item__title">Offline HD Streaming</h4>
+                                            <p class="slide-item__text main-text">Good news: You don’t need wifi to
+                                                stream. Enjoy high-definition streaming quality for all your music,
+                                                videos and podcasts — anywhere. In camp, Yeshiva, or on the road.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <div class="slide-item__body">
+                                            <h4 class="slide-item__title">Personal Playlist and Libraries</h4>
+                                            <p class="slide-item__text main-text">Curate playlists and libraries with
+                                                your favorite songs for hours of uninterrupted listening. Hit play on
+                                                your top picks with a tap.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <div class="slide-item__body">
+                                            <h4 class="slide-item__title">Shared Playlists</h4>
+                                            <p class="slide-item__text main-text">Check out public playlists — 24Six’s
+                                                playlists, an artist’s playlist, your friend’s playlist. Erev Shabbos?
+                                                Hit play on Yaakov Shwekey’s Erev Shabbos Playlist. Exercising? Choose
+                                                the Fast Jogging Playlist.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <div class="slide-item__body">
+                                            <h4 class="slide-item__title">Video in Music</h4>
+                                            <p class="slide-item__text main-text">Want to watch the music video of the
+                                                song you’re playing? View the video in a heartbeat without interrupting
+                                                your music — the video is embedded within the music.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <div class="slide-item__body">
+                                            <h4 class="slide-item__title">In-App Notifications</h4>
+                                            <p class="slide-item__text main-text">Enjoy to-the-minute updates when your
+                                                favorite artists release new songs or your favorite podcast uploads new
+                                                episodes. Ping!<i>Yaakov Shwekey just released a new album.</i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <div class="slide-item__body">
+                                            <h4 class="slide-item__title">Integrated Search</h4>
+                                            <p class="slide-item__text main-text">Enjoy the most advanced search
+                                                function available today. Search for anything and see everything, —
+                                                music, videos podcasts, playlists and more. All in one place.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <div class="slide-item__body">
+                                            <h4 class="slide-item__title">Smartlisten™</h4>
+                                            <p class="slide-item__text main-text">Our AI learns what you like and
+                                                suggests more content based on your preferences. Explore new horizons —
+                                                within your comfort-level.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <div class="slide-item__body">
+                                            <h4 class="slide-item__title">24Six Originals</h4>
+                                            <p class="slide-item__text main-text">Get access to 24Six originals from
+                                                popular Jewish artists. Songs, videos and podcasts you can’t find
+                                                anywhere else.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 order-1 order-md-2 col-md-6 col-lg-7 d-md-flex align-items-center position-relative">
+                    <div class="swiper features-slider-img">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/iPhone-12-Pro-Max-4.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/iPhone-12-Pro-Max.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/iPhone-12-pro-max-3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/iPhone-12-Pro-Max.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/iPhone-12-pro-max-3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/iPhone-12-pro-max-2.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/iPhone-12-pro-max-3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/iPhone-12-Pro-Max.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/iPhone-12-pro-max-3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/iPhone-12-pro-max-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-wrapper">
+                        <img src="assets/img/bg/features.svg" alt="" class="bg-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="how-it-works" class="how-it-works">
+        <div class="container-fluid">
+            <p class="section__above-title">How it works</p>
+            <h2 class="section-title">
+                Start streaming.<br>
+                In under 2 minutes.
+            </h2>
+            <div class="row row-cols-1 row-cols-md-3 cards-wrapper">
+                <div class="card step-card">
+                    <div class="card-header">
+                        <img src="assets/img/download.svg" class="card-img" alt="download-img">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-subtitle">Step 1</p>
+                        <h5 class="card-title">Sign Up</h5>
+                        <p class="card-text">Download the app to your phone
+                            or visit the website <a href="#">app.24Six.app</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="dashed-line"></div>
+                <div class="card step-card">
+                    <div class="card-header">
+                        <img src="assets/img/artist-music.svg" class="card-img" alt="artist-music">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-subtitle">Step 2</p>
+                        <h5 class="card-title">Customize</h5>
+                        <p class="card-text">Create profiles and custom filters for each family member.</p>
+                    </div>
+                </div>
+                <div class="dashed-line"></div>
+                <div class="card step-card">
+                    <div class="card-header">
+                        <img src="assets/img/happy.svg" class="card-img" alt="happy">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-subtitle">Step 3</p>
+                        <h5 class="card-title">Enjoy</h5>
+                        <p class="card-text">Click, browse and stream.
+                            Anywhere. Anytime. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="plans" class="plans">
+        <div class="container-fluid">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <p class="section__above-title">Plans</p>
+                        <h2 class="section-title">
+                            Thousands of songs, videos and podcasts. One monthly subscription.
+                        </h2>
+                        <p class="main-text">All plans include a 7-day free trial. No commitment.
+                            Cancel anytime.</p>
+                    </div>
+                    <div class="d-none d-md-block col-md-6">
+                        <img src="/assets/img/star-illustration.svg" alt="star-illustration" class="img-fluid">
+                    </div>
+                </div>
+                <div class="plan-cards-wrapper row row-cols-1 row-cols-md-3 gx-md-3">
+                    <div class="col">
+                        <div class="plan-card">
+                            <h4 class="plan-card__title">
+                                Single
+                            </h4>
+                            <img src="/assets/img/illustrations-for-plan-single.svg" alt="plan-single"
+                                 class="img-fluid">
+                            <p class="plan-card__text">1 Profile</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="plan-card">
+                            <h4 class="plan-card__title">
+                                Duo
+                            </h4>
+                            <img src="/assets/img/illustrations-for-plan-duo.svg" alt="plan-duo" class="img-fluid">
+                            <p class="plan-card__text">2 Profiles</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="plan-card">
+                            <h4 class="plan-card__title">
+                                Family
+                            </h4>
+                            <img src="/assets/img/illustrations-for-plan-family.svg" alt="plan-family"
+                                 class="img-fluid">
+                            <p class="plan-card__text">4 Profiles</p>
+                            <p class="plan-card__text"><small>+ additional profiles if needed</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">Join the
+                waitlist
+            </button>
+        </div>
+    </section>
+    <section id="support" class="support position-relative">
+        <div class="container-fluid">
+            <p class="section__above-title">FAQs</p>
+            <h2 class="section-title">Got questions? Find answers here.</h2>
+            <div class="accordion accordion-flush" id="accordionSupport">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is 24Six?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionSupport">
+                        <div class="accordion-body">
+                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
+                            subscribers access to thousands of songs, videos and podcasts. With features designed to
+                            provide you with complete control. Create a custom entertainment experience for your family.
+                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
+                            anywhere. All approved, kosher content. All for one low monthly fee.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How do I use 24Six?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                         data-bs-parent="#accordionSupport">
+                        <div class="accordion-body">
+                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
+                            subscribers access to thousands of songs, videos and podcasts. With features designed to
+                            provide you with complete control. Create a custom entertainment experience for your family.
+                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
+                            anywhere. All approved, kosher content. All for one low monthly fee.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How customizable are the filters?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionSupport">
+                        <div class="accordion-body">
+                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
+                            subscribers access to thousands of songs, videos and podcasts. With features designed to
+                            provide you with complete control. Create a custom entertainment experience for your family.
+                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
+                            anywhere. All approved, kosher content. All for one low monthly fee.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Can I cancel my subscription?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                         data-bs-parent="#accordionSupport">
+                        <div class="accordion-body">
+                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
+                            subscribers access to thousands of songs, videos and podcasts. With features designed to
+                            provide you with complete control. Create a custom entertainment experience for your family.
+                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
+                            anywhere. All approved, kosher content. All for one low monthly fee.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Will there be ads?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                         data-bs-parent="#accordionSupport">
+                        <div class="accordion-body">
+                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
+                            subscribers access to thousands of songs, videos and podcasts. With features designed to
+                            provide you with complete control. Create a custom entertainment experience for your family.
+                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
+                            anywhere. All approved, kosher content. All for one low monthly fee.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-wrapper w-auto">
+            <img src="assets/img/bg/support.svg" alt="" class="bg-img">
+        </div>
+    </section>
+    <section class="banner">
+        <div class="container-fluid">
+            <div class="banner-wrapper">
+                <div>
+                    <h2 class="section-subtitle">The music you love. The videos you’re proud to watch. <br>
+                        The podcasts that enrich your day.</h2>
+                    <p class="main-text">
+                        With the control you need.
+                    </p>
+                </div>
+                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">Join the
+                    waitlist
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container-fluid">
+        <div class="navbar navbar-top">
+            <ul class="navbar-list me-lg-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#how-it-works">How it works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#plans">Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#support">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                </li>
+            </ul>
+            <ul class="navbar-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">For artists & content creators</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">For advertisers</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar navbar-bottom">
+            <p><a href="#">Terms of Service</a></p>
+            <p>© <span id="year"></span> 24Six, Inc. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="joinWaitListModal" tabindex="-1" aria-labelledby="joinWaitListModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title" id="joinWaitListModalLabel">Join the waitlist.</h3>
+                <p class="modal-text">Be the first to know when 24Six is available.</p>
+                <form action="" class="modal-form">
+                    <div class="mb-3">
+                        <label for="nameInput" class="modal-form__label">First name</label>
+                        <input type="text" class="modal-form__control" id="nameInput"
+                               placeholder="Enter you first name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailInput" class="modal-form__label">Email address</label>
+                        <input type="email" class="modal-form__control" id="emailInput"
+                               placeholder="Enter you email address">
+                    </div>
+                    <button type="submit" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#joinWaitListModalSuccessMessage">Join
+                    </button>
+                </form>
+                <p class="modal-text">
+                    <small>
+                        We value your privacy. Unsubscribe anytime.
+                    </small>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="joinWaitListModalSuccessMessage" tabindex="-1"
+     aria-labelledby="joinWaitListModalSuccessMessage"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body modal-body__success-message">
+                <div class="modal__icon-box">
+                    <img src="assets/img/md-check-circle.svg" alt="check-circle">
+                </div>
+                <h4 class="modal-subtitle">You're on the waitlist! </h4>
+                <p class="modal-text">
+                    Look out for emails from 24Six.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="assets/scripts/hamburger.js"></script>
+<script src="assets/scripts/swipper.js"></script>
+<script src="assets/scripts/js.js"></script>
+</body>
+</html>
+
