@@ -1,0 +1,34 @@
+@import "colors";
+@import 'fonts';
+@import "hamburgers.css";
+@import "navigation";
+@import "modal";
+
+@import "home";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'SF Pro Display', sans-serif;
+  background: rgba(18, 19, 22, 0.9);
+}
+
+.container-fluid {
+  padding: 0 1rem;
+  @media (min-width: 768px) {
+    padding: 0 1.5rem;
+  }
+  @media (min-width: 960px) {
+    padding: 0 2rem;
+  }
+  @media (min-width: 1200px) {
+    padding: 0 3rem;
+  }
+  @media (min-width: 1400px) {
+    padding: 0 7rem;
+    max-width: 1440px;
+    margin: auto;
+  }
+}
