@@ -102,6 +102,9 @@
       font-size: 1rem;
       font-family: "SF Pro Display", sans-serif;
       line-height: 1.5;
+      &:hover{
+        color: $primary;
+      }
     }
   }
 

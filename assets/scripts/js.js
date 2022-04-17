@@ -23,3 +23,7 @@ window.addEventListener('resize', function (event) {
 //Footer current year
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
+
+//Scroll Animation
+AOS.init();
+

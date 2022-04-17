@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
             768: {
                 autoHeight: false,
-                loop: true,
                 direction: 'vertical',
                 slidesPerView: 3,
                 pagination: {
@@ -38,11 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
         on:{
             init: function (){
                 visualisedSlideNumber(this.realIndex);
-                // featuresSlideNumber.innerText =`0${this.realIndex + 1}`;
             },
             slideChange: function () {
-                visualisedSlideNumber(this.realIndex)
-                // featuresSlideNumber.innerText =`0${this.realIndex + 1}`;
+                visualisedSlideNumber(this.realIndex);
             }
         }
     });
@@ -89,5 +86,10 @@ document.addEventListener("DOMContentLoaded", function () {
     swiper3.on('slidePrevTransitionStart', () => {
         handleSlide(swiper2, 1);
     })
+
+    window.addEventListener("scroll", function(evt) {
+        evt.stopPropagation();
+        document.getElementById('features-slider-text').dispatchEvent(evt);
+    });
 });
 

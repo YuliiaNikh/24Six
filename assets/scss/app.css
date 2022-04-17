@@ -86,6 +86,9 @@
   font-family: "SF Pro Display", sans-serif;
   line-height: 1.5;
 }
+.navbar-nav .nav-item a:hover {
+  color: #FFB84A;
+}
 @media (min-width: 768px) {
   .navbar {
     padding: 1rem 0;
@@ -647,7 +650,11 @@ body:after {
   justify-content: center;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.5s ease-in-out;
+}
+.video .ratio .play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 .features {
@@ -712,6 +719,11 @@ body:after {
   color: #fff;
   font-weight: 500;
 }
+.features .features-slider-text .slide-item__above-title {
+  color: #FFB84A;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
 .features .features-slider-text .swiper-slide {
   opacity: 0.3;
   transition: opacity 0.3s ease-in-out;
@@ -766,6 +778,9 @@ body:after {
   align-items: center;
   margin: 0 auto 2.5rem auto;
 }
+.how-it-works .card-header img {
+  max-width: 2rem;
+}
 .how-it-works .card-body {
   padding: 0;
   text-align: center;
@@ -792,18 +807,19 @@ body:after {
   text-decoration: none;
 }
 .how-it-works .dashed-line {
-  border-bottom: 2px dashed #FFFFFF;
   height: 2px;
   position: absolute;
   top: 2.5rem;
   display: none;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 0%);
+  background-size: 25px 1px;
 }
 .how-it-works .dashed-line:before, .how-it-works .dashed-line:after {
   content: "";
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
-  border: 2px solid #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.6);
   display: block;
   position: absolute;
   top: calc(50% - 0.375rem);
@@ -853,6 +869,26 @@ body:after {
   padding: 1.25rem;
   color: #fff;
 }
+.plans .plan-card__header {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #272625;
+  border: 1px solid #7B7673;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+}
+.plans .plan-card__header img {
+  width: 33px;
+}
+.plans .plan-card__header img.plan-card__header-single {
+  width: 11px;
+}
+.plans .plan-card__header img.plan-card__header-duo {
+  width: 22px;
+}
 .plans .plan-card__title {
   font-weight: 700;
   font-size: 1.5rem;
@@ -900,12 +936,16 @@ body:after {
   line-height: 1.55;
   color: #fff;
   padding: 1.5rem 0;
+  transition: padding 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 .support .accordion-button:after {
   background-image: url("../img/chevron-down.svg");
 }
 .support .accordion-button:focus {
   box-shadow: none;
+}
+.support .accordion-button:hover {
+  padding-left: 0.75rem;
 }
 .support .accordion-body {
   padding: 0 1.25rem 1.5rem 0;
@@ -1087,8 +1127,9 @@ footer .navbar-bottom a {
   }
   .features .features-slider-text .slide-item__content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-left: 3rem;
+    font-weight: 500;
   }
   .features .features-slider-text .slide-item__title {
     font-size: 1.25rem;
@@ -1099,7 +1140,7 @@ footer .navbar-bottom a {
   .features .features-slider-text #slide-item__number {
     position: absolute;
     left: 1rem;
-    top: 0;
+    top: 4rem;
   }
   .features .features-slider-img {
     height: 28rem;
@@ -1296,7 +1337,7 @@ footer .navbar-bottom a {
     margin-bottom: 3.5rem;
   }
   .features .features-slider-text {
-    max-height: 40rem;
+    max-height: 47rem;
   }
   .features .features-slider-text .slide-item__title, .features .features-slider-text .slide-item__text {
     max-width: 21rem;
@@ -1357,6 +1398,7 @@ html {
 body {
   font-family: "SF Pro Display", sans-serif;
   background: rgba(18, 19, 22, 0.9);
+  overflow-x: hidden;
 }
 
 .container-fluid {
