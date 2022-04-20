@@ -180,6 +180,22 @@ body {
       margin-right: 0.875rem;
     }
   }
+
+  &-img-wrapper{
+    position: relative;
+    padding-bottom: 6rem;
+  }
+  &-phone{
+    max-width: 7.3125rem;
+    position: relative;
+    &:first-of-type{
+      z-index: 3;
+      left: 1.5rem;
+    }
+    &:last-child{
+      top: 5.75rem;
+    }
+  }
 }
 
 .testimonials {
@@ -415,6 +431,10 @@ body {
     margin: auto;
     position: relative;
     cursor: pointer;
+
+    #filter-video{
+      border-radius: 1rem;
+    }
 
     .play-btn {
       width: 5rem;
@@ -1127,6 +1147,17 @@ footer {
     .main-text {
       margin-bottom: 1.5rem;
     }
+
+    &-phone{
+      max-width: 9.5rem;
+      position: relative;
+      &:first-of-type{
+        left: 2rem;
+      }
+      &:last-child{
+        top: 7.25rem;
+      }
+    }
   }
 
   .testimonials {
@@ -1256,6 +1287,22 @@ footer {
 
       .btn-warning, .btn-outline-light {
         margin-right: 1.875rem;
+      }
+    }
+
+    &-img-wrapper{
+      position: relative;
+      padding-bottom: 8rem;
+    }
+
+    &-phone{
+      max-width: 11.5625rem;
+      position: relative;
+      &:first-of-type{
+        left: 2.25rem;
+      }
+      &:last-child{
+        top: 8.5rem;
       }
     }
   }

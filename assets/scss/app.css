@@ -444,6 +444,21 @@ body:after {
 .hero .btn-wrapper .download-link:first-of-type {
   margin-right: 0.875rem;
 }
+.hero-img-wrapper {
+  position: relative;
+  padding-bottom: 6rem;
+}
+.hero-phone {
+  max-width: 7.3125rem;
+  position: relative;
+}
+.hero-phone:first-of-type {
+  z-index: 3;
+  left: 1.5rem;
+}
+.hero-phone:last-child {
+  top: 5.75rem;
+}
 
 .testimonials {
   padding-bottom: 6rem;
@@ -638,6 +653,9 @@ body:after {
   margin: auto;
   position: relative;
   cursor: pointer;
+}
+.video .ratio #filter-video {
+  border-radius: 1rem;
 }
 .video .ratio .play-btn {
   width: 5rem;
@@ -1210,6 +1228,16 @@ footer .navbar-bottom a {
   .hero .main-text {
     margin-bottom: 1.5rem;
   }
+  .hero-phone {
+    max-width: 9.5rem;
+    position: relative;
+  }
+  .hero-phone:first-of-type {
+    left: 2rem;
+  }
+  .hero-phone:last-child {
+    top: 7.25rem;
+  }
 
   .testimonials-carousel {
     margin: 0 -2rem 0 auto;
@@ -1306,6 +1334,20 @@ footer .navbar-bottom a {
   }
   .hero .btn-wrapper .btn-warning, .hero .btn-wrapper .btn-outline-light {
     margin-right: 1.875rem;
+  }
+  .hero-img-wrapper {
+    position: relative;
+    padding-bottom: 8rem;
+  }
+  .hero-phone {
+    max-width: 11.5625rem;
+    position: relative;
+  }
+  .hero-phone:first-of-type {
+    left: 2.25rem;
+  }
+  .hero-phone:last-child {
+    top: 8.5rem;
   }
 
   .testimonials-carousel {

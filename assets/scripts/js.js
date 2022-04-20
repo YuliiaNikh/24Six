@@ -27,3 +27,12 @@ document.getElementById("year").innerHTML = new Date().getFullYear();
 //Scroll Animation
 AOS.init();
 
+
+//Play button
+const playButton = document.getElementsByClassName('play-btn')[0];
+const video = document.getElementById('filter-video');
+
+playButton.addEventListener('click', function() {
+    this.style.display = 'none';
+    video.play();
+});

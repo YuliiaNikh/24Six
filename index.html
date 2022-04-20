@@ -57,12 +57,18 @@
 <header class="hero">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-sm-8 col-md-6 align-self-center">
+            <div class="col-12 col-md-6 align-self-center">
                 <p class="section__above-title"><span>Music.</span> Videos. <span>Podcasts.</span></p>
-                <h1 class="hero-title">
+                <h1 data-aos="fade-right"
+                    data-aos-duration="1200"
+                    data-aos-delay="0"
+                    class="hero-title">
                     Hit play without thinking twice
                 </h1>
-                <p class="main-text">The first on-demand entertainment platform for the Jewish family. Enjoy the most
+                <p data-aos="fade-right"
+                   data-aos-duration="1200"
+                   data-aos-delay="50"
+                   class="main-text">The first on-demand entertainment platform for the Jewish family. Enjoy the most
                     popular Jewish entertainment, custom-filtered by you.</p>
                 <div class="btn-wrapper">
                     <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">
@@ -81,8 +87,21 @@
                     </a>
                 </div>
             </div>
-            <div class="col-12 col-sm-4 col-md-6 text-center">
-                <img src="assets/img/phones-hero.png" alt="phones" class="img-fluid">
+            <div class="col-12 col-md-6 text-center">
+                <div class="hero-img-wrapper">
+                    <img data-aos="fade-down-right"
+                         data-aos-duration="1200"
+                         data-aos-delay="50"
+                         src="assets/img/iPhone-12-Pro-left.png"
+                         alt="phones"
+                         class="hero-phone img-fluid">
+                    <img  data-aos="fade-down-left"
+                          data-aos-duration="1200"
+                          data-aos-delay="50"
+                          src="assets/img/iPhone-12-Pro-right.png"
+                          alt="phones"
+                          class="hero-phone img-fluid">
+                </div>
             </div>
         </div>
     </div>
@@ -192,7 +211,7 @@
             <button data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     data-aos-delay="1000"
-                    data-aos-duration="1200"
+                    data-aos-duration="500"
                     class="btn btn-warning d-none d-xl-block mx-auto" data-bs-toggle="modal"
                     data-bs-target="#joinWaitListModal">
                 Join the waitlist
@@ -206,7 +225,7 @@
         <div class="container-fluid">
             <h2 data-aos="fade-up"
                 data-aos-duration="500"
-                data-aos-delay="300"
+                data-aos-delay="800"
                 class="section-title d-none d-md-block">
                 The entertainment platform built for the Jewish family, customized by you
             </h2>
@@ -342,7 +361,10 @@
                          data-aos-duration="700"
                          data-aos-delay="500"
                          class="ratio ratio-16x9">
-                        <img src='./assets/img/video-card-image.png' alt="video-card-img" class="img-fluid">
+                        <video id="filter-video" height="auto" width="100%" controls="controls" preload="none">
+                            <source src="/assets/video/filter-video.mp4"
+                                    type="video/mp4">
+                        </video>
                         <div class="play-btn">
                             <img src="./assets/img/play.svg" alt="play icon">
                         </div>
@@ -812,7 +834,10 @@
     </section>
     <section class="banner">
         <div class="container-fluid">
-            <div class="banner-wrapper">
+            <div data-aos="fade-up"
+                 data-aos-duration="500"
+                 data-aos-delay="300"
+                 class="banner-wrapper">
                 <div>
                     <h2 class="section-subtitle">The music you love. The videos you’re proud to watch. <br>
                         The podcasts that enrich your day.</h2>
@@ -860,7 +885,7 @@
             </ul>
         </div>
         <div class="navbar navbar-bottom">
-            <p><a href="#">Terms of Service</a></p>
+            <p class="px-md-3"><a href="#">Terms of Service</a></p>
             <p>© <span id="year"></span> 24Six, Inc. All rights reserved.</p>
         </div>
     </div>

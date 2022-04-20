@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
         mousewheel: true,
         breakpoints: {
             768: {
-                loop: true,
                 direction: 'vertical',
             }
         },
