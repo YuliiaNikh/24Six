@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>24 Six</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link
+          rel="stylesheet"
+          href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/scss/app.css">
+</head>
+<body class="artist">
+<nav class="navbar navbar-expand-md">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/logo-horiz-yellow.svg" alt="logo-horiz">
+      <span class="d-none d-lg-inline-block">
+        for Artists & Content Creators
+      </span>
+    </a>
+    <button class="navbar-toggler hamburger hamburger--spring" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#how-it-works">How It Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#plans">FAQs</a>
+          </li>
+        </ul>
+        <div class="d-md-flex align-items-center">
+          <button class="btn moda-btn" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">
+            Join the waitlist
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<header class="hero">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-6 align-self-center">
+        <p class="section__above-title">It’s finally here</p>
+        <h1
+            class="hero-title">
+          The on-demand Jewish media platform you’re proud to join
+        </h1>
+        <p data-aos="fade-right"
+           data-aos-duration="1200"
+           data-aos-delay="50"
+           class="main-text">The first on-demand entertainment platform for the Jewish family. Enjoy the most
+          popular Jewish entertainment, custom-filtered by you.</p>
+        <div class="btn-wrapper">
+          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">
+            Join the waitlist
+          </button>
+          <a href="#video" class="btn btn-outline-light">Watch video</a>
+        </div>
+        <div class="btn-wrapper d-none d-lg-flex">
+          <p>Available soon on</p>
+          <a href="#" class="download-link">
+            <img src="assets/img/download_on_the_app_store_badge.svg" alt="download_on_the_app"
+                 class="img-fluid">
+          </a>
+          <a href="#" class="download-link">
+            <img src="assets/img/google_play_store_badge_EN.svg" alt="google_play" class="img-fluid">
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 text-center">
+        <div class="hero-img-wrapper">
+          <img data-aos="fade-down-right"
+               data-aos-duration="1200"
+               data-aos-delay="50"
+               src="assets/img/iPhone-12-Pro-left.png"
+               alt="phones"
+               class="hero-phone img-fluid">
+          <img  data-aos="fade-down-left"
+                data-aos-duration="1200"
+                data-aos-delay="50"
+                src="assets/img/iPhone-12-Pro-right.png"
+                alt="phones"
+                class="hero-phone img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+
+</main>
+<footer>
+  <div class="container-fluid">
+    <div class="navbar navbar-top">
+      <ul class="navbar-list me-lg-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#how-it-works">How it works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#plans">Plans</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#support">FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact us</a>
+        </li>
+      </ul>
+      <ul class="navbar-list">
+        <li class="nav-item">
+          <a class="nav-link" href="#">For artists & content creators</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">For advertisers</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar navbar-bottom">
+      <p class="px-md-3"><a href="#">Terms of Service</a></p>
+      <p>© <span id="year"></span> 24Six, Inc. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="modal fade" id="joinWaitListModal" tabindex="-1" aria-labelledby="joinWaitListModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3 class="modal-title" id="joinWaitListModalLabel">Join the waitlist.</h3>
+        <p class="modal-text">Be the first to know when 24Six is available.</p>
+        <form action="" class="modal-form">
+          <div class="mb-3">
+            <label for="nameInput" class="modal-form__label">First name</label>
+            <input type="text" class="modal-form__control" id="nameInput"
+                   placeholder="Enter you first name">
+          </div>
+          <div class="mb-3">
+            <label for="emailInput" class="modal-form__label">Email address</label>
+            <input type="email" class="modal-form__control" id="emailInput"
+                   placeholder="Enter you email address">
+          </div>
+          <button type="submit" class="btn btn-warning" data-bs-toggle="modal"
+                  data-bs-target="#joinWaitListModalSuccessMessage">Join
+          </button>
+        </form>
+        <p class="modal-text">
+          <small>
+            We value your privacy. Unsubscribe anytime.
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="joinWaitListModalSuccessMessage" tabindex="-1"
+     aria-labelledby="joinWaitListModalSuccessMessage"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body modal-body__success-message">
+        <div class="modal__icon-box">
+          <img src="assets/img/md-check-circle.svg" alt="check-circle">
+        </div>
+        <h4 class="modal-subtitle">You're on the waitlist! </h4>
+        <p class="modal-text">
+          Look out for emails from 24Six.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="assets/scripts/hamburger.js"></script>
+<script src="assets/scripts/swipper.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/scripts/js.js"></script>
+</body>
+</html>
