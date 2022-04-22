@@ -659,7 +659,7 @@ body:after {
   border-radius: 1rem;
 }
 .video .ratio #filter-video[poster] {
-  background: linear-gradient(0deg, rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3));
+  object-fit: cover;
 }
 .video .ratio .play-btn {
   width: 5rem;
