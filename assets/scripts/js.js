@@ -14,11 +14,14 @@ function drawDashedLine(){
     }
 }
 
-drawDashedLine();
+if ( card.length > 0){
+    drawDashedLine();
 
-window.addEventListener('resize', function (event) {
-    drawDashedLine()
-}, true);
+    window.addEventListener('resize', function (event) {
+        drawDashedLine()
+    }, true);
+}
+
 
 //Footer current year
 document.getElementById("year").innerHTML = new Date().getFullYear();

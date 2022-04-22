@@ -1,40 +1,160 @@
-.artist{
-  .navbar{
-    &-brand{
+.artist {
+  .navbar {
+    &-brand {
       font-family: 'Lato', sans-serif;
       color: $white;
       font-size: 1.25rem;
       display: flex;
       align-items: center;
-      span{
+
+      span {
         margin-left: 0.5rem;
       }
     }
-    &-nav{
-      .nav-item:nth-of-type(2){
+
+    &-nav {
+      .nav-item:nth-of-type(2) {
         padding: 0;
         border: none;
       }
     }
   }
-}
 
-
-@media (min-width: 768px) {
-  .navbar{
-    &-nav{
-      margin-right: 3.125rem;
+  .video {
+    .ratio {
+      max-width: 100%;
     }
   }
-}
 
-@media (min-width: 1200px) {
-  .navbar{
-    &-brand{
-      font-size: 1.625rem;
-      span{
-        margin-left: 0.5rem;
+  .issues {
+    .section-title {
+      text-align: left;
+      margin-bottom: 1rem;
+
+      span {
+        color: $primary;
+      }
+    }
+
+    &-slider {
+      margin-right: -1rem;
+
+      .swiper-slide {
+        width: 17.5rem;
+      }
+    }
+
+    .issue-card {
+      padding: 2rem 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      border: 2px solid transparent;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        border-color: $primary;
+      }
+
+      &__img {
+        width: 4rem;
+        height: 4rem;
+        background: rgba(255, 184, 74, 0.1);
+        border-radius: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+
+      &__title{
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        color: $white;
+        margin-bottom: 0.5rem;
+      }
+      &__text{
+        font-size: 1rem;
+        line-height: 1.5;
+        color: $gray;
       }
     }
   }
+
+  @media (min-width: 768px) {
+    .navbar {
+      &-nav {
+        margin-right: 3.125rem;
+      }
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .issues {
+      &-slider {
+        margin-right: -1.5rem;
+      }
+    }
+  }
+
+  @media (min-width: 960px) {
+    .hero {
+      &-title {
+        font-size: 2.25rem;
+      }
+
+      &-svg {
+        position: absolute;
+      }
+    }
+
+    .issues {
+      &-slider {
+        margin-right: 0;
+
+        .swiper-slide {
+          width: 17.5rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .navbar {
+      &-brand {
+        font-size: 1.625rem;
+
+        span {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+
+    .hero {
+      &-title {
+        font-size: 3rem;
+      }
+
+      .main-text {
+        margin-bottom: 2.25rem;
+      }
+    }
+  }
+
+
+  /*Svg animation*/
+  .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s linear forwards;
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 }
+

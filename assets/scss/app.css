@@ -9,7 +9,7 @@
 }
 .navbar-brand {
   padding: 0;
-  z-index: 2;
+  z-index: 11;
 }
 .navbar-collapse {
   position: absolute;
@@ -18,13 +18,14 @@
   width: 100vw;
   background: #181A1D;
   padding: 5.625rem 1.25rem 0 1.25rem;
+  z-index: 10;
 }
 .navbar-collapse > div {
   height: 100vh;
 }
 .navbar .hamburger {
   padding: 0;
-  z-index: 2;
+  z-index: 11;
 }
 .navbar .hamburger-box {
   width: 1.25rem;
@@ -1437,6 +1438,9 @@ footer .navbar-bottom a {
     opacity: 0;
   }
 }
+.artist {
+  /*Svg animation*/
+}
 .artist .navbar-brand {
   font-family: "Lato", sans-serif;
   color: #fff;
@@ -1451,20 +1455,104 @@ footer .navbar-bottom a {
   padding: 0;
   border: none;
 }
-
+.artist .video .ratio {
+  max-width: 100%;
+}
+.artist .issues .section-title {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.artist .issues .section-title span {
+  color: #FFB84A;
+}
+.artist .issues-slider {
+  margin-right: -1rem;
+}
+.artist .issues-slider .swiper-slide {
+  width: 17.5rem;
+}
+.artist .issues .issue-card {
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.artist .issues .issue-card:hover {
+  border-color: #FFB84A;
+}
+.artist .issues .issue-card__img {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(255, 184, 74, 0.1);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.artist .issues .issue-card__title {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.artist .issues .issue-card__text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #C9C1BC;
+}
 @media (min-width: 768px) {
-  .navbar-nav {
+  .artist .navbar-nav {
     margin-right: 3.125rem;
+  }
+  .artist .hero-title {
+    font-size: 2rem;
+  }
+  .artist .issues-slider {
+    margin-right: -1.5rem;
+  }
+}
+@media (min-width: 960px) {
+  .artist .hero-title {
+    font-size: 2.25rem;
+  }
+  .artist .hero-svg {
+    position: absolute;
+  }
+  .artist .issues-slider {
+    margin-right: 0;
+  }
+  .artist .issues-slider .swiper-slide {
+    width: 17.5rem;
   }
 }
 @media (min-width: 1200px) {
-  .navbar-brand {
+  .artist .navbar-brand {
     font-size: 1.625rem;
   }
-  .navbar-brand span {
+  .artist .navbar-brand span {
     margin-left: 0.5rem;
   }
+  .artist .hero-title {
+    font-size: 3rem;
+  }
+  .artist .hero .main-text {
+    margin-bottom: 2.25rem;
+  }
 }
+.artist .path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3s linear forwards;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

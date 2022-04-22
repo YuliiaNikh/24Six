@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     let featuresSlideNumber = document.getElementById('slide-item__number');
 
-    function visualisedSlideNumber(slideIndex){
-        if (slideIndex < 9){
-            featuresSlideNumber.innerText =`0${slideIndex + 1}`;
+    function visualisedSlideNumber(slideIndex) {
+        if (slideIndex < 9) {
+            featuresSlideNumber.innerText = `0${slideIndex + 1}`;
         } else {
             featuresSlideNumber.innerText = slideIndex + 1;
         }
@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
             }
         },
-        on:{
-            init: function (){
+        on: {
+            init: function () {
                 visualisedSlideNumber(this.realIndex);
             },
             slideChange: function () {
@@ -86,9 +86,22 @@ document.addEventListener("DOMContentLoaded", function () {
         handleSlide(swiper2, 1);
     })
 
-    window.addEventListener("scroll", function(evt) {
-        evt.stopPropagation();
-        document.getElementById('features-slider-text').dispatchEvent(evt);
-    });
+    let swiperIssue = new Swiper(".issues-slider", {
+        slidesPerView: "auto",
+        spaceBetween: 25,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            960: {
+                slidesPerView: 2,
+                grid: {
+                    fill: 'row',
+                    rows: 2,
+                }
+            }
+        },
+    })
 });
 
