@@ -85,23 +85,5 @@ document.addEventListener("DOMContentLoaded", function () {
     swiper3.on('slidePrevTransitionStart', () => {
         handleSlide(swiper2, 1);
     })
-
-    let swiperIssue = new Swiper(".issues-slider", {
-        slidesPerView: "auto",
-        spaceBetween: 25,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            960: {
-                slidesPerView: 2,
-                grid: {
-                    fill: 'row',
-                    rows: 2,
-                }
-            }
-        },
-    })
 });
 

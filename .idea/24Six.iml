@@ -5,5 +5,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="aos" level="application" />
+    <orderEntry type="library" name="vivus" level="application" />
+    <orderEntry type="library" name="parallax" level="application" />
+    <orderEntry type="library" name="fd67970f07" level="application" />
+    <orderEntry type="library" name="simple-parallax-js" level="application" />
+    <orderEntry type="library" name="rellax" level="application" />
   </component>
 </module>

@@ -39,3 +39,39 @@ playButton.addEventListener('click', function() {
     this.style.display = 'none';
     video.play();
 });
+
+//Svg animation when visible
+
+// Get the position on the page of the SVG
+let svgLocation = document.getElementById("section-issues__arrow").getBoundingClientRect();
+
+// Scroll offset that triggers animation start.
+// In this case it is the bottom of the SVG.
+let offsetToTriggerAnimation = svgLocation.y;
+
+// Function to handle the scroll event.
+// Add an event handler to the document for the "onscroll" event
+function scrollAnimTriggerCheck(evt) {
+    let viewBottom = window.scrollY + window.innerHeight;
+    if (viewBottom > offsetToTriggerAnimation) {
+        // Start the SMIL animation
+        document.getElementById("anim").beginElement();
+        // Remove the event handler so it doesn't trigger again
+        document.removeEventListener("scroll", scrollAnimTriggerCheck);
+    }
+}
+
+// Add an event handler to the document for the "onscroll" event
+document.addEventListener("scroll", scrollAnimTriggerCheck);
+
+
+//Parallax
+
+let rellax = new Rellax('.cols', {
+    center: true,
+    speed: -2,
+});
+
+
+
+
