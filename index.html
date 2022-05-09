@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./assets/scss/app.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-md">
+<nav id="navbar" class="navbar navbar-expand-md fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="assets/img/logo-horiz-yellow.svg" alt="logo-horiz">
@@ -45,7 +45,8 @@
                     </li>
                 </ul>
                 <div class="d-md-flex align-items-center">
-                    <a href="home-artists.html" class="nav-text d-md-none d-lg-block text-decoration-none">For artists & content creators</a>
+                    <a href="home-artists.html" class="nav-text d-md-none d-lg-block text-decoration-none">For artists &
+                        content creators</a>
                     <button class="btn moda-btn" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">
                         Join the waitlist
                     </button>
@@ -58,7 +59,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6 align-self-center">
-                <p class="section__above-title"><span>Music.</span> Videos. <span>Podcasts.</span></p>
+                <p class="section__above-title">Music. <span>Videos. </span><span>Podcasts.</span></p>
                 <h1 data-aos="fade-right"
                     data-aos-duration="1200"
                     data-aos-delay="0"
@@ -77,7 +78,9 @@
                     <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">
                         Join the waitlist
                     </button>
-                    <a href="#video" class="btn btn-outline-light">Watch video</a>
+<!--                    <a href="#video" class="btn btn-outline-light">Watch video</a>-->
+                    <a href="#" class="btn btn-outline-light" data-bs-toggle="modal"
+                       data-bs-target="#popupVideoModal">Watch video</a>
                 </div>
                 <div data-aos="fade-up"
                      data-aos-duration="600"
@@ -101,12 +104,12 @@
                          src="assets/img/iPhone-12-Pro-left.png"
                          alt="phones"
                          class="hero-phone img-fluid">
-                    <img  data-aos="fade-down-left"
-                          data-aos-duration="1200"
-                          data-aos-delay="50"
-                          src="assets/img/iPhone-12-Pro-right.png"
-                          alt="phones"
-                          class="hero-phone img-fluid">
+                    <img data-aos="fade-down-left"
+                         data-aos-duration="1200"
+                         data-aos-delay="50"
+                         src="assets/img/iPhone-12-Pro-right.png"
+                         alt="phones"
+                         class="hero-phone img-fluid">
                 </div>
             </div>
         </div>
@@ -140,10 +143,7 @@
                                 “Please can I use your phone to listen to music?”
                             </p>
                             <div class="user-info">
-                                <div>
-                                    <p class="user-info__name">Chayala</p>
-                                    <p class="user-info__age">11 y.o.</p>
-                                </div>
+                                <p class="user-info__name">Tzirel, 14</p>
                                 <div class="user-info__avatar">
                                     <img src="assets/img/chayala-avatar.svg" alt="avatar" class="img-fluid">
                                 </div>
@@ -160,10 +160,7 @@
                                 “I just got 3 USBs from yeshiva — can you just upload all 259 songs onto my MP3?”
                             </p>
                             <div class="user-info">
-                                <div>
-                                    <p class="user-info__name">Shloime</p>
-                                    <p class="user-info__age">15 y.o.</p>
-                                </div>
+                                <p class="user-info__name">Yossi, 16</p>
                                 <div class="user-info__avatar">
                                     <img src="assets/img/shloime-avatar.svg" alt="avatar" class="img-fluid">
                                 </div>
@@ -180,12 +177,9 @@
                                 “Can I get an iPod for my birthday? Or Afikomen present? Or Chanukah present?”
                             </p>
                             <div class="user-info">
-                                <div>
-                                    <p class="user-info__name">Avi</p>
-                                    <p class="user-info__age">12 y.o.</p>
-                                </div>
+                                <p class="user-info__name">Sari, 12</p>
                                 <div class="user-info__avatar">
-                                    <img src="assets/img/avi-avatar.svg" alt="avatar" class="img-fluid">
+                                    <img src="assets/img/sari.svg" alt="avatar" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -201,10 +195,7 @@
                                 standards.”
                             </p>
                             <div class="user-info">
-                                <div>
-                                    <p class="user-info__name">Baruch</p>
-                                    <p class="user-info__age">35 y.o.</p>
-                                </div>
+                                <p class="user-info__name">Gavriel, 35</p>
                                 <div class="user-info__avatar">
                                     <img src="assets/img/baruch-avatar.svg" alt="avatar" class="img-fluid">
                                 </div>
@@ -246,8 +237,7 @@
                     <p data-aos="fade-up"
                        data-aos-duration="800"
                        data-aos-delay="600"
-                       class="main-text">24Six is the only vetted media streaming platform for Jewish families worldwide
-                        — with features that give you the reins. </p>
+                       class="main-text">24Six is the only vetted media streaming platform for Jewish families worldwide - with features that give you the control.</p>
                     <ul class="feature-list list-unstyled">
                         <li data-aos="fade-up"
                             data-aos-duration="300"
@@ -263,9 +253,9 @@
                             data-aos-delay="550"
                             class="feature-list__item">
                             <span>
-                                <img src="assets/img/status-offline.svg" alt="status-offline">
+                                <img src="assets/img/download-white.svg" alt="status-offline">
                             </span>
-                            <span>Listen anytime, anywhere — no internet connection needed.</span>
+                            <span>Download to listen anytime, anywhere.</span>
                         </li>
                         <li data-aos="fade-up"
                             data-aos-duration="300"
@@ -274,7 +264,7 @@
                             <span>
                                 <img src="assets/img/heart.svg" alt="heart">
                             </span>
-                            <span>Enjoy your entertainment…according to your values.</span>
+                            <span>Enjoy your entertainment… &#10240; according to your values.</span>
                         </li>
                     </ul>
                 </div>
@@ -296,14 +286,14 @@
                         data-aos-duration="800"
                         data-aos-delay="500"
                         class="section-subtitle">
-                        All the entertainment you want. <br>
-                        All the control you need.
+                        The entertainment you want. <br>
+                        The control you need.
                     </h3>
                     <p data-aos="fade-up"
                        data-aos-duration="800"
                        data-aos-delay="600"
                        class="main-text">Jewish families need a kosher, headache-free entertainment experience. They
-                        need a place where they can access all the most popular Jewish music, videos and podcasts,
+                        need a place where they can access the most popular Jewish music, videos and podcasts,
                         filtered according to their values. So they can hit play on their favorite song without thinking
                         twice.</p>
                     <ul class="feature-list list-unstyled">
@@ -323,7 +313,7 @@
                          data-aos-duration="400"
                          data-aos-delay="1500"
                          class="about__left-side">
-                        <img src="assets/img/iPhone-12-pro-max-2.png" alt="iPhone-12" class="img-fluid">
+                        <img src="assets/img/iPhone-12-pro-max-6.png" alt="iPhone-12" class="img-fluid">
                         <div class="pulse__wrapper">
                             <div class="pulse">
                                 <img src="assets/img/user-2.png" alt="user-2" class="pulse__user">
@@ -334,7 +324,7 @@
                          data-aos-duration="400"
                          data-aos-delay="1800"
                          class="about__right-side">
-                        <img src="assets/img/iPhone-12-pro-max-3.png" alt="iPhone-12" class="img-fluid">
+                        <img src="assets/img/iPhone-12-pro-max-5.png" alt="iPhone-12" class="img-fluid">
                         <div class="pulse__wrapper">
                             <div class="pulse">
                                 <img src="assets/img/user-1.png" alt="user-1" class="pulse__user">
@@ -367,13 +357,15 @@
                          data-aos-duration="700"
                          data-aos-delay="500"
                          class="ratio ratio-16x9">
-                        <video id="filter-video" height="auto" width="100%" controls="controls" preload="none" poster="./assets/img/video-thumbnail.png">
-                            <source src="/assets/video/filter-video.mp4"
-                                    type="video/mp4">
-                        </video>
                         <div class="play-btn">
                             <img src="./assets/img/play.svg" alt="play icon">
                         </div>
+                        <video
+                                class="filter-video video-box"
+                                controls
+                                style="width: 100%;"
+                                poster="./assets/img/video-thumbnail.png"
+                        />
                     </div>
                 </div>
             </div>
@@ -389,7 +381,7 @@
                 Your control.
             </h2>
             <div class="row">
-                <div class="col-12 order-2 order-md-1 col-md-6 col-lg-5">
+                <div class="col-12 order-2 order-md-1 col-md-6">
                     <div id="features-slider-text" class="swiper features-slider-text">
                         <div class="swiper-pagination"></div>
                         <p id="slide-item__number"></p>
@@ -413,8 +405,9 @@
                                         <h4 class="slide-item__title">Control your content</h4>
                                         <p class="slide-item__text main-text">Add or remove content to suit your
                                             family’s standards. Create filters for different users. (So Sarah has
-                                            her filter and Chaim has his.) You can choose to filter by female-only
-                                            content, parenting and marriage topics and more.
+                                            her filter and Chaim has his).We provide an halachic filter. We separate קול
+                                            אשה, female-only content, and parents-only related material. You can further
+                                            personalize our filters by artists, shows or categories.
                                         </p>
                                     </div>
                                 </div>
@@ -424,9 +417,9 @@
                                     <div class="slide-item__content">
                                         <p class="slide-item__above-title">Offline HD Streaming</p>
                                         <h4 class="slide-item__title">Listen anytime, anywhere</h4>
-                                        <p class="slide-item__text main-text">Good news: You don’t need wifi to
-                                            stream. Enjoy high-definition streaming quality for all your music,
-                                            videos and podcasts — anywhere. In camp, Yeshiva, or on the road.
+                                        <p class="slide-item__text main-text">Good news: You can download now to listen
+                                            later! Enjoy high-definition quality for all music, videos and podcasts -
+                                            anytime and anywhere.
                                         </p>
                                     </div>
                                 </div>
@@ -446,11 +439,11 @@
                             <div class="swiper-slide">
                                 <div class="slide-item">
                                     <div class="slide-item__content">
-                                        <p class="slide-item__above-title">Shared Playlists</p>
+                                        <p class="slide-item__above-title">Public Playlists</p>
                                         <h4 class="slide-item__title">Access popular, public playlists</h4>
                                         <p class="slide-item__text main-text">Check out public playlists — 24Six’s
                                             playlists, an artist’s playlist, your friend’s playlist. Erev Shabbos?
-                                            Hit play on Yaakov Shwekey’s Erev Shabbos Playlist. Exercising? Choose
+                                            Hit play on the Yaakov Shwekey’s Erev Shabbos Playlist. Exercising? Choose
                                             the Fast Jogging Playlist.
                                         </p>
                                     </div>
@@ -485,7 +478,8 @@
                                 <div class="slide-item">
                                     <div class="slide-item__content">
                                         <p class="slide-item__above-title">Integrated Search</p>
-                                        <h4 class="slide-item__title">Explore multiple entertainment types with one
+                                        <h4 class="slide-item__title">Search like never before entertainment types with
+                                            one
                                             search</h4>
                                         <p class="slide-item__text main-text">Enjoy the most advanced search
                                             function available today. Search for anything and see everything, —
@@ -518,12 +512,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide d-none d-md-block"></div>
-                            <div class="swiper-slide d-none d-md-block"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 order-1 order-md-2 col-md-6 col-lg-7 d-md-flex align-items-center position-relative">
+                <div class="col-12 order-1 order-md-2 col-md-6 d-md-flex align-items-center position-relative">
                     <div class="swiper features-slider-img">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -575,8 +567,8 @@
                 data-aos-duration="500"
                 data-aos-delay="350"
                 class="section-title">
-                Start streaming.<br>
-                In under 2 minutes.
+                Start streaming<br>
+                in under 2 minutes.
             </h2>
             <div class="row row-cols-1 row-cols-md-3 cards-wrapper">
                 <div data-aos="fade-up"
@@ -589,9 +581,7 @@
                     <div class="card-body">
                         <p class="card-subtitle">Step 1</p>
                         <h5 class="card-title">Sign Up</h5>
-                        <p class="card-text">Download the app to your phone
-                            or visit the website <a href="#">app.24Six.app</a>
-                        </p>
+                        <p class="card-text">Download the app on your phone or steam online.</p>
                     </div>
                 </div>
                 <div data-aos="fade"
@@ -626,7 +616,7 @@
                         <p class="card-subtitle">Step 3</p>
                         <h5 class="card-title">Enjoy</h5>
                         <p class="card-text">Click, browse and stream.
-                            Anywhere. Anytime. </p>
+                            Anytime. Anywhere.</p>
                     </div>
                 </div>
             </div>
@@ -736,11 +726,15 @@
                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>24Six is a groundbreaking media streaming platform for the Jewish family. It gives
+                                subscribers access to thousands of songs, videos and podcasts. With features designed to
+                                provide you with complete control. Create a custom entertainment experience for your
+                                family.</p>
+                            <p>
+                                Your whole family can listen, watch, collect favorites, create playlists, and stream
+                                from
+                                anywhere. All approved, kosher content. All for one low monthly fee.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -758,11 +752,10 @@
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>Download the app on your phone or tablet, or login on our website at www.24six.app, then
+                                sign up for a free trial. Customize your profile. And start streaming.
+                            </p>
+                            <p>Enjoy your music, podcasts and videos wherever you go by downloading your favorites.</p>
                         </div>
                     </div>
                 </div>
@@ -780,11 +773,23 @@
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>The 24Six filters were built by the people, for the people. 24Six allows you to determine
+                                what’s right for you and your family. You can select one of our age-based filters,
+                                public filters created by organizations, yeshivos, schools, etc., or create your own!
+                                Curate the experience for each member of your family.
+                            </p>
+                            <p>Watch this video to see how it works:</p>
+                            <div class="ratio ratio-16x9">
+                                <div class="play-btn">
+                                    <img src="./assets/img/play.svg" alt="play icon">
+                                </div>
+                                <video
+                                        class="filter-video video-box"
+                                        controls
+                                        style="width: 100%;"
+                                        poster="./assets/img/video-thumbnail.png"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -802,11 +807,11 @@
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>
+                                Of course. Subscriptions are month-to-month. You can update or cancel your subscription
+                                at any time.
+                                Select "Manage my subscription" in your account settings.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -824,11 +829,9 @@
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>
+                               No
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -845,8 +848,8 @@
                  data-aos-delay="300"
                  class="banner-wrapper">
                 <div>
-                    <h2 class="section-subtitle">The music you love. The videos you’re proud to watch. <br>
-                        The podcasts that enrich your day.</h2>
+                    <h2 class="section-subtitle">The artists you love. The platform you're happy to join.<br>
+                        The content that will enrich your day.</h2>
                     <p class="main-text">
                         With the control you need.
                     </p>
@@ -861,43 +864,51 @@
 <footer>
     <div class="container-fluid">
         <div class="navbar navbar-top">
-            <ul class="navbar-list me-lg-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#how-it-works">How it works</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#features">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#plans">Plans</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#support">FAQs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact us</a>
-                </li>
-            </ul>
-            <ul class="navbar-list">
-                <li class="nav-item">
-                    <a class="nav-link" href="home-artists.html">For artists & content creators</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">For advertisers</a>
-                </li>
-            </ul>
+            <div class="d-flex justify-content-center justify-content-md-between align-items-center w-100 mb-4">
+                <a href="#">
+                    <img src="./assets/img/logo-horiz-yellow.svg" alt="logo">
+                </a>
+                <a href="#" class="btn btn-outline-warning d-none d-md-block">Artist Login</a>
+            </div>
+            <div>
+                <ul class="navbar-list me-lg-auto">
+                    <li class="nav-item ps-0">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How it works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plans">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#support">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn-outline-warning d-md-none mb-4">Artist Login</a>
+                <ul class="navbar-list">
+                    <li class="nav-item">
+                        <a href="home-artists.html" class="nav-link text-center text-md-right text-white">For artists & content creators</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="navbar navbar-bottom">
-            <p class="px-md-3"><a href="#">Terms of Service</a></p>
+            <p><a href="#">Terms of Service</a></p>
             <p>© <span id="year"></span> 24Six, Inc. All rights reserved.</p>
         </div>
     </div>
 </footer>
 
-<div class="modal fade" id="joinWaitListModal" tabindex="-1" aria-labelledby="joinWaitListModalLabel"
+<div class="modal modal-join-list fade" id="joinWaitListModal" tabindex="-1" aria-labelledby="joinWaitListModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -924,14 +935,14 @@
                 </form>
                 <p class="modal-text">
                     <small>
-                        We value your privacy. Unsubscribe anytime.
+                        We value your privacy.
                     </small>
                 </p>
             </div>
         </div>
     </div>
 </div>
-<div class="modal fade" id="joinWaitListModalSuccessMessage" tabindex="-1"
+<div class="modal modal-join-list fade" id="joinWaitListModalSuccessMessage" tabindex="-1"
      aria-labelledby="joinWaitListModalSuccessMessage"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -948,14 +959,37 @@
         </div>
     </div>
 </div>
+<div class="modal modal-video fade" id="popupVideoModal" tabindex="-1" aria-labelledby="popupVideoModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="ratio ratio-16x9 mw-100 overflow-hidden">
+                <div class="play-btn">
+                    <img src="./assets/img/play.svg" alt="play icon">
+                </div>
+                <video
+                        class="popup-video video-box w-100"
+                        controls
+                        poster="./assets/img/video-thumbnail.png"
+                />
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
+        integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="assets/scripts/hamburger.js"></script>
 <script src="assets/scripts/swipper.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://kit.fontawesome.com/fd67970f07.js" crossorigin="anonymous"></script>
 <script src="assets/scripts/js.js"></script>
+
 </body>
 </html>

@@ -10,5 +10,6 @@
     <orderEntry type="library" name="fd67970f07" level="application" />
     <orderEntry type="library" name="simple-parallax-js" level="application" />
     <orderEntry type="library" name="rellax" level="application" />
+    <orderEntry type="library" name="hls.js" level="application" />
   </component>
 </module>

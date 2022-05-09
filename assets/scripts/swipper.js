@@ -22,17 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
         autoHeight: true,
         slidesPerView: 1,
         spaceBetween: 20,
-        mousewheel: true,
-        breakpoints: {
-            768: {
-                autoHeight: false,
-                direction: 'vertical',
-                slidesPerView: 3,
-                pagination: {
-                    el: ".swiper-pagination",
-                    type: 'progressbar',
-                },
-            }
+        updateOnWindowResize: true,
+        mousewheel: {
+            forceToAxis: true,
+            sensitivity: 1,
+            releaseOnEdges: true,
         },
         on: {
             init: function () {
@@ -40,8 +34,24 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             slideChange: function () {
                 visualisedSlideNumber(this.realIndex);
+            },
+            reachEnd: function() {
+                this.snapGrid = [...this.slidesGrid];
+            },
+        },
+        breakpoints: {
+            768: {
+                autoHeight: false,
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: 'progressbar',
+                },
             }
-        }
+        },
+
     });
 
     let swiper3 = new Swiper(".features-slider-img", {
@@ -50,6 +60,11 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
             768: {
                 direction: 'vertical',
+                on:{
+                    reachEnd: function() {
+                        this.snapGrid = [...this.slidesGrid];
+                    },
+                }
             }
         },
     })
@@ -86,4 +101,5 @@ document.addEventListener("DOMContentLoaded", function () {
         handleSlide(swiper2, 1);
     })
 });
+
 

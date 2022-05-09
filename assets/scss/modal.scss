@@ -29,7 +29,8 @@
     padding: 0.625rem 1.875rem 1.875rem 1.875rem;
     color: $gray;
     font-family: 'SF Pro Display', sans-serif;
-    &__success-message{
+
+    &__success-message {
       padding: 5rem 4rem;
       text-align: center;
     }
@@ -44,7 +45,7 @@
     color: $white;
   }
 
-  &-subtitle{
+  &-subtitle {
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 1.66;
@@ -97,13 +98,58 @@
       }
     }
 
+    textarea {
+      height: 6.875rem;
+    }
+
+    &-check {
+      padding: 0.625rem 1.25rem;
+      background-color: transparent;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease-in-out;
+
+      &__label {
+        font-size: 0.875rem;
+        color: $gray;
+      }
+
+      &__input {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 0.25rem;
+        background: transparent;
+        border-color: #4F4C4A;
+
+        &:focus {
+          border-color: $primary;
+          box-shadow: none;
+          outline: none;
+        }
+
+        &:checked {
+          background-color: transparent;
+          border-color: #4F4C4A;
+          background-image: url('../img/check-icon-orange.svg') !important;
+          background-position: center;
+          background-size: 80%;
+          background-repeat: no-repeat;
+        }
+      }
+
+      &:hover {
+        .modal-form-check__input {
+          border-color: #4F4C4A;
+        }
+      }
+    }
+
     .btn-warning {
       width: 100%;
       margin-top: 2rem;
     }
   }
 
-  &__icon-box{
+  &__icon-box {
     width: 4rem;
     height: 4rem;
     background: rgba(255, 255, 255, 0.1);
@@ -115,15 +161,23 @@
   }
 
   @media (min-width: 576px) {
-    &-dialog {
-      max-width: 29.5rem;
+    &.modal-join-list {
+      &-dialog {
+        max-width: 29.5rem;
+      }
     }
     &-body {
       border: none;
       padding: 0.625rem 4rem 3.75rem 4rem;
-      &__success-message{
+
+      &__success-message {
         padding: 5rem 4rem;
         text-align: center;
+      }
+    }
+    &.modal-artists {
+      .modal-dialog {
+        max-width: 38.875rem;
       }
     }
   }

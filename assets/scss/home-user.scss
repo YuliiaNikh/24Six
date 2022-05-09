@@ -48,6 +48,27 @@
   }
 }
 
+.btn-outline-warning{
+  background: transparent;
+  color: $primary;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 2.5rem;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border-color: #ffcd80;
+    color: #ffcd80;
+    background: transparent;
+  }
+
+  &:focus, &:active {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
 /* End buttons style */
 
 /* Text */
@@ -144,7 +165,7 @@ body {
 }
 
 .hero {
-  padding: 2.5rem 0 6rem 0;
+  padding: 8rem 0 6rem 0;
 
   &-title {
     color: $white;
@@ -253,6 +274,12 @@ body {
     color: $white;
     display: flex;
     flex-direction: column;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      border-color: $primary;
+    }
 
     &__text {
       font-size: 1.25rem;
@@ -267,7 +294,7 @@ body {
       justify-content: space-between;
       align-items: center;
 
-      &__name, &__age {
+      &__name {
         font-size: 0.875rem;
         line-height: 1.5;
         font-weight: 500;
@@ -430,37 +457,39 @@ body {
     margin-bottom: 2.5rem;
   }
 
-  .ratio {
-    max-width: 62rem;
-    margin: auto;
-    position: relative;
-    cursor: pointer;
+}
 
-    #filter-video {
-      border-radius: 1rem;
+.ratio {
+  max-width: 62rem;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
 
-      &[poster] {
-        object-fit: cover;
-      }
+  .filter-video, .artists-video, .popup-video {
+    border-radius: 1rem;
+
+    &[poster] {
+      object-fit: cover;
     }
+  }
 
-    .play-btn {
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      padding-left: 10px;
-      background-color: rgba(255, 255, 255, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(1);
-      transition: all 0.5s ease-in-out;
+  .play-btn {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.5s ease-in-out;
 
-      &:hover {
-        transform: translate(-50%, -50%) scale(1.05);
-      }
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.05);
     }
   }
 }
@@ -513,6 +542,7 @@ body {
     .swiper-wrapper {
       padding: 0 0.625rem;
       position: relative;
+      box-sizing: border-box;
     }
 
     #slide-item__number {
@@ -550,6 +580,7 @@ body {
 
     .swiper-slide {
       opacity: 0.3;
+      height: auto !important;
       transition: opacity 0.3s ease-in-out;
 
       .slide-item__number {
@@ -711,7 +742,6 @@ body {
     flex-direction: row;
     margin: -7.75rem 0.75rem 0 0.75rem;
     position: relative;
-    bottom: -7.75rem;
   }
 
   .plan-card {
@@ -942,6 +972,10 @@ footer {
       display: block;
     }
 
+    img{
+      max-width: 15.6875rem;
+    }
+
     .feature-list {
       &__item:last-of-type {
         margin-bottom: 0;
@@ -959,7 +993,7 @@ footer {
 
 @media (min-width: 768px) {
   .hero {
-    padding: 4rem 0;
+    padding: 10rem 0 4rem 0;
 
     .section__above-title {
       margin-bottom: 1rem;
@@ -1014,12 +1048,12 @@ footer {
       text-align: center;
       max-width: 37.75rem;
     }
+  }
 
-    .ratio {
-      .play-btn {
-        width: 5.25rem;
-        height: 5.25rem;
-      }
+  .ratio {
+    .play-btn {
+      width: 5.25rem;
+      height: 5.25rem;
     }
   }
 
@@ -1152,6 +1186,8 @@ footer {
 
 @media (min-width: 960px) {
   .hero {
+    padding-top: 10rem;
+
     &-title {
       font-size: 3rem;
       margin-bottom: 1.5rem;
@@ -1362,7 +1398,7 @@ footer {
 
       .slide-item {
         &__title, &__text {
-          max-width: 21rem;
+          max-width: 25rem;
         }
       }
 

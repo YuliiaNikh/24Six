@@ -6,6 +6,10 @@
   border-bottom: 1px solid #363532;
   background-color: transparent;
   padding: 2rem 0;
+  transition: background-color 0.5s ease-in-out;
+}
+.navbar.nav-active {
+  background-color: #121316;
 }
 .navbar-brand {
   padding: 0;
@@ -258,6 +262,42 @@
 .modal-form__control::placeholder {
   color: #7B7673;
 }
+.modal-form textarea {
+  height: 6.875rem;
+}
+.modal-form-check {
+  padding: 0.625rem 1.25rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.modal-form-check__label {
+  font-size: 0.875rem;
+  color: #C9C1BC;
+}
+.modal-form-check__input {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  background: transparent;
+  border-color: #4F4C4A;
+}
+.modal-form-check__input:focus {
+  border-color: #FFB84A;
+  box-shadow: none;
+  outline: none;
+}
+.modal-form-check__input:checked {
+  background-color: transparent;
+  border-color: #4F4C4A;
+  background-image: url("../img/check-icon-orange.svg") !important;
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+.modal-form-check:hover .modal-form-check__input {
+  border-color: #4F4C4A;
+}
 .modal-form .btn-warning {
   width: 100%;
   margin-top: 2rem;
@@ -273,7 +313,7 @@
   margin: 0 auto 1rem auto;
 }
 @media (min-width: 576px) {
-  .modal-dialog {
+  .modal.modal-join-list-dialog {
     max-width: 29.5rem;
   }
   .modal-body {
@@ -283,6 +323,9 @@
   .modal-body__success-message {
     padding: 5rem 4rem;
     text-align: center;
+  }
+  .modal.modal-artists .modal-dialog {
+    max-width: 38.875rem;
   }
 }
 
@@ -325,6 +368,25 @@
   background: transparent;
 }
 .btn-outline-light:focus, .btn-outline-light:active {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-outline-warning {
+  background: transparent;
+  color: #FFB84A;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 2.5rem;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+.btn-outline-warning:hover {
+  border-color: #ffcd80;
+  color: #ffcd80;
+  background: transparent;
+}
+.btn-outline-warning:focus, .btn-outline-warning:active {
   box-shadow: none !important;
   outline: none !important;
 }
@@ -414,7 +476,7 @@ body:after {
 }
 
 .hero {
-  padding: 2.5rem 0 6rem 0;
+  padding: 8rem 0 6rem 0;
 }
 .hero-title {
   color: #fff;
@@ -505,6 +567,11 @@ body:after {
   color: #fff;
   display: flex;
   flex-direction: column;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.testimonials-card:hover {
+  border-color: #FFB84A;
 }
 .testimonials-card__text {
   font-size: 1.25rem;
@@ -518,7 +585,7 @@ body:after {
   justify-content: space-between;
   align-items: center;
 }
-.testimonials-card .user-info__name, .testimonials-card .user-info__age {
+.testimonials-card .user-info__name {
   font-size: 0.875rem;
   line-height: 1.5;
   font-weight: 500;
@@ -650,19 +717,20 @@ body:after {
 .section-video .main-text {
   margin-bottom: 2.5rem;
 }
-.section-video .ratio {
+
+.ratio {
   max-width: 62rem;
   margin: auto;
   position: relative;
   cursor: pointer;
 }
-.section-video .ratio #filter-video {
+.ratio .filter-video, .ratio .artists-video, .ratio .popup-video {
   border-radius: 1rem;
 }
-.section-video .ratio #filter-video[poster] {
+.ratio .filter-video[poster], .ratio .artists-video[poster], .ratio .popup-video[poster] {
   object-fit: cover;
 }
-.section-video .ratio .play-btn {
+.ratio .play-btn {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
@@ -673,10 +741,11 @@ body:after {
   justify-content: center;
   top: 50%;
   left: 50%;
+  z-index: 1;
   transform: translate(-50%, -50%) scale(1);
   transition: all 0.5s ease-in-out;
 }
-.section-video .ratio .play-btn:hover {
+.ratio .play-btn:hover {
   transform: translate(-50%, -50%) scale(1.05);
 }
 
@@ -718,6 +787,7 @@ body:after {
 .features .features-slider-text .swiper-wrapper {
   padding: 0 0.625rem;
   position: relative;
+  box-sizing: border-box;
 }
 .features .features-slider-text #slide-item__number {
   color: #FFB84A;
@@ -749,6 +819,7 @@ body:after {
 }
 .features .features-slider-text .swiper-slide {
   opacity: 0.3;
+  height: auto !important;
   transition: opacity 0.3s ease-in-out;
 }
 .features .features-slider-text .swiper-slide .slide-item__number {
@@ -882,7 +953,6 @@ body:after {
   flex-direction: row;
   margin: -7.75rem 0.75rem 0 0.75rem;
   position: relative;
-  bottom: -7.75rem;
 }
 .plans .plan-card {
   background: #181A1D;
@@ -1068,6 +1138,9 @@ footer .navbar-bottom a {
   .about .section-subtitle br {
     display: block;
   }
+  .about img {
+    max-width: 15.6875rem;
+  }
   .about .feature-list__item:last-of-type {
     margin-bottom: 0;
   }
@@ -1078,7 +1151,7 @@ footer .navbar-bottom a {
 }
 @media (min-width: 768px) {
   .hero {
-    padding: 4rem 0;
+    padding: 10rem 0 4rem 0;
   }
   .hero .section__above-title {
     margin-bottom: 1rem;
@@ -1120,7 +1193,8 @@ footer .navbar-bottom a {
     text-align: center;
     max-width: 37.75rem;
   }
-  .section-video .ratio .play-btn {
+
+  .ratio .play-btn {
     width: 5.25rem;
     height: 5.25rem;
   }
@@ -1226,6 +1300,9 @@ footer .navbar-bottom a {
   }
 }
 @media (min-width: 960px) {
+  .hero {
+    padding-top: 10rem;
+  }
   .hero-title {
     font-size: 3rem;
     margin-bottom: 1.5rem;
@@ -1387,7 +1464,7 @@ footer .navbar-bottom a {
     max-height: 47rem;
   }
   .features .features-slider-text .slide-item__title, .features .features-slider-text .slide-item__text {
-    max-width: 21rem;
+    max-width: 25rem;
   }
   .features .features-slider-text #slide-item__number {
     left: 1.25rem;
@@ -1480,6 +1557,9 @@ footer .navbar-bottom a {
   top: 1.5rem;
   right: -20%;
   z-index: 2;
+}
+.artist .ratio {
+  max-width: 100%;
 }
 .artist .section-video .ratio {
   max-width: 100%;
@@ -1778,6 +1858,10 @@ footer .navbar-bottom a {
   .artist .section-podcasts .cols {
     width: 10rem;
   }
+  .artist .section-difference .section-title {
+    text-align: left;
+    max-width: 25.5rem;
+  }
   .artist .section-difference .img-fluid {
     max-width: 100%;
   }
@@ -1805,6 +1889,12 @@ footer .navbar-bottom a {
   }
 }
 @media (min-width: 990px) {
+  .artist .navbar-brand {
+    font-size: 1rem;
+  }
+  .artist .hero {
+    padding-top: 10rem;
+  }
   .artist .hero-title {
     font-size: 2.25rem;
   }
@@ -1910,7 +2000,7 @@ footer .navbar-bottom a {
     margin-left: 0.5rem;
   }
   .artist .hero {
-    padding: 8rem 0 4rem 0;
+    padding: 19rem 0 4rem 0;
   }
   .artist .hero-title {
     font-size: 3rem;

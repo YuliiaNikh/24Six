@@ -55,6 +55,10 @@
     }
   }
 
+  .ratio {
+    max-width: 100%;
+  }
+
   .section-video {
     .ratio {
       max-width: 100%;
@@ -356,7 +360,6 @@
     }
   }
 
-
   footer {
     padding-top: 3rem;
     border-top: 1px solid #363532;
@@ -435,6 +438,12 @@
     }
 
     .section-difference {
+
+      .section-title{
+        text-align: left;
+        max-width: 25.5rem;
+      }
+
       .img-fluid {
         max-width: 100%;
       }
@@ -477,7 +486,15 @@
   }
 
   @media (min-width: 990px) {
+    .navbar {
+      &-brand {
+        font-size: 1rem;
+      }
+    }
+
     .hero {
+      padding-top: 10rem;
+
       &-title {
         font-size: 2.25rem;
       }
@@ -623,7 +640,7 @@
     }
 
     .hero {
-      padding: 8rem 0 4rem 0;
+      padding: 19rem 0 4rem 0;
 
       &-title {
         font-size: 3rem;

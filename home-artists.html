@@ -14,9 +14,10 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/scss/app.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
 <body class="artist">
-<nav class="navbar navbar-expand-md">
+<nav id="navbar" class="navbar navbar-expand-md fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="assets/img/logo-horiz-yellow.svg" alt="logo-horiz">
@@ -45,8 +46,11 @@
                     </li>
                 </ul>
                 <div class="d-md-flex align-items-center">
-                    <button class="btn moda-btn" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">
-                        Join the waitlist
+                    <a href="home-artists.html" class="nav-text d-md-none d-lg-block text-decoration-none mt-lg-2">For
+                        users</a>
+                    <button class="btn moda-btn mt-5 mt-md-0" data-bs-toggle="modal"
+                            data-bs-target="#joinWaitListModal">
+                        I want to join
                     </button>
                 </div>
             </div>
@@ -70,7 +74,7 @@
                 <p data-aos="fade-right"
                    data-aos-duration="1200"
                    data-aos-delay="50"
-                   class="main-text">Share your music, videos and podcasts with the Jewish world — and earn what you
+                   class="main-text">Share your music, videos and podcasts with the Jewish world, and earn what you
                     deserve for your work. With 24Six, the first on-demand, custom-filtered entertainment platform for
                     the Jewish family.</p>
                 <div data-aos="fade-up"
@@ -78,8 +82,10 @@
                      data-aos-delay="700"
                      class="btn-wrapper">
                     <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">
-                        I want to join
+                        Sign me up
                     </button>
+                    <a href="#" class="btn btn-outline-light" data-bs-toggle="modal"
+                       data-bs-target="#artistsVideoModal">Watch video</a>
                 </div>
                 <div data-aos="fade-up"
                      data-aos-duration="600"
@@ -134,27 +140,6 @@
     </div>
 </header>
 <main>
-    <section id="video" class="section-video">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div data-aos="fade-up"
-                         data-aos-duration="700"
-                         data-aos-delay="0"
-                         class="ratio ratio-16x9">
-                        <video id="filter-video" height="auto" width="100%" controls="controls" preload="none"
-                               poster="./assets/img/video-thumbnail.png">
-                            <source src="/assets/video/filter-video.mp4"
-                                    type="video/mp4">
-                        </video>
-                        <div class="play-btn">
-                            <img src="./assets/img/play.svg" alt="play icon">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section id="features" class="section-issues">
         <div class="container-fluid">
             <div class="row">
@@ -233,7 +218,7 @@
                                 <div class="issue-card__img">
                                     <img src="./assets/img/shield_warning.svg" alt="shield_warning">
                                 </div>
-                                <h3 class="issue-card__title">Rampant Privacy</h3>
+                                <h3 class="issue-card__title">Rampant Piracy</h3>
                                 <p class="issue-card__text">The lack of available options has made piracy rampant.
                                     Kids are left with no choice but to “share.”
                                 </p>
@@ -399,180 +384,120 @@
             </div>
         </div>
     </section>
-    <section id="how-it-works" class="section-difference">
+    <section id="how-it-works" class="section-difference features">
         <div class="container-fluid">
+            <p data-aos="fade-up"
+               data-aos-duration="700"
+               data-aos-delay="0"
+               class="section__above-title text-center text-md-start">How it’s different</p>
+            <h2 data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="150"
+                class="section-title">
+                Welcome to the 24Six revolution.
+            </h2>
             <div class="row">
-                <p data-aos="fade-up"
-                   data-aos-duration="700"
-                   data-aos-delay="0"
-                   class="section__above-title text-center">How it’s different</p>
-                <h2 data-aos="fade-up"
-                    data-aos-duration="700"
-                    data-aos-delay="150"
-                    class="section-title text-center mw-100">
-                    Welcome to the 24Six revolution.
-                </h2>
-                <div class="col-12 col-md-6 col-xxl-5 order-2 order-md-1 align-self-center">
-                    <div class="accordion accordion-flush" id="accordionDifference">
-                        <div data-aos="fade-right"
-                             data-aos-delay="50"
-                             data-aos-duration="500"
-                             data-aos-easing="ease-in-out"
-                             class="accordion-item">
-                            <h2 class="accordion-header" id="headingOneDifference">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOneDifference" aria-expanded="false" aria-controls="collapseOneDifference">
-                                    Earn what you deserve
-                                </button>
-                            </h2>
-                            <div id="collapseOneDifference" class="accordion-collapse collapse" aria-labelledby="headingOneDifference"
-                                 data-bs-parent="#accordionDifference">
-                                <div class="accordion-body">
-                                    Our fully customizable filters and offline streaming options opens up our platform
-                                    to tens of thousands of Jewish families that were never able to access traditional
-                                    streaming services before. (And our upcoming 24Six device will put streaming in the
-                                    hands of thousands who never had the option before.)
+                <div class="col-12 order-2 order-md-1 col-md-6">
+                    <div id="features-slider-text" class="swiper features-slider-text">
+                        <div class="swiper-pagination"></div>
+                        <p id="slide-item__number"></p>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <h4 class="slide-item__title">Earn what you deserve</h4>
+                                        <p class="slide-item__text main-text">The exclusive pool of Jewish-only artists
+                                            gives you increased revenue by greatly reducing the number of artists on the
+                                            platform. It’s simple math. Fewer artists to share the pool means more
+                                            revenue for every artist.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div data-aos="fade-right"
-                             data-aos-delay="100"
-                             data-aos-duration="500"
-                             data-aos-easing="ease-in-out"
-                             class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwoDifference">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwoDifference" aria-expanded="false" aria-controls="collapseTwoDifference">
-                                    Reach new streaming fans
-                                </button>
-                            </h2>
-                            <div id="collapseTwoDifference" class="accordion-collapse collapse" aria-labelledby="headingTwoDifference"
-                                 data-bs-parent="#accordionDifference">
-                                <div class="accordion-body">
-                                    Our fully customizable filters and offline streaming options opens up our platform
-                                    to tens of thousands of Jewish families that were never able to access traditional
-                                    streaming services before. (And our upcoming 24Six device will put streaming in the
-                                    hands of thousands who never had the option before.)
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <h4 class="slide-item__title">Reach new streaming fans</h4>
+                                        <p class="slide-item__text main-text">Our fully customizable filters and offline
+                                            streaming options opens up our platform
+                                            to tens of thousands of Jewish families that were never able to access
+                                            traditional streaming services before. (And our upcoming 24Six device will
+                                            put streaming in the hands of thousands who never had the option before.)
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div data-aos="fade-right"
-                             data-aos-delay="150"
-                             data-aos-duration="500"
-                             data-aos-easing="ease-in-out"
-                             class="accordion-item">
-                            <h2 class="accordion-header" id="headingThreeDifference">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThreeDifference" aria-expanded="false"
-                                        aria-controls="collapseThreeDifference">
-                                    Allocate royalties
-                                </button>
-                            </h2>
-                            <div id="collapseThreeDifference" class="accordion-collapse collapse" aria-labelledby="headingThreeDifference"
-                                 data-bs-parent="#accordionDifference">
-                                <div class="accordion-body">
-                                    Our fully customizable filters and offline streaming options opens up our platform
-                                    to tens of thousands of Jewish families that were never able to access traditional
-                                    streaming services before. (And our upcoming 24Six device will put streaming in the
-                                    hands of thousands who never had the option before.)
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <h4 class="slide-item__title">Allocate royalties</h4>
+                                        <p class="slide-item__text main-text">Easily allocate portions of the revenue
+                                            from each song to the people involved. With just a few clicks, you can give
+                                            credit where it’s due. Add composers, producers, lyricists or whoever is
+                                            entitled to individual songs royalties and assign them royalty rates. 24Six
+                                            will handle the rest.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div data-aos="fade-right"
-                             data-aos-delay="200"
-                             data-aos-duration="500"
-                             data-aos-easing="ease-in-out"
-                             class="accordion-item">
-                            <h2 class="accordion-header" id="headingFourDifference">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"Difference
-                                        data-bs-target="#collapseFourDifference" aria-expanded="false"
-                                        aria-controls="collapseFourDifference">
-                                    See detailed analytics
-                                </button>
-                            </h2>
-                            <div id="collapseFourDifference" class="accordion-collapse collapse" aria-labelledby="headingFourDifference"
-                                 data-bs-parent="#accordionDifference">
-                                <div class="accordion-body">
-                                    Our fully customizable filters and offline streaming options opens up our platform
-                                    to tens of thousands of Jewish families that were never able to access traditional
-                                    streaming services before. (And our upcoming 24Six device will put streaming in the
-                                    hands of thousands who never had the option before.)
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <h4 class="slide-item__title">See detailed analytics</h4>
+                                        <p class="slide-item__text main-text">Track song popularity and listening stats.
+                                            Discover who listens to what song — so you can really get to know your key
+                                            listeners.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div data-aos="fade-right"
-                             data-aos-delay="250"
-                             data-aos-duration="500"
-                             data-aos-easing="ease-in-out"
-                             class="accordion-item">
-                            <h2 class="accordion-header" id="headingFiveDifference">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFiveDifference" aria-expanded="false"
-                                        aria-controls="collapseFiveDifference">
-                                    Personalize how you present
-                                </button>
-                            </h2>
-                            <div id="collapseFiveDifference" class="accordion-collapse collapse" aria-labelledby="headingFiveDifference"
-                                 data-bs-parent="#accordionDifference">
-                                <div class="accordion-body">
-                                    Our fully customizable filters and offline streaming options opens up our platform
-                                    to tens of thousands of Jewish families that were never able to access traditional
-                                    streaming services before. (And our upcoming 24Six device will put streaming in the
-                                    hands of thousands who never had the option before.)
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <h4 class="slide-item__title">Personalize how you present</h4>
+                                        <p class="slide-item__text main-text">Create custom album jackets and covers.
+                                            Integrate your songs with your videos. Create a branded, pleasurable
+                                            experience for your audiences.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div data-aos="fade-right"
-                             data-aos-delay="250"
-                             data-aos-duration="500"
-                             data-aos-easing="ease-in-out"
-                             class="accordion-item">
-                            <h2 class="accordion-header" id="headingSixDifference">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseSixDifference" aria-expanded="false"
-                                        aria-controls="collapseSixDifference">
-                                    Personalize how you present
-                                </button>
-                            </h2>
-                            <div id="collapseSixDifference" class="accordion-collapse collapse" aria-labelledby="headingSixDifference"
-                                 data-bs-parent="#accordionDifference">
-                                <div class="accordion-body">
-                                    Our fully customizable filters and offline streaming options opens up our platform
-                                    to tens of thousands of Jewish families that were never able to access traditional
-                                    streaming services before. (And our upcoming 24Six device will put streaming in the
-                                    hands of thousands who never had the option before.)
-                                </div>
-                            </div>
-                        </div>
-                        <div data-aos="fade-right"
-                             data-aos-delay="250"
-                             data-aos-duration="500"
-                             data-aos-easing="ease-in-out"
-                             class="accordion-item">
-                            <h2 class="accordion-header" id="headingSevenDifference">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseSevenDifference" aria-expanded="false"
-                                        aria-controls="collapseSevenDifference">
-                                    Video in Music
-                                </button>
-                            </h2>
-                            <div id="collapseSevenDifference" class="accordion-collapse collapse" aria-labelledby="headingSevenDifference"
-                                 data-bs-parent="#accordionDifference">
-                                <div class="accordion-body">
-                                    Our fully customizable filters and offline streaming options opens up our platform
-                                    to tens of thousands of Jewish families that were never able to access traditional
-                                    streaming services before. (And our upcoming 24Six device will put streaming in the
-                                    hands of thousands who never had the option before.)
+                            <div class="swiper-slide">
+                                <div class="slide-item">
+                                    <div class="slide-item__content">
+                                        <h4 class="slide-item__title">Eliminate piracy</h4>
+                                        <p class="slide-item__text main-text">Protect your work — by making it easy as
+                                            1-2-3 to access and showcasing it in a kosher environment.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-xxl-7 order-1 order-md-2 text-center">
-                    <img data-aos="fade-left"
-                         data-aos-duration="700"
-                         data-aos-delay="300"
-                         src="./assets/img/welcome-img.png" alt="welcome-img" class="img-fluid">
+                <div class="col-12 order-1 order-md-2 col-md-6 d-md-flex align-items-center position-relative">
+                    <div class="swiper features-slider-img">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/features/multimedia-library.png" alt="multimedia-library">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/features/custom-filters.png" alt="custom-filters">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/features/offline-hd-streaming%20.png" alt="offline-hd-streaming">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/features/personal-playlists.png" alt="personal-playlists">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/features/shared-playlists.png" alt="shared-playlists">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/features/video-in-music%20.png" alt="video-in-music">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -678,11 +603,14 @@
                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>
+                                24Six is a groundbreaking media streaming platform for the Jewish family. It gives
+                                subscribers access to thousands of songs, videos and podcasts. With features designed to
+                                provide you with complete control. Create a custom entertainment experience for your
+                                family.
+                            </p>
+                            <p>Your whole family can listen, watch, collect favorites, create playlists, and stream from
+                                anywhere. All approved, kosher content. All for one low monthly fee.</p>
                         </div>
                     </div>
                 </div>
@@ -700,11 +628,8 @@
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>No. You can remove your content at any time. But you’ll probably want to stick around. ;
+                                ) </p>
                         </div>
                     </div>
                 </div>
@@ -722,11 +647,7 @@
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>Nope. We pay you. : ) </p>
                         </div>
                     </div>
                 </div>
@@ -744,11 +665,14 @@
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>Music is the song of the soul — and it will never be interrupted with advertisements. By
+                                subscribing to 24Six, listeners are supporting their favorite Jewish artists and content
+                                creators.</p>
+                            <p>Podcasts and videos will have ads — and the more hits your content gets, the more
+                                valuable your “real estate” becomes.
+                                The best part? The ads will be Kosher. You’ll be proud to have them associated with your
+                                content.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -766,11 +690,20 @@
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>
+                                We tried really hard to think of one. But there’s just no catch.
+                            </p>
+                            <ul>
+                                <li> You’re not limited from putting your content on other platforms at the same time.
+                                </li>
+                                <li>Your content remains yours.</li>
+                                <li>Your content is in a Jewish, kosher environment.</li>
+                                <li>Your fans get to access your content easily and with no fear of unwanted
+                                    interruptions.
+                                </li>
+                                <li>You will make a lot more money.</li>
+                            </ul>
+                            <p>It’s a win-win situation.</p>
                         </div>
                     </div>
                 </div>
@@ -788,11 +721,9 @@
                     <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>You own your content. Uploading does not transfer ownership or any rights. <br>
+                                You can remove your content at any time.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -810,11 +741,19 @@
                     <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>
+                                Yes. We will roll out incentive programs for our artists and content creators:
+                            <ul>
+                                <li>Exclusive tracks: Create content that is exclusive to 24Six or released first on
+                                    24Six.
+                                </li>
+                                <li>Affiliate program: Promote 24Six and earn.</li>
+                                <li>Bonus program: We have set aside a percentage of our revenues to work with artists
+                                    and content developers to create custom programs, promotions, ideas and other
+                                    concepts. We will work together to help us both grow!
+                                </li>
+                            </ul>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -832,11 +771,20 @@
                     <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>
+                                Good question. The offline feature is built for temporary times when families or kids
+                                don’t have internet access: at yeshiva, in camp, on the road, etc.
+                            </p>
+                            <p>
+                                The standard offline allowance is 30 days, after which the content becomes inaccessible.
+                                They'll need to go online and reconnect with the 24Six servers to see your content
+                                again. This will ensure that their subscriptions are up to date, and the analytics are
+                                uploaded so you can get paid.
+                            </p>
+                            <p>
+                                In short: <br>
+                                No. No one can download your music and then go offline and keep it without paying.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -854,11 +802,8 @@
                     <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            No. There’s a registration and approval process. Every piece of content on our platform is
+                            vetted to fit the standards of a Jewish home.
                         </div>
                     </div>
                 </div>
@@ -876,11 +821,13 @@
                     <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
                          data-bs-parent="#accordionSupport">
                         <div class="accordion-body">
-                            24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                            subscribers access to thousands of songs, videos and podcasts. With features designed to
-                            provide you with complete control. Create a custom entertainment experience for your family.
-                            Your whole family can listen, watch, collect favorites, create playlists, and stream from
-                            anywhere. All approved, kosher content. All for one low monthly fee.
+                            <p>Not yet. DistroKid won’t integrate with us unless their entire artist portfolio is
+                                allowed to join our platform, which is obviously problematic. We’re working to find
+                                solutions to integrate through third party channels. </p>
+                            <p>
+                                Really, there's no need: 24Six has native analytics, tracking, royalty sharing — a
+                                complete back-end dashboard for artists and content creators.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -911,7 +858,7 @@
             </ul>
             <ul class="navbar-list">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">For advertisers</a>
+                    <a class="nav-link" href="index.html">For users</a>
                 </li>
             </ul>
         </div>
@@ -922,7 +869,7 @@
     </div>
 </footer>
 
-<div class="modal fade" id="joinWaitListModal" tabindex="-1" aria-labelledby="joinWaitListModalLabel"
+<div class="modal modal-artists fade" id="joinWaitListModal" tabindex="-1" aria-labelledby="joinWaitListModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -934,15 +881,51 @@
                 <p class="modal-text">Be the first to know when 24Six is available.</p>
                 <form action="" class="modal-form">
                     <div class="mb-3">
-                        <label for="nameInput" class="modal-form__label">First name</label>
+                        <label for="nameInput" class="modal-form__label">Name</label>
                         <input type="text" class="modal-form__control" id="nameInput"
-                               placeholder="Enter you first name">
+                               placeholder="Enter your name">
                     </div>
                     <div class="mb-3">
                         <label for="emailInput" class="modal-form__label">Email address</label>
                         <input type="email" class="modal-form__control" id="emailInput"
-                               placeholder="Enter you email address">
+                               placeholder="Enter your email address">
                     </div>
+                    <div class="mb-3">
+                        <label for="linkInput" class="modal-form__label">Links to your Spotify or social media
+                            accounts</label>
+                        <input type="url" class="modal-form__control" id="linkInput"
+                               placeholder="Enter links here">
+                    </div>
+                    <div class="mb-3">
+                        <label for="textInput" class="modal-form__label">Describe what you would like to publish on
+                            24Six</label>
+                        <textarea class="modal-form__control" id="textInput" cols="30" rows="10"
+                                  placeholder="Enter text here"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <div class="modal-form-check form-check">
+                            <input class="modal-form-check__input form-check-input" type="checkbox" value=""
+                                   id="musicArtistCheckbox">
+                            <label class="modal-form-check__label form-check-label" for="musicArtistCheckbox">
+                                Music artist
+                            </label>
+                        </div>
+                        <div class="modal-form-check form-check">
+                            <input class="modal-form-check__input form-check-input" type="checkbox" value=""
+                                   id="videoProducerCheckbox">
+                            <label class="modal-form-check__label form-check-label" for="videoProducerCheckbox">
+                                Video producer
+                            </label>
+                        </div>
+                        <div class="modal-form-check form-check">
+                            <input class="modal-form-check__input form-check-input" type="checkbox" value=""
+                                   id="podcasterCheckbox">
+                            <label class="modal-form-check__label form-check-label" for="podcasterCheckbox">
+                                Podcaster
+                            </label>
+                        </div>
+                    </div>
+
                     <button type="submit" class="btn btn-warning" data-bs-toggle="modal"
                             data-bs-target="#joinWaitListModalSuccessMessage">Join
                     </button>
@@ -956,7 +939,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="joinWaitListModalSuccessMessage" tabindex="-1"
+<div class="modal modal-artists fade" id="joinWaitListModalSuccessMessage" tabindex="-1"
      aria-labelledby="joinWaitListModalSuccessMessage"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -973,10 +956,28 @@
         </div>
     </div>
 </div>
+<div class="modal modal-video fade" id="artistsVideoModal" tabindex="-1" aria-labelledby="artistsVideoModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="ratio ratio-16x9">
+                <div class="play-btn">
+                    <img src="./assets/img/play.svg" alt="play icon">
+                </div>
+                <video
+                        class="artists-video video-box"
+                        controls
+                        style="width: 100%;"
+                        poster="./assets/img/video-thumbnail.png"
+                />
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+                                                    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                                                    crossorigin="anonymous"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
         integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
@@ -987,5 +988,13 @@
 <script src="assets/scripts/swipper.js"></script>
 <script src="https://kit.fontawesome.com/fd67970f07.js" crossorigin="anonymous"></script>
 <script src="assets/scripts/js.js"></script>
+<script>
+    // Parallax
+
+    let rellax = new Rellax('.cols', {
+        center: true,
+        speed: -2,
+    });
+</script>
 </body>
 </html>
