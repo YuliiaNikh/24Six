@@ -162,8 +162,13 @@
 
   @media (min-width: 576px) {
     &.modal-join-list {
-      &-dialog {
+      .modal-dialog {
         max-width: 29.5rem;
+      }
+    }
+    &.modal-join-list__success{
+      .modal-dialog {
+        max-width: 36rem;
       }
     }
     &-body {

@@ -313,8 +313,11 @@
   margin: 0 auto 1rem auto;
 }
 @media (min-width: 576px) {
-  .modal.modal-join-list-dialog {
+  .modal.modal-join-list .modal-dialog {
     max-width: 29.5rem;
+  }
+  .modal.modal-join-list__success .modal-dialog {
+    max-width: 36rem;
   }
   .modal-body {
     border: none;
@@ -1477,6 +1480,9 @@ footer .navbar-bottom a {
     margin: 0 auto 4.5rem auto;
   }
 
+  .plans .section-title {
+    max-width: 29rem;
+  }
   .plans .wrapper {
     padding: 5.25rem 3.5rem 0 3.5rem;
     max-width: 77rem;
@@ -2110,6 +2116,10 @@ body {
     max-width: 1440px;
     margin: auto;
   }
+}
+
+.text-primary {
+  color: #FFB84A !important;
 }
 
 /*# sourceMappingURL=app.css.map */
