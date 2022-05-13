@@ -605,6 +605,7 @@ body:after {
 
 .about {
   margin-bottom: 6rem;
+  overflow-x: hidden;
 }
 .about .section-title {
   margin: 0 auto 5.375rem auto;
@@ -755,6 +756,7 @@ body:after {
 
 .features {
   padding-bottom: 6rem;
+  overflow-x: hidden;
 }
 .features .bg-wrapper {
   top: 50%;
@@ -844,6 +846,7 @@ body:after {
 
 .how-it-works {
   padding-bottom: 6rem;
+  overflow-x: hidden;
 }
 .how-it-works .section__above-title {
   text-align: center;
@@ -932,6 +935,7 @@ body:after {
 
 .plans {
   padding-bottom: 6rem;
+  overflow-x: hidden;
 }
 .plans .wrapper {
   background: #272625;
@@ -1011,6 +1015,7 @@ body:after {
 
 .section-support {
   padding-bottom: 3rem;
+  overflow-x: hidden;
 }
 .section-support .section__above-title {
   text-align: center;
