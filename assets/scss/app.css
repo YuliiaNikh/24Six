@@ -942,7 +942,7 @@ body:after {
   border-radius: 1.5rem;
   padding-top: 3rem;
   text-align: center;
-  margin-bottom: 7.75rem;
+  margin-bottom: 2rem;
 }
 .plans .section-title {
   margin: 0 auto 0.75rem auto;
@@ -960,7 +960,7 @@ body:after {
 .plans .plan-cards-wrapper {
   display: flex;
   flex-direction: row;
-  margin: -7.75rem 0.75rem 0 0.75rem;
+  margin: 0 0.75rem 0 0.75rem;
   position: relative;
 }
 .plans .plan-card {
@@ -1268,6 +1268,7 @@ footer .navbar-bottom a {
   }
   .plans .wrapper {
     padding: 3rem 1.5rem 0 1.5rem;
+    margin-bottom: 8rem;
   }
   .plans .plan-cards-wrapper {
     justify-content: space-between;
