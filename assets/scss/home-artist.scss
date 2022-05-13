@@ -253,6 +253,12 @@
       margin: 0 0 2.5rem 0;
     }
 
+    .features-slider-text{
+      .swiper-slide{
+        padding-right: 0.625rem;
+      }
+    }
+
     .img-fluid {
       max-width: 100%;
       width: auto;

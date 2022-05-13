@@ -1735,6 +1735,9 @@ footer .navbar-bottom a {
 .artist .section-difference .features-slider-img {
   margin: 0 0 2.5rem 0;
 }
+.artist .section-difference .features-slider-text .swiper-slide {
+  padding-right: 0.625rem;
+}
 .artist .section-difference .img-fluid {
   max-width: 100%;
   width: auto;
