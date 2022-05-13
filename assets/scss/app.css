@@ -530,6 +530,7 @@ body:after {
 .testimonials {
   padding-bottom: 6rem;
   position: relative;
+  overflow-x: hidden;
 }
 .testimonials .section-title {
   margin-bottom: 0.75rem;
@@ -604,7 +605,6 @@ body:after {
 
 .about {
   margin-bottom: 6rem;
-  overflow-x: hidden;
 }
 .about .section-title {
   margin: 0 auto 5.375rem auto;
