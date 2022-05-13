@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         autoHeight: true,
         slidesPerView: 1,
         spaceBetween: 20,
-        direction: 'vertical',
         updateOnWindowResize: true,
         mousewheel: {
             forceToAxis: true,
