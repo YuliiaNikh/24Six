@@ -5,10 +5,14 @@ const backLink = document.getElementById('back-link');
 window.onscroll = function () {
     if (window.scrollY > 20) {
         navbar.classList.add('nav-active');
-        backLink.classList.add('hidden');
+        if(backLink){
+            backLink.classList.add('hidden');
+        }
     } else {
         navbar.classList.remove('nav-active');
-        backLink.classList.remove('hidden');
+        if(backLink){
+            backLink.classList.remove('hidden');
+        }
     }
 };
 

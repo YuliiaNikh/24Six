@@ -780,9 +780,10 @@ body:after {
   object-fit: cover;
 }
 .features .features-slider-text .swiper-pagination {
-  width: 1px;
+  width: 100%;
+  height: 1px;
   background: #2A2B36;
-  opacity: 0;
+  margin-left: 0.625rem;
 }
 .features .features-slider-text .swiper-pagination-progressbar-fill {
   background: linear-gradient(180deg, #FFB84A 0%, rgba(255, 184, 74, 0) 100%);
@@ -798,6 +799,7 @@ body:after {
   line-height: 1.29;
   margin-bottom: 0.75rem;
   padding-left: 0.625rem;
+  margin-top: 0.625rem;
 }
 .features .features-slider-text .slide-item {
   display: flex;
@@ -822,7 +824,6 @@ body:after {
 }
 .features .features-slider-text .swiper-slide {
   opacity: 0.3;
-  height: auto !important;
   transition: opacity 0.3s ease-in-out;
 }
 .features .features-slider-text .swiper-slide .slide-item__number {
@@ -1216,7 +1217,9 @@ footer .navbar-bottom a {
     max-height: 33rem;
   }
   .features .features-slider-text .swiper-pagination {
-    opacity: 1;
+    width: 1px;
+    height: 100%;
+    margin-left: 0;
   }
   .features .features-slider-text .swiper-wrapper {
     padding-left: 1.25rem;
@@ -1241,6 +1244,7 @@ footer .navbar-bottom a {
     position: absolute;
     left: 1rem;
     top: 4rem;
+    margin-top: 0;
   }
   .features .features-slider-img {
     height: 28rem;

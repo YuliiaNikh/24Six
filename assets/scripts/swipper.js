@@ -28,6 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
             sensitivity: 1,
             releaseOnEdges: true,
         },
+        pagination: {
+            el: ".swiper-pagination",
+            type: 'progressbar',
+        },
         on: {
             init: function () {
                 visualisedSlideNumber(this.realIndex);
@@ -41,14 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         breakpoints: {
             768: {
-                autoHeight: false,
                 direction: 'vertical',
+                autoHeight: false,
                 slidesPerView: 'auto',
                 loopFillGroupWithBlank: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    type: 'progressbar',
-                },
             }
         },
 
@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let swiper3 = new Swiper(".features-slider-img", {
         spaceBetween: 10,
         mousewheel: true,
+
         breakpoints: {
             768: {
                 direction: 'vertical',
