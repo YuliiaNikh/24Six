@@ -6,6 +6,30 @@
     display: none;
   }
 
+  .back__link{
+    padding: 0.625rem 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, padding 0.3s linear, margin 0.3s linear, height 0.3s ease-in-out;
+    border-bottom: 1px solid #363532;
+    margin-bottom: 1rem;
+    a{
+      color: $white;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        color: $primary;
+      }
+    }
+    &.hidden{
+      opacity: 0;
+      height: 0;
+      margin-bottom: 0;
+      transform: translateY(-100%);
+      padding: 0;
+    }
+  }
+
   .navbar {
     &-brand {
       font-family: 'Lato', sans-serif;

@@ -1,10 +1,14 @@
-// Change navbar background color on scroll
+// Change navbar background color and hide back link on scroll
 const navbar = document.getElementById('navbar');
+const backLink = document.getElementById('back-link');
+
 window.onscroll = function () {
     if (window.scrollY > 20) {
         navbar.classList.add('nav-active');
+        backLink.classList.add('hidden');
     } else {
         navbar.classList.remove('nav-active');
+        backLink.classList.remove('hidden');
     }
 };
 
