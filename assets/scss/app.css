@@ -266,7 +266,7 @@
   height: 6.875rem;
 }
 .modal-form-check {
-  padding: 0.625rem 1.25rem;
+  padding: 0.35rem 1.25rem;
   background-color: transparent;
   border-radius: 0.5rem;
   transition: all 0.3s ease-in-out;
@@ -1598,11 +1598,13 @@ footer .navbar-bottom a {
 }
 .artist .section-issues .section-title {
   margin-bottom: 0.75rem;
+  max-width: 27.5rem;
 }
 .artist .section-issues .section-title:last-child {
   color: #FFB84A;
   text-align: center;
   margin-top: 3rem;
+  max-width: 100%;
 }
 .artist .section-issues .section-title span {
   color: #FFB84A;
@@ -1657,6 +1659,12 @@ footer .navbar-bottom a {
 .artist .section-podcasts {
   padding-bottom: 6rem;
   overflow: hidden;
+}
+.artist .section-podcasts .section__above-title {
+  margin-bottom: 0.75rem;
+}
+.artist .section-podcasts .section__above-title img {
+  margin-top: 0.75rem;
 }
 .artist .section-podcasts-animation-container {
   display: flex;
@@ -1713,57 +1721,12 @@ footer .navbar-bottom a {
 .artist .section-difference .section-title {
   margin-bottom: 1.875rem;
 }
-.artist .section-difference .accordion {
-  margin-top: 2.5rem;
-}
-.artist .section-difference .accordion-item {
-  background-color: transparent;
-  border: none;
-  margin-bottom: 2.25rem;
-}
-.artist .section-difference .accordion-button {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  font-weight: 500;
-  font-size: 1.125rem;
-}
-.artist .section-difference .accordion-button:focus {
-  box-shadow: none;
-}
-.artist .section-difference .accordion-button:before {
-  flex-shrink: 0;
-  display: inline-block;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font: var(--fa-font-solid);
-  content: "\f054";
-  margin-right: 1.625rem;
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.5);
-  transition: all 0.2s ease-in-out;
-}
-.artist .section-difference .accordion-button:after {
-  display: none;
-}
-.artist .section-difference .accordion-button[aria-expanded=true] {
-  color: #FFB84A;
-}
-.artist .section-difference .accordion-button[aria-expanded=true]:before {
-  color: #FFB84A;
-  transform: rotate(90deg);
-}
-.artist .section-difference .accordion-body {
-  padding-top: 0.875rem;
-  color: #C9C1BC;
-  font-size: 1rem;
-  line-height: 1.5;
-  padding-left: 2.25rem;
+.artist .section-difference .features-slider-img {
+  margin: 0;
 }
 .artist .section-difference .img-fluid {
-  max-width: 63vw;
-  width: 100%;
+  max-width: 100%;
+  width: auto;
 }
 .artist .section-steps {
   padding-bottom: 6rem;
@@ -1860,7 +1823,7 @@ footer .navbar-bottom a {
   .artist .hero .devices {
     position: absolute;
     width: 50%;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     right: 0;
   }
@@ -1899,9 +1862,6 @@ footer .navbar-bottom a {
   .artist .section-difference .section-title {
     text-align: left;
     max-width: 25.5rem;
-  }
-  .artist .section-difference .img-fluid {
-    max-width: 100%;
   }
   .artist .section-steps .section-title {
     margin-bottom: 1rem;
@@ -1990,9 +1950,6 @@ footer .navbar-bottom a {
   .artist .section-difference .section-title {
     margin-bottom: 3.5rem;
   }
-  .artist .section-difference .img-fluid {
-    max-width: 26rem;
-  }
   .artist .section-steps {
     padding: 4rem 0;
   }
@@ -2074,9 +2031,6 @@ footer .navbar-bottom a {
   }
   .artist .section-podcasts .cols.lower {
     padding-top: 12rem;
-  }
-  .artist .section-difference .img-fluid {
-    max-width: 32.625rem;
   }
   .artist .section-steps .join-step-card-title {
     font-size: 1.875rem;
