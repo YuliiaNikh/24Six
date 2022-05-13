@@ -2071,6 +2071,7 @@ html {
 body {
   font-family: "SF Pro Display", sans-serif;
   background: rgba(18, 19, 22, 0.9);
+  position: relative;
   overflow-x: hidden;
 }
 

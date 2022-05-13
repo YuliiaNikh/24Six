@@ -14,7 +14,8 @@ html {
 body {
   font-family: 'SF Pro Display', sans-serif;
   background: rgba(18, 19, 22, 0.9);
-  overflow-x: hidden;
+  position:relative;
+  overflow-x:hidden
 }
 
 .container-fluid {
