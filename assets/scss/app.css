@@ -604,6 +604,7 @@ body:after {
 
 .about {
   margin-bottom: 6rem;
+  overflow-x: hidden;
 }
 .about .section-title {
   margin: 0 auto 5.375rem auto;
