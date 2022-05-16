@@ -112,6 +112,10 @@ for (let videoBox of videoBoxes) {
             stopVideo(videoBox);
         })
     }
+
+    window.addEventListener('scroll', function (){
+        videoBox.pause();
+    })
 }
 
 //Video
