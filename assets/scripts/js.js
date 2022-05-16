@@ -5,12 +5,12 @@ const backLink = document.getElementById('back-link');
 window.onscroll = function () {
     if (window.scrollY > 20) {
         navbar.classList.add('nav-active');
-        if(backLink){
+        if (backLink) {
             backLink.classList.add('hidden');
         }
     } else {
         navbar.classList.remove('nav-active');
-        if(backLink){
+        if (backLink) {
             backLink.classList.remove('hidden');
         }
     }
@@ -77,18 +77,21 @@ if (sectionIArrow) {
 // Add an event handler to the document for the "onscroll" event
 document.addEventListener("scroll", scrollAnimTriggerCheck);
 
-
-
-//Play button
+//Play/stop video
 let videoBoxes = document.querySelectorAll('.video-box');
+let videoModalEl = document.getElementsByClassName('modal-video');
+let faqAccordion = document.getElementById('accordionSupport');
 
-console.log(typeof videoBoxes);
+
+function stopVideo(e) {
+    e.pause();
+    e.currentTime = 0;
+}
 
 for (let videoBox of videoBoxes) {
     videoBox.removeAttribute('controls');
 
-
-    videoBox.closest('div').querySelector('.play-btn').addEventListener('click', function (){
+    videoBox.closest('div').querySelector('.play-btn').addEventListener('click', function () {
         this.style.display = 'none';
         videoBox.setAttribute("controls", "controls");
         videoBox.play();
@@ -97,13 +100,25 @@ for (let videoBox of videoBoxes) {
     videoBox.addEventListener('click', function () {
         this.closest('div').querySelector('.play-btn').style.display = 'none';
     })
+
+    for (let modalVideo of videoModalEl) {
+        modalVideo.addEventListener('hidden.bs.modal', event => {
+            stopVideo(videoBox);
+        })
+    }
+
+    if (faqAccordion) {
+        faqAccordion.addEventListener('hidden.bs.collapse', event => {
+            stopVideo(videoBox);
+        })
+    }
 }
 
 //Video
 
-const videoFilter = document.querySelector('.filter-video');
-const videoArtists = document.querySelector('.artists-video');
-const videoPopUp = document.querySelector('.popup-video');
+const videoFilter = document.querySelectorAll('.filter-video');
+const videoArtists = document.querySelectorAll('.artists-video');
+const videoPopUp = document.querySelectorAll('.popup-video');
 
 const srcFilter = 'https://stream.mux.com/9On9MWt9ZA01A3F01hGnzkVNf02s6n2b6HfDgIjyxYeKxg.m3u8';
 const srcArtists = 'https://stream.mux.com/9On9MWt9ZA01A3F01hGnzkVNf02s6n2b6HfDgIjyxYeKxg.m3u8';
@@ -111,31 +126,34 @@ const scrPopUp = 'https://stream.mux.com/45tb01KwSf5wVl2ygXnyz2Sg89QMZF1QJPuKpS0
 
 const data = [
     {
-        video: videoFilter,
+        videos: videoFilter,
         src: srcFilter,
     },
     {
-        video: videoArtists,
+        videos: videoArtists,
         src: srcArtists,
     },
     {
-        video: videoPopUp,
+        videos: videoPopUp,
         src: scrPopUp,
     }
 ]
 
 for (let item of data) {
-    if (item.video && item.video.canPlayType('application/vnd.apple.mpegurl')) {
-        // Some browsers (safari and ie edge) support HLS natively
-        item.video.src = item.src;
-    } else if (Hls.isSupported()) {
-        const hls = new Hls();
-        hls.loadSource(item.src);
-        hls.attachMedia(item.video);
-    } else {
-        console.error("This is a legacy browser that doesn't support MSE");
+    for (let video of item.videos) {
+        if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
+            // Some browsers (safari and ie edge) support HLS natively
+            video.src = item.src;
+        } else if (Hls.isSupported()) {
+            const hls = new Hls();
+            hls.loadSource(item.src);
+            hls.attachMedia(video);
+        } else {
+            console.error("This is a legacy browser that doesn't support MSE");
+        }
     }
 }
+
 
 
 
