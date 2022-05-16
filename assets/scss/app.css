@@ -1361,7 +1361,7 @@ footer .navbar-bottom a {
   }
 
   .features .features-slider-text {
-    max-height: 40rem;
+    max-height: 39rem;
   }
   .features .features-slider-text .swiper-wrapper {
     padding-left: 2rem;
@@ -1467,9 +1467,6 @@ footer .navbar-bottom a {
 
   .features .section-title {
     margin-bottom: 3.5rem;
-  }
-  .features .features-slider-text {
-    max-height: 47rem;
   }
   .features .features-slider-text .slide-item__title, .features .features-slider-text .slide-item__text {
     max-width: 25rem;
