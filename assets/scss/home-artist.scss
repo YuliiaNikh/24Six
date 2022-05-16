@@ -444,7 +444,7 @@
       }
 
       .features-slider-img{
-        margin: 0;
+        margin: -1rem 0 0 0;
       }
     }
 
@@ -568,6 +568,10 @@
 
       .section-title {
         margin-bottom: 3.5rem;
+      }
+
+      .features-slider-img{
+        margin: -2.5rem 0 0 0;
       }
     }
 

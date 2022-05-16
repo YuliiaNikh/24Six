@@ -1869,7 +1869,7 @@ footer .navbar-bottom a {
     max-width: 25.5rem;
   }
   .artist .section-difference .features-slider-img {
-    margin: 0;
+    margin: -1rem 0 0 0;
   }
   .artist .section-steps .section-title {
     margin-bottom: 1rem;
@@ -1957,6 +1957,9 @@ footer .navbar-bottom a {
   }
   .artist .section-difference .section-title {
     margin-bottom: 3.5rem;
+  }
+  .artist .section-difference .features-slider-img {
+    margin: -2.5rem 0 0 0;
   }
   .artist .section-steps {
     padding: 4rem 0;
