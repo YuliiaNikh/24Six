@@ -56,11 +56,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let swiper3 = new Swiper(".features-slider-img", {
         spaceBetween: 10,
-        mousewheel: true,
-
+        mousewheel: {
+            forceToAxis: true,
+            sensitivity: 1,
+            releaseOnEdges: true,
+        },
         breakpoints: {
             768: {
                 direction: 'vertical',
+                loopFillGroupWithBlank: true,
                 on:{
                     reachEnd: function() {
                         this.snapGrid = [...this.slidesGrid];
