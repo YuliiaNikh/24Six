@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>24 Six</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/scss/app.css">
+</head>
+<body>
+<nav id="navbar" class="navbar navbar-expand-md fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo-horiz-yellow.svg" alt="logo-horiz">
+        </a>
+        <button class="navbar-toggler hamburger hamburger--spring" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item d-md-none">
+                        <a class="nav-link active" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plans">Pricing</a>
+                    </li>
+                </ul>
+                <div class="d-md-flex align-items-center">
+                    <a href="home-artists.html" class="nav-text d-md-none d-lg-block text-decoration-none text-primary">For
+                        artists & content creators</a>
+                    <button class="btn moda-btn mt-4 mt-md-0" data-bs-toggle="modal"
+                            data-bs-target="#joinWaitListModal">
+                        Join the waitlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="terms-wrapper col-lg-10 mx-auto">
+                <h2 class="section-subtitle text-center mb-5">24SIX SERVICE TERMS OF USE</h2>
+                <ol class="terms-list">
+                    <li>
+                        <p class="text-decoration-underline fw-bold">INTRODUCTION</p>
+                        <p>
+                            The Terms and Conditions of Use (these "Terms") set forth below govern the use of (which
+                            includes access to) the 24Six digital platform, including, but not limited to, the 24Six
+                            website and software applications that incorporate or link to these Terms (collectively,
+                            "24Six Platform") and any material that is made available through 24Six Platform (the "24Six
+                            Platform Content"). Use of the 24Six Platform may be subject to additional terms and
+                            conditions presented by 24Six.
+                        </p>
+                        <p>
+                            24Six for Artists is made available to users in the entertainment industry for business
+                            purposes only and is not open to "consumers" as contemplated in applicable consumer
+                            protection laws, or anyone acting for personal, family or household purposes.
+                        </p>
+                        <p>
+                            By signing up for, accessing, or otherwise utilizing the 24Six Platform, you agree to these
+                            Terms on behalf of the entity, organization or business that you represent , and you
+                            represent and warrant to 24Six that: (1) you are an authorized representative of that
+                            Contributing Artist with the authority to bind the Contributing Artist to these Terms; (2)
+                            the Contributing Artist agrees to be bound by these Terms; and (3) you agree to be bound by
+                            these Terms on behalf of such Contributing Artist. If you cannot agree to everything in the
+                            preceding sentence, then you must not use 24Six Platform.
+                        </p>
+                        <p class="fw-bold">Age and eligibility requirements</p>
+                        <p>In order to use 24Six Platform, you must (1) be 13 years of age (or the equivalent minimum
+                            age in your home country) or older; (2) have parent or guardian consent if you are a minor
+                            in your home country; (3) have the power to enter a binding contract with us on behalf of
+                            your Contributing Artist and not be barred from doing so under any applicable laws; and (4)
+                            reside in a country where 24Six Platform is available. You also promise that any
+                            registration information that you submit to 24Six is true, accurate, and complete, and you
+                            agree to keep it that way at all times.</p>
+                    </li>
+                    <li>
+                        <p class="text-decoration-underline fw-bold">THE 24SIX SERVICE PROVIDED BY US</p>
+                        <p class="fw-bold">Usage Data</p>
+                        <p>
+                            24Six has the right to track the volume of downloads and 24Six shall determine how the data
+                            will be used, if at all, in its sole discretion. The 24Six Platform may provide you access
+                            to usage data with respect to your content (“Usage Data”). 24Six makes no representation or
+                            warranty as to the accuracy of the Usage Data. All Usage Data is provided to you "AS-IS" and
+                            use of the Usage Data shall be at your sole and exclusive risk and discretion.
+                        </p>
+                        <p class="fw-bold">
+                            Backup
+                        </p>
+                        <p>
+                            The 24Six Platform Content is stored in the 24Six database for the sole purpose of making
+                            such content available on the 24Six Platform. You shall not rely on 24Six Platform as your
+                            sole venue for storage of content. 24Six is not liable for damage to, deletion of, or
+                            failure to store any 24Six Platform Content.
+                        </p>
+                        <p class="fw-bold">
+                            Trending List
+                        </p>
+                        <p>
+                            24Six will track the current popularity of 24Six Platform Content on the 24Six Platform in a
+                            manner determined by 24Six in its sole and exclusive discretion, and shall be entitled to
+                            publish the list of trending 24Six Platform Content including, but not limited to, the order
+                            in which any particular 24Six Platform Content appears on the list of trending content. You
+                            acknowledge and agree that 24Six has full and absolute discretion to determine the list of
+                            trending content and you expressly waive any right to challenge or otherwise dispute 24Six’s
+                            determinations.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-decoration-underline fw-bold">CONTENT AND INTELLECTUAL PROPERTY RIGHTS</p>
+                        <p class="fw-bold">
+                            The content you post on 24Six Platform
+                        </p>
+                        <p>
+                            You, on behalf of your Contributing Artist, may post, upload, or otherwise contribute
+                            content to 24Six Platform ("User Content"). For the avoidance of doubt, "User Content"
+                            includes all information, materials and other content that is added, created, uploaded,
+                            submitted, distributed, or posted to 24Six Platform by users, which includes, but is not
+                            limited to, songs, podcast programs and videos. 24Six, and/or any third party appointed by
+                            24Six, may in its sole and absolute discretion decide to use all, or parts of, the metadata
+                            provided in connection with such User Content, as well as to supplement and/or replace such
+                            metadata.
+                        </p>
+                        <p>
+                            24Six may also post, upload, or otherwise contribute User Content to 24Six Platform on your
+                            behalf. 24Six has the sole discretion to categorize User Content as it sees appropriate.
+                        </p>
+                        <p>
+                            You and your Contributing Artist are solely responsible for all User Content that you post
+                            or posted on your behalf by 24Six.
+                        </p>
+                        <p>
+                            You covenant, represent and warrant, on behalf of your Contributing Artist, that, with
+                            respect to any User Content you post on 24Six Platform: (1) you own or have the right to
+                            post such User Content; (2) such User Content, or its use by 24Six pursuant to the license
+                            granted below, does not (i) violate these Terms, applicable law, the regulations and rules
+                            of any guilds, unions or collectives, or violate or infringe upon the rights of any third
+                            party, including any intellectual property (including without limitation, copyright),
+                            publicity, privacy, personality, contract or other rights of others, or (ii) imply any
+                            affiliation with or endorsement of you or your User Content by 24Six or any artist, band,
+                            label, or other individual or entity without the prior express written consent from 24Six or
+                            such individual or entity; (3) you have and shall have acquired, retained and properly
+                            administered any third-party rights, licenses, authorizations, consents, permissions and
+                            approvals relating to the User Content you post to 24Six Platform and required by 24Six to
+                            exercise the license granted in these Terms; (4) you shall be solely responsible for
+                            complying with the terms and conditions set forth in each of the third-party licenses,
+                            authorizations, consents, permissions and approvals referenced in clause (3) of this
+                            paragraph, and you shall be solely responsible for making any and all payments of royalties,
+                            fees and any other monies (however characterized) to any and all third parties as and when
+                            required under such third-party licenses, authorizations, consents, permissions and
+                            approvals; (5) no royalties, fees or other monies (however characterized) are or shall be
+                            payable by or on behalf of 24Six to or on behalf of any person or entity in connection with
+                            or arising out of the User Content you post to 24Six Platform or the exercise by 24Six of
+                            the license granted in these Terms; (6) all User Content you post to 24Six Platform is and
+                            shall be correct, accurate, and does not contain any content that violates the terms of the
+                            Agreement and the representations and warranties set forth herein; and (7) you have and
+                            shall comply with all applicable laws, regulations and industry standards when posting User
+                            Content to 24Six Platform, including the FTC's Guidelines Concerning the Use of Testimonials
+                            and Endorsements in Advertising, the FTC's.com Disclosures Guide, the FTC's Native
+                            Advertising Guidelines, and any other guidelines issued by the FTC from time to time, and
+                            updates thereto.
+                        </p>
+                        <p>
+                            24Six is not responsible for what you or others post or share on 24Six Platform. To the
+                            extent you or your Contributing Artist has access to a particular page or account on 24Six
+                            Platform which is also accessible to one or more other users or subscribers, certain of your
+                            User Content (including, but not limited to, your name, role, access level and certain
+                            actions you take on 24Six Platform) may be visible to such other users or subscribers. Your
+                            right to access and edit pages or assets may differ depending on your underlying rights over
+                            that material and your level of access to 24Six Platform. In some cases, you may share
+                            editing rights of a particular page or account on 24Six Platform with other users or
+                            Subscribing Entities.
+                        </p>
+                        <p class="fw-bold">Takedowns and monitoring user content</p>
+                        <p>
+                            24Six shall be under no obligation to include or distribute User Content via 24Six Platform.
+                            24Six may, but has no obligation to, monitor or review User Content. Except to the extent
+                            prohibited by applicable law, 24Six reserves the right to remove or disable access to any
+                            User Content from 24Six Platform in its sole discretion, for any or no reason. 24Six may
+                            take these actions without prior notification to you or any third party and without any
+                            liability to you for such removal.
+                        </p>
+                        <p class="fw-bold">
+                            Licenses that you grant to us – User Content
+                        </p>
+                        <p>
+                            24Six does not claim any ownership rights in the User Content you post to 24Six Platform.
+                            After posting User Content to the Service, as between you and 24Six, you will continue to
+                            retain any rights you may have in your User Content, including any intellectual property
+                            rights or other proprietary rights associated with your User Content, subject to the license
+                            you grant to 24Six.
+                        </p>
+                        <p>
+                            By posting User Content to the Service, you, on behalf of your Contributing Artist, grant
+                            24Six an exclusive, transferable license to reproduce, make available, perform and display,
+                            translate, modify, create derivative works from, distribute, and otherwise use such User
+                            Content through any medium, whether alone or in combination with other content or materials,
+                            in any manner and by any means, method or technology, whether now known or hereafter
+                            created, in connection with 24Six Platform and 24Six's streaming service, the promotion and
+                            marketing of 24Six Platform and 24Six's music streaming service and the promotion and
+                            marketing of 24Six Platform and 24Six's music streaming service. You further grant us the
+                            right to use your name, likeness, song, video, podcast program, and photograph on 24Six
+                            Platform and 24Six's music streaming service and in our marketing communications to
+                            advertise, market and promote the availability of your User Content on 24Six Platform and
+                            24Six's music streaming service. Where applicable and to the extent permitted under
+                            applicable law, you also agree to waive, and not to enforce, any "moral rights" or
+                            equivalent rights, such as your right to be identified as the author of any User Content.
+                        </p>
+                        <p class="fw-bold">
+                            Exclusive Content
+                        </p>
+                        <p>
+                            Artist shall have the right, but not the obligation, to contribute content as Exclusive
+                            Content. In the event that an Artist contributes content as Exclusive Content, the rights to
+                            such Exclusive Content shall be exclusive to 24Six and neither Contributing Artist nor
+                            anyone acting on behalf of or with the consent of Contributing Artist, shall upload, share
+                            or post any 24Six Platform Content or User Content on any website, application or other
+                            streaming service or device without the written consent of 24Six, which consent may granted
+                            or denied in the sole and absolute discretion of 24Six; provided, however, that the
+                            following are explicitly excluded from the restriction set forth herein: Spotify, Apple
+                            Music, Tidal, Pandora, YouTube Music, Deezer, iHeart Radio, Soundtrack by Twitch,
+                            Primephonic, Amazon Music, Amazon Music Unlimited, Qobuz, Mixcloud, Soundcloud, Google Play
+                            Music, Idagio. Compensation for Exclusive Content shall be as set forth in Section IV below.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-decoration-underline fw-bold">
+                            COMPENSATION
+                        </p>
+                        <p class="fw-bold">
+                            Compensation to Song Artist
+                        </p>
+                        <p>
+                            24Six will distribute, on a monthly basis, a fixed percentage of all subscription-based net
+                            revenue (the “Artist Revenue Pool”) to the song artists collectively. The allocation of the
+                            Artist Revenue Pool to individual song artists, will be in proportion to the number of
+                            downloads generated by such song artist in comparison to the total number of downloads for
+                            the relevant period. For the purposes of allocation of the Artist Revenue Pool, each
+                            download must have been played for a minimum of 20 seconds. The allocation of the Artist
+                            Revenue Pool shall be made by 24Six based solely on its data and its determination shall be
+                            final and binding.
+                        </p>
+                        <p class="fw-bold">
+                            Compensation to Podcasters and Video Creators
+                        </p>
+                        <p>
+                            24Six will distribute, on a monthly basis, thirty percent (30%) of all revenue generated
+                            from advertisements (“Podcast and Video Revenue Pool”) to the podcasters and video creators
+                            collectively. The allocation of the Podcast and Video Revenue Pool to individual podcasters
+                            and video creators will be thirty percent (30%) of the revenues generated from
+                            advertisements listened to or played on such podcast and video. For the purposes of
+                            allocation of the Podcast and Video Revenue Pool, each advertisement must have been played
+                            or listened to for a minimum of 15 seconds. The allocation of the Podcast and Video Revenue
+                            Pool shall be made by 24Six based solely on its data and its determination shall be final
+                            and binding.
+                        </p>
+                        <p class="fw-bold">
+                            Adjustments
+                        </p>
+                        <p>
+                            With 24Six’s music streaming service, users are able to subscribe, download and listen to
+                            the song, hear the podcast and view the video offline. While offline, 24Six will still be
+                            able to track offline use, however, such data will only become available once users go back
+                            online. As a result, the streaming data of a particular song artist and the advertisement
+                            revenue generated from a podcast or video are not fixed and will be subject to adjustment if
+                            and when users come back online. Upon receipt of such data, 24Six will adjust the revenue
+                            due to the song artists, podcasters, and video creators, which sum may be deducted or added
+                            to the next distribution. In the event that an adjustment is made after you terminate this
+                            Agreement, you should be entitled to receive such additional funds, or, you shall refund
+                            such excess funds as the case may be. This provision shall survive termination of this
+                            Agreement.
+                        </p>
+                        <p class="fw-bold">
+                            Compensation for Exclusive Content
+                        </p>
+                        <p>
+                            In the event that you release new content, which is made available exclusively on the 24Six
+                            Platform, 24Six will compensate you in an amount to be agreed upon, which shall be separate
+                            and apart from the compensation from the Revenue Pool.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-decoration-underline fw-bold">
+                            DISPUTES AND PROBLEMS
+                        </p>
+                        <p class="fw-bold">
+                            Limitation of liability and time for filing a claim
+                        </p>
+                        <p>
+                            You agree that your sole and exclusive remedy for any problems or dissatisfaction with 24Six
+                            Platform is to uninstall any 24Six software and to stop utilizing the 24Six Platform. 24Six
+                            shall have no obligation or liability arising from or related to third-party applications or
+                            the content thereof made available through or in connection with 24Six Platform, and while
+                            your relationship with such third-party applications may be governed by separate agreements
+                            with such third parties, your sole and exclusive remedy, as with respect to 24Six, for any
+                            problems or dissatisfaction with any third-party applications or the content thereof, is to
+                            uninstall or stop using such third-party applications.
+                        </p>
+                        <p>
+                            In no event will 24Six, its officers, members, shareholders, employees, agents, directors,
+                            subsidiaries, affiliates, successors, assigns, suppliers, or licensors be liable for (1) any
+                            indirect, special, incidental, punitive, exemplary, or consequential damages; (2) any loss
+                            of use, data, business, or profits (whether direct or indirect), in all cases arising out of
+                            the use of or inability to use 24Six Platform, devices, third-party applications, or
+                            third-party application content, regardless of legal theory, without regard to whether 24Six
+                            has been warned of the possibility of those damages, and even if a remedy fails of its
+                            essential purpose; or (3) aggregate liability for all claims relating to 24Six Platform,
+                            third-party applications, or third-party application content more than the greater of (a)
+                            the amounts paid by you to 24Six during the twelve months prior to the first claim; or
+                            $100.00.
+                        </p>
+                        <p class="fw-bold">
+                            Indemnity
+                        </p>
+                        <p>By using 24Six Platform , you agree, to the fullest extent permitted by law, to indemnify and
+                            hold 24Six, its directors, officers, employees, affiliates, agents, contractors, and
+                            licensors harmless from and against any and all damages, losses, and expenses of any kind
+                            (including reasonable attorney fees and costs) arising out of or related to: (1) your breach
+                            of any of these Terms (including any additional 24Six terms and conditions incorporated
+                            herein); (2) any representation or warranties made by you herein, (3) any User Content you
+                            post or otherwise contribute; (3) any activity in which you engage on or through 24Six
+                            Platform; and (4) your violation of any law or the rights of a third party.</p>
+                        <p class="fw-bold">
+                            Termination
+                        </p>
+                        <p>
+                            24Six has the option to terminate if you breach any of these Terms.
+                        </p>
+                        <p>
+                            Any party to these Terms may cancel at any time, except when you grant exclusive Content to
+                            24Six, in which case, the parties may terminate upon the expiration of the exclusivity
+                            period.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-decoration-underline fw-bold">GOVERNING LAW, MANDATORY ARBITRATION</p>
+                        <p class="fw-bold">Governing law and jurisdiction</p>
+                        <p>These Terms are governed by and shall be construed in accordance with the laws of Orthodox
+                            Judaism, as determined by the arbitrators set forth in the proceeding section. In the event
+                            that any dispute, claim, or controversy arises in connection with these Terms or 24Six
+                            Platform that is not subject to mandatory arbitration under the Arbitration Agreement below,
+                            then such matter shall be subject to the State of New York, United States of America,
+                            without regard to New York's choice or conflicts of law principles and each party agrees to
+                            the jurisdiction of the federal and state courts located in New York County, New York, to
+                            resolve such dispute. NOTHING HEREIN SHALL BE CONSTRUED TO CREATE A RIGHT TO LITIGATION OR
+                            OTHERWISE UNDERMINE THE ARBITRATION AGREEMENT SET FORTH BELOW.</p>
+                        <p class="fw-bold">
+                            Dispute Resolution and Arbitration Agreement
+                        </p>
+                        <p>
+                            Any claim arising under these terms must be commenced by filing a demand for arbitration or
+                            filing an individual action under the arbitration agreement below within one (1) year after
+                            the date the party asserting the claim first knows or reasonably should know of the act,
+                            omission, or default giving rise to the claim; and there shall be no right to any remedy for
+                            any claim not asserted within that time period. The parties expressly agree that any and all
+                            disputes or controversies arising out of this Agreement, its performance, or the alleged
+                            breach thereof, if not disposed of by agreement, shall be submitted for resolution by
+                            binding arbitration before the Beth Din of America (https://bethdin.org/). If the Beth Din
+                            of America is not available or otherwise unable to adjudicate the dispute, the parties shall
+                            engage in the process known as “Zabla” whereby each parties designates one rabbinical court
+                            judge and those judges jointly designate a third judge. The decision of the arbitrators
+                            shall be final and conclusive on the parties and shall be a bar to any suit, action or
+                            proceeding instituted in any federal, state or local court or before any administrative
+                            tribunal. THERE IS NO JUDGE OR JURY IN ARBITRATION, AND COURT REVIEW OF AN ARBITRATION AWARD
+                            IS LIMITED. The arbitrator must follow these Terms and can award the same damages and relief
+                            as a court (including attorney fees and costs only where allowable under applicable law),
+                            except that the arbitrator may not award any relief, including declaratory or injunctive
+                            relief, benefiting anyone but the parties to the arbitration. This arbitration provision
+                            will survive termination of these Terms.
+                        </p>
+                        <p class="fw-bold">
+                            Enforceability
+                        </p>
+                        <p>
+                            If this Arbitration Agreement is invalidated in whole or in part, the parties agree that the
+                            exclusive jurisdiction and venue described in the 'Governing law and jurisdiction' section
+                            above shall govern with respect to any aspect of any dispute, claim or controversy that, as
+                            a result of such invalidation, is no longer governed by this Arbitration Agreement.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-decoration-underline fw-bold">ABOUT THESE TERMS</p>
+                        <p class="fw-bold">Entire agreement</p>
+                        <p>
+                            Other than as stated in this section or as explicitly agreed upon in writing between you and
+                            24Six, these Terms constitute all the terms and conditions agreed upon between you and 24Six
+                            and supersede any prior agreements in relation to the subject matter of these Terms, whether
+                            written or oral.
+                        </p>
+                        <p class="fw-bold">Changes to these Terms</p>
+                        <p>We may make changes to these Terms (including any additional 24Six terms and conditions
+                            incorporated by reference herein) from time to time by notifying you of such changes by any
+                            reasonable means, including by posting the revised Terms on the applicable 24Six Service
+                            (provided that, for material changes, we will seek to supplement such notice by email, an
+                            in-service pop-up message or other prominent notice within the Service, or other means). Any
+                            such changes will not apply to any dispute between you and us arising prior to the date on
+                            which the Terms were changed. Your use of 24Six Platform following any changes to these
+                            Terms will constitute your acceptance of such changes. If you do not wish to continue using
+                            24Six Platform under the updated Terms, you may terminate your account by contacting
+                            us. </p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container-fluid">
+        <div class="navbar navbar-top">
+            <div class="d-flex justify-content-center justify-content-md-between align-items-center w-100 mb-4">
+                <a href="#">
+                    <img src="./assets/img/logo-horiz-yellow.svg" alt="logo">
+                </a>
+                <a href="#" class="btn btn-outline-warning d-none d-md-block">Artist Login</a>
+            </div>
+            <div>
+                <ul class="navbar-list me-lg-auto">
+                    <li class="nav-item ps-0">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How it works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plans">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#support">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn-outline-warning d-md-none mb-4">Artist Login</a>
+                <ul class="navbar-list">
+                    <li class="nav-item">
+                        <a href="home-artists.html" class="nav-link text-center text-md-right text-white">For artists &
+                            content creators</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar navbar-bottom">
+            <p><a href="tesrma-of-service-users.html">Terms of Service</a></p>
+            <p>© <span id="year"></span> 24Six, Inc. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<div class="modal modal-join-list fade" id="joinWaitListModal" tabindex="-1" aria-labelledby="joinWaitListModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title" id="joinWaitListModalLabel">Join the waitlist.</h3>
+                <p class="modal-text">Be the first to know when 24Six is available.</p>
+                <form action="" class="modal-form">
+                    <div class="mb-3">
+                        <label for="nameInput" class="modal-form__label">First name</label>
+                        <input type="text" class="modal-form__control" id="nameInput"
+                               placeholder="Enter you first name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailInput" class="modal-form__label">Email address</label>
+                        <input type="email" class="modal-form__control" id="emailInput"
+                               placeholder="Enter you email address">
+                    </div>
+                    <button type="submit" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#joinWaitListModalSuccessMessage">Join
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal modal-join-list modal-join-list__success fade" id="joinWaitListModalSuccessMessage" tabindex="-1"
+     aria-labelledby="joinWaitListModalSuccessMessage"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body modal-body__success-message">
+                <div class="modal__icon-box">
+                    <img src="assets/img/md-check-circle.svg" alt="check-circle">
+                </div>
+                <h4 class="modal-subtitle">Thank you for joining! Be sure to be on the lookout for the latest updates
+                    and our fast-approaching launch date!</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
+        integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/scripts/hamburger.js"></script>
+<script src="assets/scripts/swipper.js"></script>
+<script src="https://kit.fontawesome.com/fd67970f07.js" crossorigin="anonymous"></script>
+<script src="assets/scripts/js.js"></script>
+
+</body>
+</html>
