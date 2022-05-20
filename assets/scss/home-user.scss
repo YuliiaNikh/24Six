@@ -78,7 +78,7 @@
   text-align: center;
   font-weight: 600;
   font-size: 1.8rem;
-  line-height: 1.2;
+  line-height: 1.333;
 }
 
 .section-subtitle {
@@ -198,6 +198,10 @@ body {
       margin-bottom: 0;
     }
 
+    .download-link.disabled{
+      pointer-events: none;
+    }
+
     .download-link:first-of-type {
       margin-right: 0.875rem;
     }
@@ -285,7 +289,7 @@ body {
       font-size: 1.25rem;
       line-height: 1.5;
       font-weight: 500;
-      margin-bottom: 3.125rem;
+      margin-bottom: 0.75rem;
     }
 
     .user-info {
@@ -299,6 +303,7 @@ body {
         line-height: 1.5;
         font-weight: 500;
         margin-bottom: 0;
+        color: $gray;
       }
 
       &__avatar {
@@ -991,6 +996,11 @@ footer {
 }
 
 @media (min-width: 768px) {
+
+  .section__above-title{
+    scroll-margin-top: 10rem;
+  }
+
   .hero {
     padding: 10rem 0 4rem 0;
 
@@ -1223,6 +1233,7 @@ footer {
 
   .about {
     margin-bottom: 6.5rem;
+    padding-top: 4rem;
 
     .row:first-of-type {
       margin-bottom: 7rem;
@@ -1235,7 +1246,6 @@ footer {
     .feature-list {
       &__item {
         font-size: 1.125rem;
-        margin-bottom: 2.8675rem;
         max-width: 30.5rem;
 
         &:last-of-type {
@@ -1326,7 +1336,7 @@ footer {
   }
   .hero {
     &-title {
-      font-size: 4rem;
+      font-size: 4.5rem;
       line-height: 1.22;
       max-width: 35.75rem;
     }
@@ -1389,6 +1399,9 @@ footer {
   }
   .section-video {
     margin-bottom: 3rem;
+    .main-text{
+      margin-bottom: 5.9375rem;
+    }
   }
   .features {
 
@@ -1451,7 +1464,7 @@ footer {
     }
   }
   .about {
-    padding: 0 2.5rem;
+    padding: 4rem 2.5rem 0 2.5rem;
     margin-bottom: 8.875rem;
 
     .row:first-of-type {
