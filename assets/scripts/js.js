@@ -55,7 +55,10 @@ document.getElementById("year").innerHTML = new Date().getFullYear();
 
 
 //Scroll Animation
-AOS.init({once: true});
+AOS.init({
+    once: true,
+    disable: window.innerWidth < 767,
+});
 
 
 //Svg animation when visible
