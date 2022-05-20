@@ -57,6 +57,7 @@
   .hero {
     &-title {
       font-size: 2rem;
+      line-height: 1.3;
     }
 
     .btn-wrapper {
@@ -102,6 +103,8 @@
       &:last-child {
         color: $primary;
         text-align: center;
+        font-weight: 500;
+        line-height: 0.66666;
         margin-top: 3rem;
         max-width: 100%;
       }
@@ -171,17 +174,19 @@
     padding-bottom: 6rem;
     overflow: hidden;
 
-    .section__above-title{
+    .section__above-title {
       margin-bottom: 0.75rem;
-      img{
+
+      img {
         margin-top: 0.75rem;
+        width: 10rem;
       }
     }
 
     &-animation-container {
       display: flex;
       justify-content: center;
-      margin-top: 2.5rem;
+      margin-top: 0.5rem;
     }
 
     &-iphone {
@@ -249,12 +254,12 @@
       margin-bottom: 1.875rem;
     }
 
-    .features-slider-img{
+    .features-slider-img {
       margin: 0 0 2.5rem 0;
     }
 
-    .features-slider-text{
-      .swiper-slide{
+    .features-slider-text {
+      .swiper-slide {
         padding-right: 0.625rem;
       }
     }
@@ -423,9 +428,6 @@
     }
 
     .section-podcasts {
-      &-animation-container {
-        margin-top: 4rem;
-      }
 
       &-iphone {
         width: 13rem;
@@ -443,7 +445,7 @@
         max-width: 25.5rem;
       }
 
-      .features-slider-img{
+      .features-slider-img {
         margin: -1rem 0 0 0;
       }
     }
@@ -570,7 +572,7 @@
         margin-bottom: 3.5rem;
       }
 
-      .features-slider-img{
+      .features-slider-img {
         margin: -2.5rem 0 0 0;
       }
     }
@@ -645,7 +647,7 @@
     }
 
     .hero {
-      padding: 19rem 0 4rem 0;
+      padding: 15rem 0 4rem 0;
 
       &-title {
         font-size: 3rem;
@@ -662,7 +664,7 @@
         }
 
         .iphone-img {
-          max-width: 13rem;
+          max-width: 13.25rem;
           right: -13%;
           width: 100%;
         }
@@ -709,6 +711,11 @@
       }
     }
 
+    .section-issues {
+      .issue-card {
+        width: 21.375rem;
+      }
+    }
   }
 
   @media (min-width: 2000px) {

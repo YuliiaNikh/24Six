@@ -412,11 +412,12 @@
 }
 
 .section__above-title {
-  letter-spacing: 0.03rem;
   font-size: 1rem;
   line-height: 1.5;
+  letter-spacing: 0.03em;
   margin-bottom: 0.75rem;
   color: #FFB84A;
+  font-weight: 700;
 }
 .section__above-title span:first-of-type {
   color: #2A999A;
@@ -1581,6 +1582,7 @@ footer .navbar-bottom a {
 }
 .artist .hero-title {
   font-size: 2rem;
+  line-height: 1.3;
 }
 .artist .hero .btn-wrapper {
   margin-bottom: 4rem;
@@ -1616,6 +1618,8 @@ footer .navbar-bottom a {
 .artist .section-issues .section-title:last-child {
   color: #FFB84A;
   text-align: center;
+  font-weight: 500;
+  line-height: 0.66666;
   margin-top: 3rem;
   max-width: 100%;
 }
@@ -1678,11 +1682,12 @@ footer .navbar-bottom a {
 }
 .artist .section-podcasts .section__above-title img {
   margin-top: 0.75rem;
+  width: 10rem;
 }
 .artist .section-podcasts-animation-container {
   display: flex;
   justify-content: center;
-  margin-top: 2.5rem;
+  margin-top: 0.5rem;
 }
 .artist .section-podcasts-iphone {
   width: 10.1875rem;
@@ -1866,9 +1871,6 @@ footer .navbar-bottom a {
     width: auto;
     transform: scale(-1, 1) rotate(90deg);
   }
-  .artist .section-podcasts-animation-container {
-    margin-top: 4rem;
-  }
   .artist .section-podcasts-iphone {
     width: 13rem;
   }
@@ -2020,7 +2022,7 @@ footer .navbar-bottom a {
     margin-left: 0.5rem;
   }
   .artist .hero {
-    padding: 19rem 0 4rem 0;
+    padding: 15rem 0 4rem 0;
   }
   .artist .hero-title {
     font-size: 3rem;
@@ -2033,7 +2035,7 @@ footer .navbar-bottom a {
     width: 100%;
   }
   .artist .hero .devices .iphone-img {
-    max-width: 13rem;
+    max-width: 13.25rem;
     right: -13%;
     width: 100%;
   }
@@ -2059,6 +2061,9 @@ footer .navbar-bottom a {
   }
   .artist .section-banner .banner-wrapper {
     padding: 4.875rem 1.25rem 7.75rem 1.25rem;
+  }
+  .artist .section-issues .issue-card {
+    width: 21.375rem;
   }
 }
 @media (min-width: 2000px) {
