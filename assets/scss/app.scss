@@ -8,6 +8,12 @@
 @import "home-artist";
 @import "terms-of-services";
 
+
+html, body{
+  width: 100%;
+  position: relative;
+}
+
 html {
   scroll-behavior: smooth;
 }
