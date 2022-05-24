@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>24 Six | Contact Us</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon/favicon.svg">
+    <link rel="icon" type="image/png" href="./assets/img/favicon/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/scss/app.css">
+</head>
+<body class="contact">
+<nav id="navbar" class="navbar navbar-expand-md fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo-horiz-yellow.svg" alt="logo-horiz">
+        </a>
+        <button class="navbar-toggler hamburger hamburger--spring" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item d-md-none">
+                        <a class="nav-link active" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plans">Plans</a>
+                    </li>
+                </ul>
+                <div class="d-md-flex align-items-center">
+                    <a href="home-artists.html" class="nav-text d-md-none d-lg-block text-decoration-none text-primary">For
+                        artists & content creators</a>
+                    <button class="btn moda-btn mt-4 mt-md-0" data-bs-toggle="modal"
+                            data-bs-target="#joinWaitListModal">
+                        Join the waitlist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="contact-box">
+        <h2 class="section-title">Contact us</h2>
+        <p class="main-text">Our team is happy to answer your questions. Fill out the form and we’ll be in touch as soon as
+            possible.</p>
+        <form action="" class="contact-form modal-form">
+            <div class="mb-3">
+                <label for="nameInputContact" class="modal-form__label">First name</label>
+                <input type="text" class="modal-form__control" id="nameInputContact"
+                       placeholder="Enter you first name">
+            </div>
+            <div class="mb-3">
+                <label for="emailInputContact" class="modal-form__label">Email address</label>
+                <input type="email" class="modal-form__control" id="emailInputContact"
+                       placeholder="Enter you email address">
+            </div>
+            <div class="mb-3">
+                <label for="phoneInputContact" class="modal-form__label">Phone number (optional)</label>
+                <input type="tel" class="modal-form__control" id="phoneInputContact"
+                       placeholder="Enter your phone number">
+            </div>
+            <div class="mb-3">
+                <label for="textInputContact" class="modal-form__label">Leave us a message</label>
+                <textarea class="modal-form__control" id="textInputContact" cols="30" rows="10"
+                          placeholder="Enter text here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning mt-2">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="modal modal-join-list fade" id="joinWaitListModal" tabindex="-1" aria-labelledby="joinWaitListModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title" id="joinWaitListModalLabel">Join the waitlist.</h3>
+                <p class="modal-text">Be the first to know when 24Six is available.</p>
+                <form action="" class="modal-form">
+                    <div class="mb-3">
+                        <label for="nameInput" class="modal-form__label">First name</label>
+                        <input type="text" class="modal-form__control" id="nameInput"
+                               placeholder="Enter you first name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailInput" class="modal-form__label">Email address</label>
+                        <input type="email" class="modal-form__control" id="emailInput"
+                               placeholder="Enter you email address">
+                    </div>
+                    <button type="submit" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#joinWaitListModalSuccessMessage">Join
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal modal-join-list modal-join-list__success fade" id="joinWaitListModalSuccessMessage" tabindex="-1"
+     aria-labelledby="joinWaitListModalSuccessMessage"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body modal-body__success-message">
+                <div class="modal__icon-box">
+                    <img src="assets/img/md-check-circle.svg" alt="check-circle">
+                </div>
+                <h4 class="modal-subtitle">Thank you for joining! Be sure to be on the lookout for the latest updates
+                    and our fast-approaching launch date!</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal modal-video fade" id="popupVideoModal" tabindex="-1" aria-labelledby="popupVideoModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="ratio ratio-16x9 mw-100 overflow-hidden">
+                <div class="play-btn">
+                    <img src="./assets/img/play.svg" alt="play icon">
+                </div>
+                <video
+                        class="popup-video video-box w-100"
+                        controls
+                        poster="./assets/img/video-thumbnail.png"
+                />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
+        integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/scripts/hamburger.js"></script>
+<script src="assets/scripts/swipper.js"></script>
+<script src="https://kit.fontawesome.com/fd67970f07.js" crossorigin="anonymous"></script>
+<script src="assets/scripts/js.js"></script>
+
+</body>

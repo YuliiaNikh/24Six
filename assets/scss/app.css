@@ -178,6 +178,9 @@
   }
 }
 
+.modal::-webkit-scrollbar {
+  width: 2px;
+}
 .modal-content {
   background: #272625;
   box-shadow: 10px 20px 50px rgba(19, 18, 17, 0.25);
@@ -2102,6 +2105,60 @@ footer .navbar-bottom a {
   font-size: 1rem;
   font-family: "SF Pro Display", serif;
   font-weight: 300;
+}
+
+.contact {
+  background: rgba(18, 19, 22, 0.9);
+  min-height: 100vh;
+  height: 100%;
+  padding: 9rem 0 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-box {
+  height: 100%;
+  background: #1F2023;
+  border: 0.25rem solid #FFB84A;
+  border-radius: 1.5rem;
+  padding: 3rem 1rem;
+}
+.contact .section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact .main-text {
+  margin: 0 auto 2rem auto;
+  max-width: 29.125rem;
+  text-align: center;
+}
+.contact-form {
+  color: #C9C1BC;
+  max-width: 30.875rem;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .contact {
+    padding: 9rem 0 4rem 0;
+  }
+  .contact.artist {
+    padding: 14rem 0 4rem 0;
+  }
+  .contact .contact-box {
+    padding: 4.5rem 0;
+  }
+}
+@media (min-width: 990px) {
+  .contact {
+    padding: 9.575rem 0 4.375rem 0;
+  }
+  .contact .contact-box {
+    padding: 5.625rem 0;
+  }
+  .contact .section-title {
+    font-size: 3rem;
+  }
 }
 
 html, body {

@@ -1,0 +1,55 @@
+.contact {
+  background: rgba(18, 19, 22, 0.9);
+  min-height: 100vh;
+  height: 100%;
+  padding: 9rem 0 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-box {
+    height: 100%;
+    background: #1F2023;
+    border: 0.25rem solid #FFB84A;
+    border-radius: 1.5rem;
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .main-text {
+    margin: 0 auto 2rem auto;
+    max-width: 29.125rem;
+    text-align: center;
+  }
+
+  &-form {
+    color: $gray;
+    max-width: 30.875rem;
+    margin: auto;
+  }
+
+  @media (min-width: 768px) {
+    padding: 9rem 0 4rem 0;
+    &.artist{
+      padding: 14rem 0 4rem 0;
+    }
+    .contact-box{
+      padding: 4.5rem 0;
+    }
+  }
+  @media (min-width: 990px) {
+    padding: 9.575rem 0 4.375rem 0;
+
+    .contact-box {
+      padding: 5.625rem 0;
+    }
+    .section-title {
+      font-size: 3rem;
+    }
+  }
+}

@@ -7,6 +7,7 @@
 @import "home-user";
 @import "home-artist";
 @import "terms-of-services";
+@import "contact";
 
 
 html, body{
@@ -23,7 +24,7 @@ body {
   font-family: 'SF Pro Display', sans-serif;
   background: rgba(18, 19, 22, 0.9);
   position:relative;
-  overflow-x:hidden
+  overflow-x:hidden;
 }
 
 .container-fluid {

@@ -1,4 +1,7 @@
 .modal {
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
 
   &-content {
     background: #272625;
@@ -166,7 +169,7 @@
         max-width: 29.5rem;
       }
     }
-    &.modal-join-list__success{
+    &.modal-join-list__success {
       .modal-dialog {
         max-width: 36rem;
       }

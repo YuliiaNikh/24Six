@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>24 Six | Contact Us</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon/favicon.svg">
+    <link rel="icon" type="image/png" href="./assets/img/favicon/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/scss/app.css">
+</head>
+<body class="contact artist">
+<nav id="navbar" class="navbar navbar-expand-md fixed-top flex-wrap">
+    <div id="back-link" class="back__link d-none d-md-block w-100">
+        <div class="container-fluid">
+            <a href="index.html">
+                <i class="fa-solid fa-arrow-left me-2"></i>
+                Back to Home Page
+            </a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo-horiz-yellow.svg" alt="logo-horiz">
+            <span class="d-none d-lg-inline-block">
+        for Artists
+      </span>
+        </a>
+        <button class="navbar-toggler hamburger hamburger--spring" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item d-md-none">
+                        <a class="nav-link" href="index.html">
+                            <i class="fa-solid fa-arrow-left pe-2"></i> Back to Home Page
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#support">FAQs</a>
+                    </li>
+                </ul>
+                <div class="d-md-flex align-items-center">
+                    <button class="btn moda-btn mt-5 mt-md-0" data-bs-toggle="modal"
+                            data-bs-target="#joinWaitListModal">
+                        Join as an artist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="contact-box">
+        <h2 class="section-title">Contact us</h2>
+        <p class="main-text">Our team is happy to answer your questions. Fill out the form and we’ll be in touch as soon as
+            possible.</p>
+        <form action="" class="contact-form modal-form">
+            <div class="mb-3">
+                <label for="nameInputContact" class="modal-form__label">First name</label>
+                <input type="text" class="modal-form__control" id="nameInputContact"
+                       placeholder="Enter you first name">
+            </div>
+            <div class="mb-3">
+                <label for="emailInputContact" class="modal-form__label">Email address</label>
+                <input type="email" class="modal-form__control" id="emailInputContact"
+                       placeholder="Enter you email address">
+            </div>
+            <div class="mb-3">
+                <label for="phoneInputContact" class="modal-form__label">Phone number (optional)</label>
+                <input type="tel" class="modal-form__control" id="phoneInputContact"
+                       placeholder="Enter your phone number">
+            </div>
+            <div class="mb-3">
+                <label for="textInputContact" class="modal-form__label">Leave us a message</label>
+                <textarea class="modal-form__control" id="textInputContact" cols="30" rows="10"
+                          placeholder="Enter text here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning mt-2">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="modal modal-artists fade" id="joinWaitListModal" tabindex="-1" aria-labelledby="joinWaitListModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title" id="joinWaitListModalLabel">Join 24Six</h3>
+                <p class="modal-text">Join the growing collection of Jewish artists prepared to change kosher
+                    entertainment forever. Enter the information below, and one of our representatives will reach out to
+                    your shortly.</p>
+                <form action="" class="modal-form">
+                    <div class="mb-3">
+                        <label for="nameInput" class="modal-form__label">Name</label>
+                        <input type="text" class="modal-form__control" id="nameInput"
+                               placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailInput" class="modal-form__label">Email address</label>
+                        <input type="email" class="modal-form__control" id="emailInput"
+                               placeholder="Enter your email address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="linkInput" class="modal-form__label">Phone number</label>
+                        <input type="tel" class="modal-form__control" id="linkInput"
+                               placeholder="Enter your phone number">
+                    </div>
+                    <div class="mb-3">
+                        <label for="textInput" class="modal-form__label">Leave us a message</label>
+                        <textarea class="modal-form__control" id="textInput" cols="30" rows="10"
+                                  placeholder="Enter text here"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <p>What content do you create?</p>
+                        <div class="modal-form-check form-check">
+                            <input class="modal-form-check__input form-check-input" type="checkbox" value=""
+                                   id="musicArtistCheckbox">
+                            <label class="modal-form-check__label form-check-label" for="musicArtistCheckbox">
+                                Music
+                            </label>
+                        </div>
+                        <div class="modal-form-check form-check">
+                            <input class="modal-form-check__input form-check-input" type="checkbox" value=""
+                                   id="videoProducerCheckbox">
+                            <label class="modal-form-check__label form-check-label" for="videoProducerCheckbox">
+                                Videos
+                            </label>
+                        </div>
+                        <div class="modal-form-check form-check">
+                            <input class="modal-form-check__input form-check-input" type="checkbox" value=""
+                                   id="podcasterCheckbox">
+                            <label class="modal-form-check__label form-check-label" for="podcasterCheckbox">
+                                Podcasts
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#joinWaitListModalSuccessMessage">Join
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal modal-artists fade" id="joinWaitListModalSuccessMessage" tabindex="-1"
+     aria-labelledby="joinWaitListModalSuccessMessage"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body modal-body__success-message">
+                <div class="modal__icon-box">
+                    <img src="assets/img/md-check-circle.svg" alt="check-circle">
+                </div>
+                <h4 class="modal-subtitle">Thank you for reaching out!</h4>
+                <p class="modal-text">
+                    We will contact you as soon as possible. We look forward to working with you!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal modal-video fade" id="artistsVideoModal" tabindex="-1" aria-labelledby="artistsVideoModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="ratio ratio-16x9">
+                <div class="play-btn">
+                    <img src="./assets/img/play.svg" alt="play icon">
+                </div>
+                <video
+                        class="artists-video video-box"
+                        controls
+                        style="width: 100%;"
+                        poster="./assets/img/video-thumbnail.png"
+                />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
+        integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/scripts/hamburger.js"></script>
+<script src="assets/scripts/swipper.js"></script>
+<script src="https://kit.fontawesome.com/fd67970f07.js" crossorigin="anonymous"></script>
+<script src="assets/scripts/js.js"></script>
+
+</body>
