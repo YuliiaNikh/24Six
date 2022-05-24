@@ -16,11 +16,22 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/scss/app.css">
 </head>
-<body>
-<nav id="navbar" class="navbar navbar-expand-md fixed-top">
+<body class="artist">
+<nav id="navbar" class="navbar navbar-expand-md fixed-top flex-wrap">
+    <div id="back-link" class="back__link d-none d-md-block w-100">
+        <div class="container-fluid">
+            <a href="index.html">
+                <i class="fa-solid fa-arrow-left me-2"></i>
+                Back to Home Page
+            </a>
+        </div>
+    </div>
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="assets/img/logo-horiz-yellow.svg" alt="logo-horiz">
+            <span class="d-none d-lg-inline-block">
+        for Artists
+      </span>
         </a>
         <button class="navbar-toggler hamburger hamburger--spring" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent"
@@ -31,26 +42,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div>
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item d-md-none">
-                        <a class="nav-link active" href="#about">About</a>
+                        <a class="nav-link" href="index.html">
+                            <i class="fa-solid fa-arrow-left pe-2"></i> Back to Home Page
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#features">Features</a>
+                        <a class="nav-link active" href="home-artists.html#features">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                        <a class="nav-link" href="home-artists.html#how-it-works">How It Works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#plans">Pricing</a>
+                        <a class="nav-link" href="home-artists.html#support">FAQs</a>
                     </li>
                 </ul>
                 <div class="d-md-flex align-items-center">
-                    <a href="home-artists.html" class="nav-text d-md-none d-lg-block text-decoration-none text-primary">For
-                        artists & content creators</a>
-                    <button class="btn moda-btn mt-4 mt-md-0" data-bs-toggle="modal"
+                    <button class="btn moda-btn mt-5 mt-md-0" data-bs-toggle="modal"
                             data-bs-target="#joinWaitListModal">
-                        Join the waitlist
+                        Join as an artist
                     </button>
                 </div>
             </div>
@@ -427,44 +438,25 @@
 </main>
 <footer>
     <div class="container-fluid">
-        <div class="navbar navbar-top">
-            <div class="d-flex justify-content-center justify-content-md-between align-items-center w-100 mb-4">
-                <a href="#">
-                    <img src="./assets/img/logo-horiz-yellow.svg" alt="logo">
-                </a>
-                <a href="#" class="btn btn-outline-warning d-none d-md-block">Artist Login</a>
-            </div>
-            <div>
-                <ul class="navbar-list me-lg-auto">
-                    <li class="nav-item ps-0">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#how-it-works">How it works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#plans">Plans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#support">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact us</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="text-center">
-                <a href="#" class="btn btn-outline-warning d-md-none mb-4">Artist Login</a>
-                <ul class="navbar-list">
-                    <li class="nav-item">
-                        <a href="home-artists.html" class="nav-link text-center text-md-right text-white">For artists &
-                            content creators</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="navbar navbar-top mb-5 align-items-center">
+            <a href="#" class="footer-logo order-1 mb-4 mb-md-0">
+                <img src="./assets/img/logo-horiz-yellow.svg" alt="logo" class="me-1"> for Artists
+            </a>
+            <ul class="navbar-list mb-0 my-md-4 my-lg-0 order-3 order-md-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="home-artists.html#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="home-artists.html#how-it-works">How it works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="home-artists.html#support">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                </li>
+            </ul>
+            <a href="#" class="btn btn-outline-warning order-2 order-md-3 mb-4 mb-md-0">Artist Login</a>
         </div>
         <div class="navbar navbar-bottom">
             <p><a href="terms-of-service-artists.html">Terms of Service</a></p>

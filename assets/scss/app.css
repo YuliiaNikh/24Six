@@ -1822,6 +1822,9 @@ footer .navbar-bottom a {
   text-align: center;
   margin-bottom: 1rem;
 }
+.artist footer .navbar-list .nav-item:last-of-type {
+  padding: 0 1.25rem;
+}
 .artist footer .footer-logo {
   color: #fff;
   font-size: 1.5rem;
@@ -1905,6 +1908,9 @@ footer .navbar-bottom a {
   }
   .artist footer .navbar-list {
     flex-direction: row;
+  }
+  .artist footer .navbar-list .nav-item {
+    margin-bottom: 0;
   }
 }
 @media (min-width: 990px) {
@@ -2010,7 +2016,7 @@ footer .navbar-bottom a {
   .artist .section-support {
     padding-bottom: 7.5rem;
   }
-  .artist footer .nav-item {
+  .artist footer .navbar-list .nav-item {
     margin-bottom: 0;
   }
 }
