@@ -471,7 +471,7 @@ body::before {
   -webkit-backdrop-filter: blur(225px);
   backdrop-filter: blur(225px);
   transform: translate3d(0, 0, 0);
-  z-index: -1;
+  z-index: 0;
 }
 body::after {
   content: "";
@@ -483,6 +483,9 @@ body::after {
   left: 0;
   background: rgba(18, 19, 22, 0.9);
   z-index: -1;
+}
+body > * {
+  z-index: 2;
 }
 
 .hero {
