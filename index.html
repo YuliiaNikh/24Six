@@ -15,6 +15,8 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/scss/app.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
 <body>
 <nav id="navbar" class="navbar navbar-expand-md fixed-top">
@@ -330,6 +332,37 @@
                     </div>
                     <div class="bg-wrapper">
                         <img src="assets/img/bg/about-2.svg" alt="" class="bg-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="video" class="section-video">
+        <div class="container-fluid">
+            <h2 data-aos="fade-up"
+                data-aos-duration="500"
+                class="section-title">How do our filters work?</h2>
+            <p data-aos="fade-up"
+               data-aos-duration="500"
+               data-aos-delay="20"
+               class="main-text">
+                Everything is vetted before it’s uploaded to 24Six. In addition, you can customize the experience for
+                each member of your family with our filters.
+            </p>
+            <div class="row">
+                <div class="col-12 col-md-10 mx-auto">
+                    <div data-aos="fade"
+                         data-aos-duration="700"
+                         data-aos-delay="50"
+                         class="ratio ratio-16x9">
+                        <div class="play-btn">
+                            <img src="./assets/img/play.svg" alt="play icon">
+                        </div>
+                        <video
+                                class="filter-video video-box"
+                                controls
+                                style="width: 100%;"
+                                poster="./assets/img/video-thumbnail.png"></video>
                     </div>
                 </div>
             </div>
@@ -735,6 +768,16 @@
                                 Curate the experience for each member of your family.
                             </p>
                             <p>Watch this video to see how it works:</p>
+                            <div class="ratio ratio-16x9">
+                                <div class="play-btn">
+                                    <img src="./assets/img/play.svg" alt="play icon">
+                                </div>
+                                <video
+                                        class="filter-video video-box"
+                                        controls
+                                        style="width: 100%;"
+                                        poster="./assets/img/video-thumbnail.png"></video>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -942,20 +985,31 @@
      aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
+            <div class="ratio ratio-16x9 mw-100 overflow-hidden">
+                <div class="play-btn">
+                    <img src="./assets/img/play.svg" alt="play icon">
+                </div>
+                <video
+                        class="popup-video video-box w-100"
+                        controls
+                        poster="./assets/img/video-thumbnail.png"></video>
+            </div>
         </div>
     </div>
 </div>
 
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-
+        crossorigin="anonymous"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
         integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="assets/scripts/swipper.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="assets/scripts/hamburger.js"></script>
+<script src="assets/scripts/swipper.js"></script>
 <script src="https://kit.fontawesome.com/fd67970f07.js" crossorigin="anonymous"></script>
 <script src="assets/scripts/js.js"></script>
 
