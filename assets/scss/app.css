@@ -467,9 +467,6 @@ body:before {
   top: 0;
   left: 0;
   background: url("../img/bg/hero-bg.svg") top right no-repeat;
-  filter: blur(225px);
-  -webkit-backdrop-filter: blur(225px);
-  backdrop-filter: blur(225px);
   z-index: -1;
 }
 body:after {
