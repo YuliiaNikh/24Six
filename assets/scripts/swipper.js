@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // let swiper = new Swiper(".testimonials-carousel", {
-    //     slidesPerView: "auto",
-    //     spaceBetween: 32,
-    //     pagination: {
-    //         el: ".swiper-pagination",
-    //         clickable: true,
-    //     },
-    // });
+    let swiper = new Swiper(".testimonials-carousel", {
+        slidesPerView: "auto",
+        spaceBetween: 32,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
 
     let swiper2 = new Swiper(".features-slider-text", {
         autoHeight: true,
