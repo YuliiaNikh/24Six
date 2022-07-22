@@ -457,6 +457,8 @@
 
 body {
   position: relative;
+  background: rgba(18, 19, 22, 0.9) url("../img/bg/hero-bg.svg") no-repeat top;
+  background-size: 100% auto;
 }
 body::before {
   content: "";
@@ -466,7 +468,6 @@ body::before {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("../img/bg/hero-bg.svg") top right no-repeat;
   filter: blur(225px);
   -webkit-backdrop-filter: blur(225px);
   backdrop-filter: blur(225px);
@@ -483,9 +484,6 @@ body::after {
   left: 0;
   background: rgba(18, 19, 22, 0.9);
   z-index: -1;
-}
-body > * {
-  z-index: 2;
 }
 
 .hero {
@@ -1520,7 +1518,7 @@ footer .navbar-bottom a {
   }
 }
 .artist {
-  background: rgba(18, 19, 22, 0.9) url("../img/bg/hero-artists.svg") no-repeat;
+  background: rgba(18, 19, 22, 0.9) url("../img/bg/hero-artists.svg") no-repeat center;
   background-size: 100% auto;
   /*Svg animation*/
 }
@@ -2154,7 +2152,6 @@ html {
 
 body {
   font-family: "SF Pro Display", sans-serif;
-  background: rgba(18, 19, 22, 0.9);
   position: relative;
   overflow-x: hidden;
 }

@@ -138,6 +138,8 @@
 
 body {
   position: relative;
+  background: rgba(18, 19, 22, 0.9) url('../img/bg/hero-bg.svg') no-repeat top;
+  background-size: 100% auto;
 
   &::before {
     content: "";
@@ -147,7 +149,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background: url("../img/bg/hero-bg.svg") top right no-repeat;
     filter: blur(225px);
     -webkit-backdrop-filter: blur(225px);
     backdrop-filter: blur(225px);
@@ -165,10 +166,6 @@ body {
     left: 0;
     background: rgba(18, 19, 22, 0.9);
     z-index: -1;
-  }
-
-  & > *{
-    z-index: 2;
   }
 }
 
