@@ -139,7 +139,7 @@
 body {
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     display: block;
     width: 100%;
@@ -152,7 +152,7 @@ body {
     z-index: -1;
   }
 
-  &:after {
+  &::after {
     content: "";
     display: block;
     width: 100%;

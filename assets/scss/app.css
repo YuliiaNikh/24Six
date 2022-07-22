@@ -458,7 +458,7 @@
 body {
   position: relative;
 }
-body:before {
+body::before {
   content: "";
   display: block;
   width: 100%;
@@ -469,7 +469,7 @@ body:before {
   background: url("../img/bg/hero-bg.svg") top right no-repeat;
   z-index: -1;
 }
-body:after {
+body::after {
   content: "";
   display: block;
   width: 100%;
