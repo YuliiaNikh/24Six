@@ -138,10 +138,10 @@
 
 body {
   position: relative;
-  //&.users{
-  //  background: rgba(18, 19, 22, 0.9) url('../img/bg/hero-bg.svg') no-repeat top;
-  //  background-size: 100% auto;
-  //}
+  &.users{
+    background: rgba(18, 19, 22, 0.9) url('../img/bg/hero-bg.svg') no-repeat top;
+    background-size: 100% auto;
+  }
   //
   //&::before {
   //  content: "";

@@ -458,6 +458,10 @@
 body {
   position: relative;
 }
+body.users {
+  background: rgba(18, 19, 22, 0.9) url("../img/bg/hero-bg.svg") no-repeat top;
+  background-size: 100% auto;
+}
 
 .hero {
   padding: 8rem 0 6rem 0;
