@@ -457,10 +457,7 @@
 
 body {
   position: relative;
-}
-body.users {
-  background: rgba(18, 19, 22, 0.9) url("../img/bg/hero-bg.svg") no-repeat top;
-  background-size: 100% auto;
+  background: rgba(18, 19, 22, 0.9);
 }
 body::after {
   content: "";
@@ -476,6 +473,7 @@ body::after {
 
 .hero {
   padding: 8rem 0 6rem 0;
+  position: relative;
 }
 .hero-title {
   color: #fff;
