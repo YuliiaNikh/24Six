@@ -48,7 +48,7 @@
   }
 }
 
-.btn-outline-warning{
+.btn-outline-warning {
   background: transparent;
   color: $primary;
   font-size: 1rem;
@@ -136,6 +136,7 @@
   }
 }
 
+
 body {
   position: relative;
   background: rgba(18, 19, 22, 0.9);
@@ -186,14 +187,20 @@ body {
       line-height: 1.75rem;
       margin-right: 1rem;
       margin-bottom: 0;
+      flex-basis: 100%;
     }
 
     .download-link.disabled{
       pointer-events: none;
     }
 
-    .download-link:first-of-type {
-      margin-right: 0.875rem;
+    .download-link {
+      flex-basis: calc(100% / 3);
+      margin-bottom: 0.875rem;
+    }
+
+    .download-link:last-of-type {
+      margin-right:0;
     }
   }
 
@@ -491,6 +498,7 @@ body {
 
 .features {
   padding-bottom: 6rem;
+
   .bg-wrapper {
     top: 50%;
     left: 50%;
@@ -800,6 +808,7 @@ body {
 
 .section-support {
   padding-bottom: 3rem;
+
   .section__above-title {
     text-align: center;
   }
@@ -837,9 +846,6 @@ body {
         box-shadow: none;
       }
 
-      &:hover {
-        padding-left: 0.75rem;
-      }
     }
 
     &-body {
@@ -896,8 +902,8 @@ footer {
       padding: 0;
       margin-bottom: 2.5rem;
 
-      .nav-item {
-        padding: 0 1.25rem;
+      .nav-item-footer {
+        padding: 0 1.25rem !important;
         margin-bottom: 1rem;
 
         &:last-of-type {
@@ -910,7 +916,8 @@ footer {
         color: $gray;
         font-size: 1rem;
         line-height: 1.3125;
-        &:hover{
+
+        &:hover {
           color: $primary;
         }
       }
@@ -969,7 +976,7 @@ footer {
       display: block;
     }
 
-    img{
+    img {
       max-width: 15.6875rem;
     }
 
@@ -990,7 +997,7 @@ footer {
 
 @media (min-width: 768px) {
 
-  .section__above-title{
+  .section__above-title {
     scroll-margin-top: 10rem;
   }
 
@@ -1203,6 +1210,16 @@ footer {
       margin-bottom: 1.5rem;
     }
 
+    & > p {
+      flex-basis: auto;
+    }
+
+    .download-link {
+      margin-right: 0.875rem;
+      flex-basis: auto;
+      margin-bottom: 0;
+    }
+
     &-phone {
       max-width: 9.5rem;
       position: relative;
@@ -1392,7 +1409,8 @@ footer {
   }
   .section-video {
     margin-bottom: 3rem;
-    .main-text{
+
+    .main-text {
       margin-bottom: 5.9375rem;
     }
   }
@@ -1427,13 +1445,19 @@ footer {
     }
   }
   .plans {
-    .section-title{
+    .section-title {
       max-width: 29rem;
     }
+
     .wrapper {
       padding: 5.25rem 3.5rem 0 3.5rem;
       max-width: 77rem;
       margin: 0 auto 7.75rem auto;
+    }
+  }
+  .section-support {
+    .accordion-button:hover {
+      padding-left: 0.75rem;
     }
   }
 }

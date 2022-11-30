@@ -1,0 +1,258 @@
+.plan {
+
+  .plan-cards {
+    padding-top: 6rem;
+
+    &_title {
+      color: $white;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    &_text {
+      color: $gray;
+      max-width: 51.5rem;
+      font-size: 1rem;
+      margin: 0 auto 3rem auto;
+    }
+  }
+
+  .switcher {
+    &_buttons-container {
+      display: flex;
+      border: 1px solid $primary;
+      border-radius: 2.5rem;
+      padding: 0.5rem;
+      max-width: 21.75rem;
+      margin: 0 auto 2rem auto;
+      justify-content: space-between;
+    }
+
+    &_button {
+      padding: 0.75rem 1.25rem;
+      background-color: transparent;
+      transition: all 0.3s;
+      color: $white;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 1.5rem;
+
+      span {
+        color: $primary;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .btn-check:checked ~ .switcher_button {
+      background-color: $primary;
+      color: $dark;
+      box-shadow: none;
+
+      span {
+        color: $dark;
+      }
+    }
+  }
+
+  .plan-card {
+    border-radius: 1rem;
+    background: #272625;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.25rem 0.5rem;
+      background-color: $primary;
+      text-align: center;
+      border-radius: 0.5rem;
+      color: $dark;
+      font-size: 0.875rem;
+      line-height: 1.3;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    &_title {
+      text-align: center;
+      color: $white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    &_price {
+      text-align: center;
+      line-height: 1.5;
+      color: #C0C0C0;
+      margin-bottom: 1.5rem;
+
+      &-regular {
+        text-decoration: line-through;
+        display: block;
+        visibility: hidden;
+      }
+
+      &-sale {
+        font-weight: 700;
+        color: $primary;
+        font-size: 1.25rem;
+        display: block;
+      }
+    }
+
+    &__text {
+      color: #B5B2B0;
+      text-align: center;
+
+      span {
+        color: $white;
+      }
+    }
+
+    &__image {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #4F4C4A;
+      background-color: transparent;
+      transition: all 0.3s;
+      margin: 1.5rem auto;
+    }
+
+    &__profile-number {
+      color: $white;
+      text-align: center;
+      font-weight: 700;
+
+      span {
+        margin-top: 0.25rem;
+        display: block;
+        color: #B5B2B0;
+        font-weight: 400;
+      }
+    }
+
+    //&::after {
+    //  content: url("../img/triangle.svg");
+    //  position: absolute;
+    //  left: 50%;
+    //  top: 99%;
+    //  transform: translateX(-50%);
+    //  opacity: 0;
+    //  transition: opacity 0.3s;
+    //}
+
+    //&:hover {
+    //  background-color: $primary;
+    //
+    //  .plan-card_title {
+    //    color: $dark;
+    //  }
+    //
+    //  .plan-card_price {
+    //    color: $dark;
+    //
+    //    &-regular.visible {
+    //      visibility: visible;
+    //    }
+    //
+    //    &-sale {
+    //      color: $dark;
+    //    }
+    //  }
+    //
+    //  .plan-card__text, .plan-card__text span {
+    //    color: $dark;
+    //  }
+    //
+    //  .plan-card__image {
+    //    border-color: transparent;
+    //    background-color: #101011;
+    //  }
+    //
+    //  .plan-card__profile-number, .plan-card__profile-number span {
+    //    color: $dark;
+    //  }
+    //
+    //  .badge {
+    //    background-color: $dark;
+    //    color: $primary;
+    //  }
+    //
+    //  //&::after {
+    //  //  opacity: 1;
+    //  //}
+    //}
+
+  }
+
+  .cards-wrapper{
+    margin-bottom: 3.125rem;
+  }
+
+  .btn-warning{
+    margin: auto;
+    display: block;
+    max-width: 11.25rem;
+    padding: 0.5rem 2.5rem;
+  }
+
+  @media (width >= 768px) {
+    .plan-cards {
+      padding-top: 7.5rem;
+    }
+
+    .cards-wrapper {
+      max-width: 38.25rem;
+      margin:0 auto  3.125rem auto;
+    }
+
+    .plan-card {
+      &_price {
+        &-duration_single {
+          display: block;
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+  }
+
+  @media (width >= 1024px) {
+    .plan-cards {
+      &_title {
+        font-size: 3rem;
+      }
+
+      &_text {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media (width >= 1200px) {
+    .plan-cards {
+      padding-top: 7.5rem;
+
+      &_title {
+        font-size: 4.375rem;
+      }
+    }
+  }
+}

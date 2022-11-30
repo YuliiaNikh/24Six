@@ -50,15 +50,23 @@
                 <div class="d-md-flex align-items-center">
                     <a href="home-artists.html" class="nav-text d-md-none d-lg-block text-decoration-none text-primary">For
                         artists & content creators</a>
-                    <button class="btn moda-btn mt-4 mt-md-0" data-bs-toggle="modal"
-                            data-bs-target="#joinWaitListModal">
-                        Join the waitlist
-                    </button>
+                    <a href="#" class="btn moda-btn mt-4 mt-md-0">
+                        Sign up
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </nav>
+<section style='margin-top: 85px; position:relative;'>
+    <img src="./assets/img/P1eI2h5w.png" alt="" class="img-fluid">
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <div class="d-flex">
+            <button type="button" class="btn btn-warning me-5">Warning</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+        </div>
+    </div>
+</section>
 <header class="hero">
     <div class="container-fluid">
         <div class="row">
@@ -82,9 +90,9 @@
                      data-aos-delay="700"
                      data-aos-offset="0"
                      class="btn-wrapper">
-                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">
-                        Join the waitlist
-                    </button>
+                    <a href="#" class="btn btn-warning border border-warning">
+                        Sign up
+                    </a>
                     <!--                    <a href="#video" class="btn btn-outline-light">Watch video</a>-->
                     <a href="#" class="btn btn-outline-light" data-bs-toggle="modal"
                        data-bs-target="#popupVideoModal">Watch video</a>
@@ -129,6 +137,7 @@
     </div>
 </header>
 <main>
+
     <section class="testimonials">
         <div class="container-fluid">
             <h2 data-aos="fade-up"
@@ -222,15 +231,16 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            <button data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    data-aos-delay="150"
-                    data-aos-duration="500"
-                    data-aos-offset="0"
-                    class="btn btn-warning d-none d-xl-block mx-auto" data-bs-toggle="modal"
-                    data-bs-target="#joinWaitListModal">
-                Join the waitlist
-            </button>
+            <div class="text-center">
+                <a href="#" data-aos="fade-up"
+                   data-aos-anchor-placement="top-bottom"
+                   data-aos-delay="150"
+                   data-aos-duration="500"
+                   data-aos-offset="0"
+                   class="btn btn-warning d-none d-xl-inline-block mx-auto">
+                    Sign up
+                </a>
+            </div>
             <div class="bg-wrapper">
                 <img src="assets/img/bg/testimonials.svg" alt="" class="bg-img">
             </div>
@@ -545,35 +555,35 @@
                     <div class="swiper features-slider-img">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="assets/img/features/users/feature-1.png" alt="multimedia-library">
+                                <img src="assets/img/features/users/feature-new-1.png" alt="multimedia-library">
                             </div>
                             <div class="swiper-slide">
-                                <img src="assets/img/features/users/custom-filters.png" alt="custom-filters">
+                                <img src="assets/img/features/users/feature-new-2.png" alt="custom-filters">
                             </div>
                             <div class="swiper-slide">
-                                <img src="assets/img/features/users/feature-3.png" alt="offline-hd-streaming">
+                                <img src="assets/img/features/users/feature-new-3.png" alt="offline-hd-streaming">
                             </div>
                             <div class="swiper-slide">
-                                <img src="assets/img/features/users/personal-playlists.png" alt="personal-playlists">
+                                <img src="assets/img/features/users/feature-new-4.png" alt="personal-playlists">
                             </div>
                             <div class="swiper-slide">
-                                <img src="assets/img/features/users/shared-playlists.png" alt="shared-playlists">
+                                <img src="assets/img/features/users/feature-new-5.png" alt="shared-playlists">
                             </div>
                             <div class="swiper-slide">
-                                <img src="assets/img/features/users/video-in-music%20.png" alt="video-in-music">
+                                <img src="assets/img/features/users/feature-new-6.png" alt="video-in-music">
                             </div>
                             <div class="swiper-slide">
-                                <img src="assets/img/features/users/in-app-notifications%20.png"
+                                <img src="assets/img/features/users/feature-new-7.png"
                                      alt="in-app-notifications">
                             </div>
                             <div class="swiper-slide">
-                                <img src="assets/img/features/users/integrated-search.png" alt="integrated-search">
+                                <img src="assets/img/features/users/feature-new-8.png" alt="integrated-search">
                             </div>
                             <div class="swiper-slide">
-                                <img src="assets/img/features/users/feature-9.png" alt="smartlisten">
+                                <img src="assets/img/features/users/feature-new-9.png" alt="smartlisten">
                             </div>
                             <div class="swiper-slide">
-                                <img src="assets/img/features/users/24six-originals.png" alt="24six-originals">
+                                <img src="assets/img/features/users/feature-new-10.png" alt="24six-originals">
                             </div>
                         </div>
                     </div>
@@ -675,15 +685,23 @@
                              data-aos-anchor-placement="top-bottom"
                              data-aos-duration="1000"
                              data-aos-offset="0"
-                             class="plan-card">
-                            <h4 class="plan-card__title">
+                             class="plan-card d-flex flex-column">
+                            <h4 class="plan-card__title mb-2">
                                 Single
                             </h4>
+                            <span class="mb-3 mt-0 d-block">$9.99 <span class="main-text">/ month</span></span>
                             <div class="plan-card__header">
                                 <img src="./assets/img/illustrations-for-plan-single.svg" alt="plan-single"
                                      class="img-fluid plan-card__header-single">
                             </div>
-                            <p class="plan-card__text">1 Profile</p>
+                            <p class="plan-card__text mb-3">1 Profile</p>
+                            <a href="#" data-aos="fade-up"
+                                    data-aos-anchor-placement="top-bottom"
+                                    data-aos-duration="1200"
+                                    data-aos-offset="0"
+                                    class="btn btn-warning mt-auto mx-0 mb-0">
+                                Sign up
+                            </a>
                         </div>
                     </div>
                     <div class="col">
@@ -692,15 +710,23 @@
                              data-aos-delay="50"
                              data-aos-duration="1000"
                              data-aos-offset="0"
-                             class="plan-card">
-                            <h4 class="plan-card__title">
+                             class="plan-card d-flex flex-column">
+                            <h4 class="plan-card__title mb-2">
                                 Duo
                             </h4>
+                            <span class="mb-3 mt-0 d-block">$14.99 <span class="main-text">/ month</span></span>
                             <div class="plan-card__header">
                                 <img src="./assets/img/illustrations-for-plan-duo.svg" alt="plan-duo"
                                      class="img-fluid plan-card__header-duo">
                             </div>
-                            <p class="plan-card__text">2 Profiles</p>
+                            <p class="plan-card__text mb-3">2 Profiles</p>
+                            <a href="#" data-aos="fade-up"
+                               data-aos-anchor-placement="top-bottom"
+                               data-aos-duration="1200"
+                               data-aos-offset="0"
+                               class="btn btn-warning mt-auto mx-0 mb-0">
+                                Sign up
+                            </a>
                         </div>
                     </div>
                     <div class="col">
@@ -709,29 +735,28 @@
                              data-aos-delay="80"
                              data-aos-duration="1000"
                              data-aos-offset="0"
-                             class="plan-card">
-                            <h4 class="plan-card__title">
+                             class="plan-card d-flex flex-column">
+                            <h4 class="plan-card__title mb-2">
                                 Family
                             </h4>
+                            <span class="mb-3 mt-0 d-block">$19.99 <span class="main-text">/ month</span></span>
                             <div class="plan-card__header">
                                 <img src="./assets/img/illustrations-for-plan-family.svg" alt="plan-family"
                                      class="img-fluid">
                             </div>
                             <p class="plan-card__text">4 Profiles</p>
-                            <p class="plan-card__text"><small>+ additional profiles if needed</small></p>
+                            <p class="plan-card__text mb-3"><small>+ additional profiles if needed</small></p>
+                            <a href="#" data-aos="fade-up"
+                               data-aos-anchor-placement="top-bottom"
+                               data-aos-duration="1200"
+                               data-aos-offset="0"
+                               class="btn btn-warning mt-auto mx-0 mb-0">
+                                Sign up
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <button data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    data-aos-duration="1200"
-                    data-aos-offset="0"
-                    class="btn btn-warning"
-                    data-bs-toggle="modal"
-                    data-bs-target="#joinWaitListModal">
-                Join the waitlist
-            </button>
         </div>
     </section>
     <section id="support" class="section-support position-relative">
@@ -933,9 +958,8 @@
                         Plus the ability to customize the experience of each family member.
                     </p>
                 </div>
-                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#joinWaitListModal">Join the
-                    waitlist
-                </button>
+                <a href="#" class="btn btn-warning">Sign up
+                </a>
             </div>
         </div>
     </section>
@@ -988,35 +1012,6 @@
     </div>
 </footer>
 
-<div class="modal modal-join-list fade" id="joinWaitListModal" tabindex="-1" aria-labelledby="joinWaitListModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h3 class="modal-title" id="joinWaitListModalLabel">Join the waitlist.</h3>
-                <p class="modal-text">Be the first to know when 24Six is available.</p>
-                <form action="" class="modal-form">
-                    <div class="mb-3">
-                        <label for="nameInput" class="modal-form__label">First name</label>
-                        <input type="text" class="modal-form__control" id="nameInput"
-                               placeholder="Enter you first name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="emailInput" class="modal-form__label">Email address</label>
-                        <input type="email" class="modal-form__control" id="emailInput"
-                               placeholder="Enter you email address">
-                    </div>
-                    <button type="submit" class="btn btn-warning" data-bs-toggle="modal"
-                            data-bs-target="#joinWaitListModalSuccessMessage">Join
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="modal modal-join-list modal-join-list__success fade" id="joinWaitListModalSuccessMessage" tabindex="-1"
      aria-labelledby="joinWaitListModalSuccessMessage"
      aria-hidden="true">

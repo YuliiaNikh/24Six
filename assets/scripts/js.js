@@ -1,8 +1,10 @@
 const navLinks = document.querySelectorAll('.nav-item')
 const menuToggle = document.getElementById('navbarSupportedContent')
-const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false})
+const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false})
 navLinks.forEach((l) => {
-    l.addEventListener('click', () => { bsCollapse.toggle() })
+    l.addEventListener('click', () => {
+        bsCollapse.toggle()
+    })
 })
 
 
@@ -124,7 +126,7 @@ for (let videoBox of videoBoxes) {
         })
     }
 
-    window.addEventListener('scroll', function (){
+    window.addEventListener('scroll', function () {
         videoBox.pause();
     })
 }
@@ -168,6 +170,40 @@ for (let item of data) {
         }
     }
 }
+
+/*Plans switcher*/
+
+$(document).ready(function () {
+    const planPriceRegular = $('.plan-card_price-regular');
+    const planSalePriceSingle = $('#single_sale-price');
+    const planSalePriceDuo = $('#duo_sale-price');
+    const planSalePriceFamily = $('#family_sale-price');
+    const planPricePerProfileDuo = $('.duo_profile-price');
+    const planPricePerProfileFamily = $('.family_profile-price');
+    const additionalAccountPrice = $('.plan-card__profile-number__additional');
+
+    $('input:radio[name="plans"]').change(function () {
+        planPriceRegular.removeClass('visible');
+
+        if ($(this).val() === 'yearly') {
+            planPriceRegular.addClass('visible');
+            planSalePriceSingle.text('$99.99');
+            planSalePriceDuo.text('$149.99');
+            planSalePriceFamily.text('$199.99');
+            planPricePerProfileDuo.text('$75');
+            planPricePerProfileFamily.text('$50');
+            additionalAccountPrice.text('Add a profile for + $50 per year.')
+        } else if ($(this).val() === 'monthly') {
+            planSalePriceSingle.text('$9.99');
+            planSalePriceDuo.text('$14.99');
+            planSalePriceFamily.text('$19.99');
+            planPricePerProfileDuo.text('$7.50');
+            planPricePerProfileFamily.text('$5');
+            additionalAccountPrice.text('Add a profile for + $3 per month.')
+        }
+    });
+});
+
 
 
 
