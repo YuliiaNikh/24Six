@@ -58,15 +58,6 @@
         </div>
     </div>
 </nav>
-<section style='margin-top: 85px; position:relative;'>
-    <img src="./assets/img/P1eI2h5w.png" alt="" class="img-fluid">
-    <div class="position-absolute top-50 start-50 translate-middle">
-        <div class="d-flex">
-            <button type="button" class="btn btn-warning me-5">Warning</button>
-            <button type="button" class="btn btn-primary">Primary</button>
-        </div>
-    </div>
-</section>
 <header class="hero">
     <div class="container-fluid">
         <div class="row">
@@ -696,10 +687,10 @@
                             </div>
                             <p class="plan-card__text mb-3">1 Profile</p>
                             <a href="#" data-aos="fade-up"
-                                    data-aos-anchor-placement="top-bottom"
-                                    data-aos-duration="1200"
-                                    data-aos-offset="0"
-                                    class="btn btn-warning mt-auto mx-0 mb-0">
+                               data-aos-anchor-placement="top-bottom"
+                               data-aos-duration="1200"
+                               data-aos-offset="0"
+                               class="btn btn-warning mt-auto mx-0 mb-0">
                                 Sign up
                             </a>
                         </div>
@@ -1044,21 +1035,152 @@
     </div>
 </div>
 
+<div class="modal fade bd-example-modal-lg modal-banner" id="modalBanner" tabindex="-1" role="dialog"
+     aria-labelledby="modalBannerTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="btn btn-close close" data-dismiss="modal" aria-label="Close"></button>
+                <img src="./assets/img/24Six_Launch_Ad_Mishpacha_V2.jpg" alt="" class="img-fluid w-100">
+                <div class="content">
+                    <div class="button-group">
+                        <a href="#" class="btn btn-light me-5">Watch the trailer</a>
+                        <a href="#" class="btn btn-warning border border-warning">Sign up now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
         integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./assets/scripts/hamburger.js"></script>
+<script src="./assets/scripts/swipper.js"></script>
+<script src="https://kit.fontawesome.com/e25968b3b0.js" crossorigin="anonymous"></script>
+<script src="https://www.google.com/recaptcha/api.js?render={{env('RECAPTCHA_KEY')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="assets/scripts/hamburger.js"></script>
-<script src="assets/scripts/swipper.js"></script>
-<script src="https://kit.fontawesome.com/fd67970f07.js" crossorigin="anonymous"></script>
-<script src="assets/scripts/js.js"></script>
+<script src="./assets/scripts/js.js"></script>
+<script>
+    function submitWaitlist() {
+        if (!$('#nameInput')[0].checkValidity() || !$('#emailInput')[0].checkValidity())
+            return;
+        $('.modal-join-list button').html("Joining ...").attr('disabled', 'true');
+        grecaptcha.execute('{{env('
+        RECAPTCHA_KEY
+        ')}}', {action: 'waitlist'}
+    ).
+        then(function (token) {
+            $.post('/website-contact', {
+                'token': token,
+                'action': 'waitlist',
+                'name': $('#nameInput').val(),
+                'email': $('#emailInput').val(),
+                '_token': '{{ csrf_token() }}',
+            }).done(function () {
+                $('.modal-join-list button').html("Join").attr('disabled', false);
+                $('#joinWaitListModal').modal('hide');
+                $('#nameInput').val('');
+                $('#emailInput').val('');
+                $('#joinWaitListModalSuccessMessage').modal('show');
+            }).fail(function (message) {
+                $('.modal-join-list button').html("Join").attr('disabled', false);
+                message = message.responseJSON;
+                if (message.message)
+                    message = message.message;
+
+                alert(message);
+            }, 'json')
+
+        });
+    }
+
+    $('#24six-form').submit(function (evt) {
+        evt.preventDefault();
+    });
+
+    @if
+    (request()
+    ->
+    has('load') && request()
+    ->
+    load == 'video'
+    )
+    setTimeout(function () {
+        playVideo('popup-video', 'popupVideoModal');
+    }, 1);
+    @elseif(request()->
+    has('load') && request()
+    ->
+    load == 'form'
+    )
+    $('.btn-join-waitlist').click();
+    @endif
+</script>
+<style>
+    .grecaptcha-badge {
+        visibility: hidden;
+    }
+
+    .swiper-wrapper {
+        height: auto;
+    }
+</style>
+<script>
+    window.intercomSettings = {
+        api_base: "https://api-iam.intercom.io",
+        app_id: "ktd9ieu3"
+    };
+</script>
+
+<script>
+    // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/ktd9ieu3'
+    (function () {
+        var w = window;
+        var ic = w.Intercom;
+        if (typeof ic === "function") {
+            ic('reattach_activator');
+            ic('update', w.intercomSettings);
+        } else {
+            var d = document;
+            var i = function () {
+                i.c(arguments);
+            };
+            i.q = [];
+            i.c = function (args) {
+                i.q.push(args);
+            };
+            w.Intercom = i;
+            var l = function () {
+                var s = d.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = 'https://widget.intercom.io/widget/ktd9ieu3';
+                var x = d.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            };
+            if (document.readyState === 'complete') {
+                l();
+            } else if (w.attachEvent) {
+                w.attachEvent('onload', l);
+            } else {
+                w.addEventListener('load', l, false);
+            }
+        }
+    })();
+</script>
 
 </body>
 </html>

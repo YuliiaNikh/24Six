@@ -202,7 +202,22 @@ $(document).ready(function () {
             additionalAccountPrice.text('Add a profile for + $3 per month.')
         }
     });
+
+    /*Modal Open*/
+    $(window).on('load', function() {
+        $('#modalBanner').modal('show');
+    });
+
+    /*Modal Close*/
+    setTimeout(function(){
+        $('#modalBanner').modal('hide')
+    }, 60000);
+    $('.close').on('click', function(){
+        $('#modalBanner').modal('hide');
+    })
 });
+
+
 
 
 
