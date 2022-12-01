@@ -210,7 +210,7 @@ body {
       flex-basis: 100%;
     }
 
-    .download-link.disabled{
+    .download-link.disabled {
       pointer-events: none;
     }
 
@@ -220,7 +220,7 @@ body {
     }
 
     .download-link:last-of-type {
-      margin-right:0;
+      margin-right: 0;
     }
   }
 
@@ -1527,35 +1527,19 @@ footer {
 
 
 /*Section Image banner*/
-.modal-banner{
-  padding: 0!important;
-  .modal-dialog{
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    margin: 0;
-  }
-  .modal-content{
-    background: rgba(0,0,0,0.2);
-    width: 100%;
-    height: 100%;
-  }
-  .modal-body{
-    padding: 0;
-    position: relative;
-  }
-  
-  .btn-close{
+.top-banner {
+  position: relative;
+
+  .btn-close {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color:$white;
+    background-color: $white;
     opacity: 1;
     z-index: 1;
   }
 
-
-  .content{
+  .content {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -1563,10 +1547,41 @@ footer {
     left: 0;
   }
 
-.button-group{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 32vw;
-}
+  .button-group {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 157vw;
+  }
+
+  &_img-desktop, &_img-tablet {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    &_img-mobile {
+      display: none;
+    }
+    &_img-tablet {
+      display: block;
+    }
+
+    .button-group {
+      top: 104vw;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &_img-mobile, &_img-tablet {
+      display: none;
+    }
+    &_img-desktop {
+      display: block;
+    }
+    .button-group {
+      top: 48vw;
+      left: 7vw;
+      justify-content: flex-start;
+    }
+  }
 }

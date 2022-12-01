@@ -8,6 +8,7 @@
   background-color: transparent;
   padding: 2rem 0;
   transition: background-color 0.5s ease-in-out;
+  top: -1px !important;
 }
 .navbar.nav-active {
   background-color: #121316;
@@ -1642,25 +1643,10 @@ footer .navbar-bottom a {
   }
 }
 /*Section Image banner*/
-.modal-banner {
-  padding: 0 !important;
-}
-.modal-banner .modal-dialog {
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  margin: 0;
-}
-.modal-banner .modal-content {
-  background: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 100%;
-}
-.modal-banner .modal-body {
-  padding: 0;
+.top-banner {
   position: relative;
 }
-.modal-banner .btn-close {
+.top-banner .btn-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -1668,18 +1654,45 @@ footer .navbar-bottom a {
   opacity: 1;
   z-index: 1;
 }
-.modal-banner .content {
+.top-banner .content {
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
-.modal-banner .button-group {
+.top-banner .button-group {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 32vw;
+  top: 157vw;
+}
+.top-banner_img-desktop, .top-banner_img-tablet {
+  display: none;
+}
+@media (min-width: 768px) {
+  .top-banner_img-mobile {
+    display: none;
+  }
+  .top-banner_img-tablet {
+    display: block;
+  }
+  .top-banner .button-group {
+    top: 104vw;
+  }
+}
+@media (min-width: 1024px) {
+  .top-banner_img-mobile, .top-banner_img-tablet {
+    display: none;
+  }
+  .top-banner_img-desktop {
+    display: block;
+  }
+  .top-banner .button-group {
+    top: 48vw;
+    left: 7vw;
+    justify-content: flex-start;
+  }
 }
 
 .artist {
@@ -2639,7 +2652,6 @@ footer .navbar-bottom a {
 html, body {
   width: 100%;
   position: relative;
-  overflow-x: hidden !important;
 }
 
 html {
