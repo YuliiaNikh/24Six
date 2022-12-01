@@ -1694,6 +1694,11 @@ footer .navbar-bottom a {
     justify-content: flex-start;
   }
 }
+@media (min-width: 1600px) {
+  .top-banner .button-group {
+    top: 46vw;
+  }
+}
 
 .artist {
   background: rgba(18, 19, 22, 0.9) url("../img/bg/hero-artists.svg") no-repeat center;
