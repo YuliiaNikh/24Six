@@ -212,7 +212,9 @@ window.onscroll = function () {
 
         /*Modal Close*/
         $('.close').on('click', function () {
-            $('.top-banner').hide();
+            $('.top-banner').slideUp(200, function() {
+                AOS.refresh()
+            });
         })
     });
 
