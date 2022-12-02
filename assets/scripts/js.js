@@ -253,7 +253,6 @@ $(document).ready(function () {
     const planSalePriceSingle = $('#single_sale-price');
     const planSalePriceDuo = $('#duo_sale-price');
     const planSalePriceFamily = $('#family_sale-price');
-    const planPricePerProfileSingle = $('.single_profile-price');
     const planPricePerProfileDuo = $('.duo_profile-price');
     const planPricePerProfileFamily = $('.family_profile-price');
     const additionalAccountPrice = $('.plan-card__profile-number__additional-price .additional-price');
@@ -273,7 +272,6 @@ $(document).ready(function () {
             planSalePriceSingle.text('99');
             planSalePriceDuo.text('149');
             planSalePriceFamily.text('199');
-            planPricePerProfileSingle.text('$99.99');
             planPricePerProfileDuo.text('$75');
             planPricePerProfileFamily.text('$50');
             additionalAccountPrice.text('30')
@@ -285,7 +283,6 @@ $(document).ready(function () {
             planSalePriceSingle.text('9');
             planSalePriceDuo.text('14');
             planSalePriceFamily.text('19');
-            planPricePerProfileSingle.text('$9.99');
             planPricePerProfileDuo.text('$7.50');
             planPricePerProfileFamily.text('$5');
             additionalAccountPrice.text('3');
