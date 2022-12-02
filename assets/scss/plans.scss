@@ -1,4 +1,5 @@
 .plan {
+  font-family: 'Roboto Flex', sans-serif;
 
   .plan-cards {
     padding-top: 6rem;
@@ -9,15 +10,32 @@
       margin-bottom: 1rem;
     }
 
+    &_section-title {
+      background: #FBD989;
+      background: linear-gradient(to bottom, #FBD989 0%, #FFB84A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2rem;
+      text-align: center;
+      margin: auto;
+    }
+
     &_text {
-      color: $gray;
       max-width: 51.5rem;
       font-size: 1rem;
       margin: 0 auto 3rem auto;
+      color: #B5B2B0;
+    }
+
+    .main-text {
+      margin-bottom: 3rem;
+      color: #B5B2B0;
     }
   }
 
   .switcher {
+    margin-bottom: 5rem;
+
     &_buttons-container {
       display: flex;
       border: 1px solid $primary;
@@ -60,7 +78,7 @@
   .plan-card {
     border-radius: 1rem;
     background: #272625;
-    padding: 1.5rem;
+    padding: 1rem;
     position: relative;
     transition: all 0.3s;
     cursor: pointer;
@@ -90,8 +108,9 @@
       text-align: center;
       color: $white;
       font-size: 1.5rem;
+      line-height: 1.5;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     &_price {
@@ -99,18 +118,35 @@
       line-height: 1.5;
       color: #C0C0C0;
       margin-bottom: 1.5rem;
+      font-size: 1rem;
 
       &-regular {
         text-decoration: line-through;
         display: block;
-        visibility: hidden;
       }
 
       &-sale {
-        font-weight: 700;
+        font-weight: 500;
         color: $primary;
-        font-size: 1.25rem;
         display: block;
+        font-size: 3rem;
+
+        &:after {
+          content: '/ mo';
+          color: #C0C0C0;
+          font-size: 0.875rem;
+          margin-left: -1.75rem;
+        }
+
+        &.yearly:after {
+          content: '/ year';
+        }
+      }
+
+      sup {
+        top: -1.25rem;
+        font-size: 1.25rem;
+        font-weight: 700;
       }
     }
 
@@ -123,6 +159,12 @@
       }
     }
 
+    &__info {
+      font-size: 0.875rem;
+      color: #B5B2B0;
+      text-align: center;
+    }
+
     &__image {
       width: 5rem;
       height: 5rem;
@@ -133,13 +175,13 @@
       border: 1px solid #4F4C4A;
       background-color: transparent;
       transition: all 0.3s;
-      margin: 1.5rem auto;
+      margin: auto auto 1.5rem auto;
     }
 
     &__profile-number {
       color: $white;
       text-align: center;
-      font-weight: 700;
+      margin-bottom: 0.25rem;
 
       span {
         margin-top: 0.25rem;
@@ -203,25 +245,27 @@
 
   }
 
-  .cards-wrapper{
+  .cards-wrapper {
     margin-bottom: 3.125rem;
   }
 
-  .btn-warning{
+  .btn-warning {
     margin: auto;
     display: block;
-    max-width: 11.25rem;
-    padding: 0.5rem 2.5rem;
+    max-width: 13.85rem;
+    padding: 1rem 1.25rem;
   }
 
-  @media (width >= 768px) {
+  @media (min-width: 768px) {
     .plan-cards {
       padding-top: 7.5rem;
+      &_section-title {
+        max-width: 35rem;
+      }
     }
-
     .cards-wrapper {
-      max-width: 38.25rem;
-      margin:0 auto  3.125rem auto;
+      max-width: 40rem;
+      margin: 0 auto 3.125rem auto;
     }
 
     .plan-card {
@@ -234,10 +278,14 @@
     }
   }
 
-  @media (width >= 1024px) {
+  @media (min-width: 1024px) {
     .plan-cards {
-      &_title {
+      &_title, &_section-title {
         font-size: 3rem;
+      }
+
+      &_section-title {
+        max-width: 51.5rem;
       }
 
       &_text {
@@ -246,9 +294,13 @@
     }
   }
 
-  @media (width >= 1200px) {
+  @media (min-width: 1200px) {
     .plan-cards {
       padding-top: 7.5rem;
+
+      .switcher {
+        margin-bottom: 10rem;
+      }
 
       &_title {
         font-size: 4.375rem;

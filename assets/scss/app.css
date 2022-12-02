@@ -13,6 +13,9 @@
 .navbar.nav-active {
   background-color: #121316;
 }
+.navbar.banner-visible {
+  padding-top: 8.2rem;
+}
 .navbar-brand {
   padding: 0;
   z-index: 11;
@@ -286,6 +289,9 @@
   }
 }
 
+.modal {
+  background: rgba(18, 19, 22, 0.75);
+}
 .modal::-webkit-scrollbar {
   width: 2px;
 }
@@ -293,6 +299,7 @@
   background: #272625;
   box-shadow: 10px 20px 50px rgba(19, 18, 17, 0.25);
   border-radius: 16px;
+  overflow: hidden;
 }
 .modal-header {
   padding: 1.875rem;
@@ -1643,16 +1650,42 @@ footer .navbar-bottom a {
   }
 }
 /*Section Image banner*/
-.top-banner {
-  position: relative;
-}
-.top-banner .btn-close {
+.btn-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
   background-color: #fff;
   opacity: 1;
   z-index: 1;
+}
+
+.top-ribbon {
+  display: none;
+  background-image: url(../img/banner/ribbon-bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #000211;
+  padding: 1.25rem 4%;
+}
+.top-ribbon.active {
+  display: block;
+}
+.top-ribbon_name {
+  color: #FFB84A;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  margin-right: 1.5rem;
+}
+.top-ribbon_name .last-name {
+  font-size: 1.75rem;
+  display: block;
+}
+
+.top-banner {
+  position: relative;
 }
 .top-banner .content {
   height: 100%;
@@ -2488,6 +2521,9 @@ footer .navbar-bottom a {
   }
 }
 
+.plan {
+  font-family: "Roboto Flex", sans-serif;
+}
 .plan .plan-cards {
   padding-top: 6rem;
 }
@@ -2496,11 +2532,27 @@ footer .navbar-bottom a {
   font-weight: 500;
   margin-bottom: 1rem;
 }
+.plan .plan-cards_section-title {
+  background: #FBD989;
+  background: linear-gradient(to bottom, #FBD989 0%, #FFB84A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  text-align: center;
+  margin: auto;
+}
 .plan .plan-cards_text {
-  color: #C9C1BC;
   max-width: 51.5rem;
   font-size: 1rem;
   margin: 0 auto 3rem auto;
+  color: #B5B2B0;
+}
+.plan .plan-cards .main-text {
+  margin-bottom: 3rem;
+  color: #B5B2B0;
+}
+.plan .switcher {
+  margin-bottom: 5rem;
 }
 .plan .switcher_buttons-container {
   display: flex;
@@ -2537,7 +2589,7 @@ footer .navbar-bottom a {
 .plan .plan-card {
   border-radius: 1rem;
   background: #272625;
-  padding: 1.5rem;
+  padding: 1rem;
   position: relative;
   transition: all 0.3s;
   cursor: pointer;
@@ -2565,25 +2617,40 @@ footer .navbar-bottom a {
   text-align: center;
   color: #fff;
   font-size: 1.5rem;
+  line-height: 1.5;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .plan .plan-card_price {
   text-align: center;
   line-height: 1.5;
   color: #C0C0C0;
   margin-bottom: 1.5rem;
+  font-size: 1rem;
 }
 .plan .plan-card_price-regular {
   text-decoration: line-through;
   display: block;
-  visibility: hidden;
 }
 .plan .plan-card_price-sale {
-  font-weight: 700;
+  font-weight: 500;
   color: #FFB84A;
-  font-size: 1.25rem;
   display: block;
+  font-size: 3rem;
+}
+.plan .plan-card_price-sale:after {
+  content: "/ mo";
+  color: #C0C0C0;
+  font-size: 0.875rem;
+  margin-left: -1.75rem;
+}
+.plan .plan-card_price-sale.yearly:after {
+  content: "/ year";
+}
+.plan .plan-card_price sup {
+  top: -1.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 .plan .plan-card__text {
   color: #B5B2B0;
@@ -2591,6 +2658,11 @@ footer .navbar-bottom a {
 }
 .plan .plan-card__text span {
   color: #fff;
+}
+.plan .plan-card__info {
+  font-size: 0.875rem;
+  color: #B5B2B0;
+  text-align: center;
 }
 .plan .plan-card__image {
   width: 5rem;
@@ -2602,12 +2674,12 @@ footer .navbar-bottom a {
   border: 1px solid #4F4C4A;
   background-color: transparent;
   transition: all 0.3s;
-  margin: 1.5rem auto;
+  margin: auto auto 1.5rem auto;
 }
 .plan .plan-card__profile-number {
   color: #fff;
   text-align: center;
-  font-weight: 700;
+  margin-bottom: 0.25rem;
 }
 .plan .plan-card__profile-number span {
   margin-top: 0.25rem;
@@ -2621,15 +2693,18 @@ footer .navbar-bottom a {
 .plan .btn-warning {
   margin: auto;
   display: block;
-  max-width: 11.25rem;
-  padding: 0.5rem 2.5rem;
+  max-width: 13.85rem;
+  padding: 1rem 1.25rem;
 }
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .plan .plan-cards {
     padding-top: 7.5rem;
   }
+  .plan .plan-cards_section-title {
+    max-width: 35rem;
+  }
   .plan .cards-wrapper {
-    max-width: 38.25rem;
+    max-width: 40rem;
     margin: 0 auto 3.125rem auto;
   }
   .plan .plan-card_price-duration_single {
@@ -2637,17 +2712,23 @@ footer .navbar-bottom a {
     margin-bottom: 2.5rem;
   }
 }
-@media (width >= 1024px) {
-  .plan .plan-cards_title {
+@media (min-width: 1024px) {
+  .plan .plan-cards_title, .plan .plan-cards_section-title {
     font-size: 3rem;
+  }
+  .plan .plan-cards_section-title {
+    max-width: 51.5rem;
   }
   .plan .plan-cards_text {
     font-size: 1.5rem;
   }
 }
-@media (width >= 1200px) {
+@media (min-width: 1200px) {
   .plan .plan-cards {
     padding-top: 7.5rem;
+  }
+  .plan .plan-cards .switcher {
+    margin-bottom: 10rem;
   }
   .plan .plan-cards_title {
     font-size: 4.375rem;
@@ -2697,6 +2778,15 @@ body {
 
 .text-primary {
   color: #FFB84A !important;
+}
+
+.ratio-16x9 {
+  --bs-aspect-ratio: calc(16 / 9 * 100%);
+}
+@media (min-width: 520px) {
+  .ratio-16x9 {
+    --bs-aspect-ratio: 56.25%;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

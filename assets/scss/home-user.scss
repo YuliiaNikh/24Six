@@ -1527,17 +1527,43 @@ footer {
 
 
 /*Section Image banner*/
+.btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: $white;
+  opacity: 1;
+  z-index: 1;
+}
+
+.top-ribbon{
+  display: none;
+  background-image: url(../img/banner/ribbon-bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #000211;
+  padding: 1.25rem 4%;
+  &.active{
+    display: block;
+  }
+
+  &_name{
+    color: $primary;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    margin-right: 1.5rem;
+    .last-name{
+      font-size:1.75rem;
+      display: block;
+    }
+  }
+}
+
 .top-banner {
   position: relative;
-
-  .btn-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background-color: $white;
-    opacity: 1;
-    z-index: 1;
-  }
 
   .content {
     height: 100%;

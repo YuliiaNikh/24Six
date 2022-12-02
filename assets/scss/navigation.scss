@@ -9,6 +9,10 @@
     background-color: $dark;
   }
 
+  &.banner-visible{
+    padding-top: 8.2rem;
+  }
+
   &-brand {
     padding: 0;
     z-index: 11;

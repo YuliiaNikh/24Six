@@ -3,7 +3,9 @@ const menuToggle = document.getElementById('navbarSupportedContent')
 const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false})
 navLinks.forEach((l) => {
     l.addEventListener('click', () => {
-        bsCollapse.toggle()
+        setTimeout(() => {
+            bsCollapse.toggle()
+        }, 50);
     })
 })
 
@@ -33,191 +35,279 @@ window.onscroll = function () {
 
 
 //Dashed line between two cards
-    const card = document.querySelectorAll('.step-card');
-    const cardImage = document.querySelectorAll('.step-card .card-header');
-    let dashedLineContainers = document.querySelectorAll('.dashed-line');
+const card = document.querySelectorAll('.step-card');
+const cardImage = document.querySelectorAll('.step-card .card-header');
+let dashedLineContainers = document.querySelectorAll('.dashed-line');
 
-    function drawDashedLine() {
-        let distanceBetweenCards = (card[1].getBoundingClientRect().left - card[0].getBoundingClientRect().right + cardImage[0].offsetLeft);
+function drawDashedLine() {
+    let distanceBetweenCards = (card[1].getBoundingClientRect().left - card[0].getBoundingClientRect().right + cardImage[0].offsetLeft);
 
-        for (const element of dashedLineContainers) {
-            element.style.width = distanceBetweenCards + 'px';
-        }
-        for (let i = 0; i < 2; i++) {
-            dashedLineContainers[i].style.left = (card[i].offsetLeft + cardImage[i].offsetLeft + cardImage[i].offsetWidth + 44) + 'px';
-        }
+    for (const element of dashedLineContainers) {
+        element.style.width = distanceBetweenCards + 'px';
     }
-
-    if (card.length > 0) {
-        drawDashedLine();
-
-        window.addEventListener('resize', function (event) {
-            drawDashedLine()
-        }, true);
+    for (let i = 0; i < 2; i++) {
+        dashedLineContainers[i].style.left = (card[i].offsetLeft + cardImage[i].offsetLeft + cardImage[i].offsetWidth + 44) + 'px';
     }
+}
+
+if (card.length > 0) {
+    drawDashedLine();
+
+    window.addEventListener('resize', function (event) {
+        drawDashedLine()
+    }, true);
+}
 
 
 //Footer current year
-    document.getElementById("year").innerHTML = new Date().getFullYear();
+document.getElementById("year").innerHTML = new Date().getFullYear();
 
 
 //Scroll Animation
-    AOS.init({
-        once: true,
-        disable: window.innerWidth < 767,
-    });
+AOS.init({
+    once: true,
+    disable: window.innerWidth < 767,
+});
 
 
 //Svg animation when visible
 
 // Get the position on the page of the SVG
-    let sectionIArrow = document.getElementById("section-issues__arrow");
-    if (sectionIArrow) {
-        let svgLocation = sectionIArrow.getBoundingClientRect();
+let sectionIArrow = document.getElementById("section-issues__arrow");
+if (sectionIArrow) {
+    let svgLocation = sectionIArrow.getBoundingClientRect();
 
 // Scroll offset that triggers animation start.
 // In this case it is the bottom of the SVG.
-        let offsetToTriggerAnimation = svgLocation.y;
+    let offsetToTriggerAnimation = svgLocation.y;
 
 // Function to handle the scroll event.
 // Add an event handler to the document for the "onscroll" event
-        function scrollAnimTriggerCheck(evt) {
-            let viewBottom = window.scrollY + window.innerHeight;
-            if (viewBottom > offsetToTriggerAnimation) {
-                // Start the SMIL animation
-                document.getElementById("anim").beginElement();
-                // Remove the event handler so it doesn't trigger again
-                document.removeEventListener("scroll", scrollAnimTriggerCheck);
-            }
+    function scrollAnimTriggerCheck(evt) {
+        let viewBottom = window.scrollY + window.innerHeight;
+        if (viewBottom > offsetToTriggerAnimation) {
+            // Start the SMIL animation
+            document.getElementById("anim").beginElement();
+            // Remove the event handler so it doesn't trigger again
+            document.removeEventListener("scroll", scrollAnimTriggerCheck);
         }
     }
 
-// Add an event handler to the document for the "onscroll" event
+    // Add an event handler to the document for the "onscroll" event
     document.addEventListener("scroll", scrollAnimTriggerCheck);
+}
 
 //Play/stop video
-    let videoBoxes = document.querySelectorAll('.video-box');
-    let videoModalEl = document.getElementsByClassName('modal-video');
-    let faqAccordion = document.getElementById('accordionSupport');
+let videoBoxes = document.querySelectorAll('.video-boxx');
+let videoModalEl = document.getElementsByClassName('modal-videox');
+let faqAccordion = document.getElementById('accordionSupport');
 
 
-    function stopVideo(e) {
-        e.pause();
-        e.currentTime = 0;
-    }
+function stopVideo(e) {
 
-    for (let videoBox of videoBoxes) {
-        videoBox.removeAttribute('controls');
+}
 
-        videoBox.closest('div').querySelector('.play-btn').addEventListener('click', function () {
-            this.style.display = 'none';
-            videoBox.setAttribute("controls", "controls");
-            videoBox.play();
-        })
+for (let videoBox of videoBoxes) {
+    videoBox.removeAttribute('controls');
 
-        videoBox.addEventListener('click', function () {
-            this.closest('div').querySelector('.play-btn').style.display = 'none';
-        })
+    videoBox.closest('div').querySelector('.play-btn').addEventListener('click', function () {
+        this.style.display = 'none';
+        videoBox.setAttribute("controls", "controls");
+        videoBox.play();
+    })
 
-        for (let modalVideo of videoModalEl) {
-            modalVideo.addEventListener('hidden.bs.modal', event => {
-                stopVideo(videoBox);
-            })
-        }
+    videoBox.addEventListener('click', function () {
+        this.closest('div').querySelector('.play-btn').style.display = 'none';
+    })
 
-        if (faqAccordion) {
-            faqAccordion.addEventListener('hidden.bs.collapse', event => {
-                stopVideo(videoBox);
-            })
-        }
-
-        window.addEventListener('scroll', function () {
-            videoBox.pause();
+    for (let modalVideo of videoModalEl) {
+        modalVideo.addEventListener('hidden.bs.modal', event => {
+            stopVideo(videoBox);
         })
     }
+
+    if (faqAccordion) {
+        faqAccordion.addEventListener('hidden.bs.collapse', event => {
+            stopVideo(videoBox);
+        })
+    }
+
+    window.addEventListener('scroll', function () {
+        videoBox.pause();
+    })
+}
 
 //Video
 
-    const videoFilter = document.querySelectorAll('.filter-video');
-    const videoArtists = document.querySelectorAll('.artists-video');
-    const videoPopUp = document.querySelectorAll('.popup-video');
 
-    const srcFilter = 'https://stream.mux.com/9On9MWt9ZA01A3F01hGnzkVNf02s6n2b6HfDgIjyxYeKxg.m3u8';
-    const srcArtists = 'https://stream.mux.com/UdG6OSov2DVZVCToKw00NbNYgZU3uYopTvOjXtSkjaYc.m3u8';
-    const scrPopUp = 'https://stream.mux.com/45tb01KwSf5wVl2ygXnyz2Sg89QMZF1QJPuKpS01l00800c.m3u8';
+var startedFilterVideo = false;
+var startedFilterVideo2 = false;
 
-    const data = [
-        {
-            videos: videoFilter,
-            src: srcFilter,
-        },
-        {
-            videos: videoArtists,
-            src: srcArtists,
-        },
-        {
-            videos: videoPopUp,
-            src: scrPopUp,
-        }
-    ]
-
-    for (let item of data) {
-        for (let video of item.videos) {
-            if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
-                // Some browsers (safari and ie edge) support HLS natively
-                video.src = item.src;
-            } else if (Hls.isSupported()) {
-                const hls = new Hls();
-                hls.loadSource(item.src);
-                hls.attachMedia(video);
+function playVideo(className, modalId = false) {
+    if (className == 'filter-video') {
+        if (startedFilterVideo) {
+            let video = data[className].videos[0];
+            console.log('pausing vid', video, video.paused, className);
+            if (video.paused) {
+                video.play();
+                $('#' + className + '-play-btn').hide();
             } else {
-                console.error("This is a legacy browser that doesn't support MSE");
+                video.pause();
+                $('#' + className + '-play-btn').show();
             }
+            return;
+        }
+        startedFilterVideo = true;
+    }
+    if (className == 'filter-video2') {
+        if (startedFilterVideo2) {
+            let video = data[className].videos[0];
+            if (video.paused) {
+                video.play();
+                $('#' + className + '-play-btn').hide();
+            } else {
+                video.pause();
+                $('#' + className + '-play-btn').show();
+            }
+            return;
+        }
+        startedFilterVideo2 = true;
+    }
+    videoFilter = document.querySelectorAll('.filter-video');
+    videoArtists = document.querySelectorAll('.artists-video');
+    videoPopUp = document.querySelectorAll('.popup-video');
+    videoBannerPopUp = document.querySelectorAll('.popup-banner-video');
+
+    srcFilter = 'https://stream.mux.com/9On9MWt9ZA01A3F01hGnzkVNf02s6n2b6HfDgIjyxYeKxg.m3u8';
+    srcArtists = 'https://stream.mux.com/UdG6OSov2DVZVCToKw00NbNYgZU3uYopTvOjXtSkjaYc.m3u8';
+    scrPopUp = 'https://stream.mux.com/vZaKQBH5FLwKxGkvjEgzX3X02MrqL3yjNmUBhygoxP5c.m3u8';
+
+    function getBannerVideoSrc() {
+        let width = window.innerWidth;
+        console.log(width);
+        if(width < 520){
+            srcBannerPopUp = 'https://stream.mux.com/znoiP3FNgShtpFYevxRj6i02WPOeQ4Guj3rinSkQFN8Y.m3u8';
+        } else {
+            srcBannerPopUp = 'https://stream.mux.com/LLfwJPTNBmfWU00cWZBBZvBqy7HMzEYI502yMFrZW5u4k.m3u8';
         }
     }
 
-    /*Plans switcher*/
+    getBannerVideoSrc();
 
-    $(document).ready(function () {
-        const planPriceRegular = $('.plan-card_price-regular');
-        const planSalePriceSingle = $('#single_sale-price');
-        const planSalePriceDuo = $('#duo_sale-price');
-        const planSalePriceFamily = $('#family_sale-price');
-        const planPricePerProfileDuo = $('.duo_profile-price');
-        const planPricePerProfileFamily = $('.family_profile-price');
-        const additionalAccountPrice = $('.plan-card__profile-number__additional');
+    window.onresize = getBannerVideoSrc;
 
-        $('input:radio[name="plans"]').change(function () {
-            planPriceRegular.removeClass('visible');
+    data = {
+        'filter-video': {
+            videos: videoFilter,
+            src: srcFilter,
+        },
+        'filter-video2': {
+            videos: document.querySelectorAll('.filter-video2'),
+            src: srcFilter,
+        },
+        'artists-video': {
+            videos: videoArtists,
+            src: srcArtists,
+        },
+        'popup-video': {
+            videos: videoPopUp,
+            src: scrPopUp,
+        },
+        'popup-banner-video': {
+            videos: videoBannerPopUp,
+            src: srcBannerPopUp,
+        }
+    };
 
-            if ($(this).val() === 'yearly') {
-                planPriceRegular.addClass('visible');
-                planSalePriceSingle.text('$99.99');
-                planSalePriceDuo.text('$149.99');
-                planSalePriceFamily.text('$199.99');
-                planPricePerProfileDuo.text('$75');
-                planPricePerProfileFamily.text('$50');
-                additionalAccountPrice.text('Add a profile for + $50 per year.')
-            } else if ($(this).val() === 'monthly') {
-                planSalePriceSingle.text('$9.99');
-                planSalePriceDuo.text('$14.99');
-                planSalePriceFamily.text('$19.99');
-                planPricePerProfileDuo.text('$7.50');
-                planPricePerProfileFamily.text('$5');
-                additionalAccountPrice.text('Add a profile for + $3 per month.')
-            }
-        });
-
-        /*Modal Open*/
-
-        /*Modal Close*/
-        $('.close').on('click', function () {
-            $('.top-banner').slideUp(200, function() {
-                AOS.refresh()
+    for (let video of data[className].videos) {
+        if (modalId)
+            $('#' + modalId).modal('show').on('hidden.bs.modal', function () {
+                video.pause();
             });
-        })
+        if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
+            // Some browsers (safari and ie edge) support HLS natively
+            video.src = data[className].src;
+        } else if (Hls.isSupported()) {
+            const hls = new Hls();
+            hls.loadSource(data[className].src);
+            hls.attachMedia(video);
+        } else {
+            console.error("This is a legacy browser that doesn't support MSE");
+        }
+        video.play();
+        if (modalId)
+            $('#' + modalId + ' video').click(function () {
+                this.paused ? this.play() : this.pause();
+            });
+        else {
+            $('#' + className + '-play-btn').hide();
+        }
+    }
+}
+
+/*Plans switcher*/
+
+$(document).ready(function () {
+    const planPriceRegular = $('.plan-card_price-regular');
+    const planPriceSale = $('.plan-card_price-sale');
+    const planSalePriceSingle = $('#single_sale-price');
+    const planSalePriceDuo = $('#duo_sale-price');
+    const planSalePriceFamily = $('#family_sale-price');
+    const planPricePerProfileSingle = $('.single_profile-price');
+    const planPricePerProfileDuo = $('.duo_profile-price');
+    const planPricePerProfileFamily = $('.family_profile-price');
+    const additionalAccountPrice = $('.plan-card__profile-number__additional-price .additional-price');
+    const priceRenew = $('.price-renew_duration');
+    const priceRenewSingle = $('.plan-card__auto-renew .single-price');
+    const priceRenewDuo = $('.plan-card__auto-renew .duo-price');
+    const priceRenewFamily = $('.plan-card__auto-renew .family-price');
+
+    planPriceRegular.hide();
+    planPriceSale.removeClass('yearly');
+
+    $('input:radio[name="plans"]').change(function () {
+        planPriceRegular.hide();
+        if ($(this).val() === 'yearly') {
+            planPriceRegular.show();
+            planPriceSale.addClass('yearly');
+            planSalePriceSingle.text('99');
+            planSalePriceDuo.text('149');
+            planSalePriceFamily.text('199');
+            planPricePerProfileSingle.text('$99.99');
+            planPricePerProfileDuo.text('$75');
+            planPricePerProfileFamily.text('$50');
+            additionalAccountPrice.text('30')
+            priceRenewSingle.text('99.99');
+            priceRenewDuo.text('149.99');
+            priceRenewFamily.text('199.99');
+            priceRenew.text('year');
+        } else if ($(this).val() === 'monthly') {
+            planSalePriceSingle.text('9');
+            planSalePriceDuo.text('14');
+            planSalePriceFamily.text('19');
+            planPricePerProfileSingle.text('$9.99');
+            planPricePerProfileDuo.text('$7.50');
+            planPricePerProfileFamily.text('$5');
+            additionalAccountPrice.text('3');
+            priceRenewSingle.text('9.99');
+            priceRenewDuo.text('14.99');
+            priceRenewFamily.text('19.99');
+            priceRenew.text('month');
+        }
     });
 
+    /*Banner Close*/
+    $('.close').on('click', function () {
+        $('.top-banner').slideToggle(500, function () {
+            AOS.refresh()
+        });
+        $('.top-ribbon').toggleClass('active');
+        $('.banner-container').toggleClass('fixed-top');
+        $('.navbar').toggleClass('banner-visible')
+    })
+});
+
+/*Plans switcher*/
 
 
 

@@ -19,27 +19,39 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
 <body class="users">
-<div id="top-banner" class="top-banner">
-    <picture class="top-banner_img-desktop">
-        <source srcset="./assets/img/banner/banner_desktop.webp" type="image/webp">
-        <source srcset="./assets/img/banner/banner_desktop.jpeg" type="image/png">
-        <img src="./assets/img/banner/banner_desktop.jpeg" alt="banner_desktop" class="img-fluid w-100">
-    </picture>
-    <picture class="top-banner_img-tablet">
-        <source srcset="./assets/img/banner/banner_tablet.webp" type="image/webp">
-        <source srcset="./assets/img/banner/banner_tablet.jpeg" type="image/png">
-        <img src="./assets/img/banner/banner_tablet.jpeg" alt="banner_desktop" class="img-fluid w-100">
-    </picture>
-    <picture class="top-banner_img-mobile">
-        <source srcset="./assets/img/banner/banner_mobile.webp" type="image/webp">
-        <source srcset="./assets/img/banner/banner_mobile.jpeg" type="image/png">
-        <img src="./assets/img/banner/banner_mobile.jpeg" alt="banner_desktop" class="img-fluid w-100">
-    </picture>
+<div class="banner-container">
     <button type="button" class="btn btn-close close" data-dismiss="modal" aria-label="Close"></button>
-    <div class="content">
-        <div class="button-group">
-            <a href="#" class="btn btn-outline-light me-3 me-lg-5">Watch the trailer</a>
-            <a href="#" class="btn btn-warning border border-warning">Sign up now</a>
+    <div id="top-banner" class="top-banner">
+        <picture class="top-banner_img-desktop">
+            <source srcset="./assets/img/banner/banner_desktop.webp" type="image/webp">
+            <source srcset="./assets/img/banner/banner_desktop.jpeg" type="image/png">
+            <img src="./assets/img/banner/banner_desktop.jpeg" alt="banner_desktop" class="img-fluid w-100">
+        </picture>
+        <picture class="top-banner_img-tablet">
+            <source srcset="./assets/img/banner/banner_tablet.webp" type="image/webp">
+            <source srcset="./assets/img/banner/banner_tablet.jpeg" type="image/png">
+            <img src="./assets/img/banner/banner_tablet.jpeg" alt="banner_desktop" class="img-fluid w-100">
+        </picture>
+        <picture class="top-banner_img-mobile">
+            <source srcset="./assets/img/banner/banner_mobile.webp" type="image/webp">
+            <source srcset="./assets/img/banner/banner_mobile.jpeg" type="image/png">
+            <img src="./assets/img/banner/banner_mobile.jpeg" alt="banner_desktop" class="img-fluid w-100">
+        </picture>
+        <div class="content">
+            <div class="button-group">
+                <a href="javascript:playVideo('popup-banner-video','popupVideoBannerModal')" class="btn btn-outline-light me-3 me-lg-5">Watch the trailer</a>
+                <a href="#" class="btn btn-warning border border-warning">Sign up now</a>
+            </div>
+        </div>
+    </div>
+    <div class="top-ribbon">
+        <div class="d-flex align-items-center">
+            <img src="./assets/img/banner/all-together-now.png" alt="all-together-now">
+            <div class="d-flex">
+                <p class="top-ribbon_name">Avraham <span class="last-name">Fried</span></p>
+                <p class="top-ribbon_name">Yaakov <span class="last-name">Shwekey</span></p>
+                <p class="top-ribbon_name">Shmueli <span class="last-name">Ungar</span></p>
+            </div>
         </div>
     </div>
 </div>
@@ -153,7 +165,6 @@
     </div>
 </header>
 <main>
-
     <section class="testimonials">
         <div class="container-fluid">
             <h2 data-aos="fade-up"
@@ -1055,6 +1066,21 @@
                         class="popup-video video-box w-100"
                         controls
                         poster="./assets/img/video-thumbnail.png"></video>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal modal-video fade" id="popupVideoBannerModal" tabindex="-1" aria-labelledby="popupVideoBannerModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="ratio ratio-16x9 mw-100 overflow-hidden">
+                <video
+                        class="popup-banner-video video-box w-100"
+                        poster="./assets/img/video-thumbnail.jpg"
+                />
             </div>
         </div>
     </div>

@@ -111,11 +111,12 @@
 <main>
     <section class="plan-cards hero">
         <div class="container-fluid">
-            <h1 class="plan-cards_title text-center">Try 24Six for free for 7 days</h1>
-            <p class="plan-cards_text text-center">
-                Pick a plan as low as $9.99 per profile per month to get started, upgrade to save more. No commitments,
-                no hidden fees. Cancel anytime.
+            <h1 class="plan-cards_title text-center">Try 24Six free for 7 days</h1>
+            <p class="plan-cards_text text-center mb-3">
+                Plans as low as $4 per profile per month*. <br>
+                No commitments, no hidden fees. Cancel anytime.
             </p>
+            <p class="main-text text-center mx-auto">*Per profile in a yearly Family Plan subscription.</p>
             <div class="switcher">
                 <div class="switcher_buttons-container">
                     <div>
@@ -132,33 +133,38 @@
                         <div class="plan-card active">
                             <h3 class="plan-card_title">Single</h3>
                             <p class="plan-card_price">
-                                <span id="single_regular-year-price" class="plan-card_price-regular">$119.88</span>
-                                <span id="single_sale-price" class="plan-card_price-sale">$9.99</span>
-                                <span class="plan-card_price-duration plan-card_price-duration_single">/ month</span>
+                                <span id="single_regular-year-price" class="plan-card_price-regular">$199.99</span>
+                                <span class="plan-card_price-sale position-relative"><sup>$</sup><span id="single_sale-price">9</span><sup>.99</sup></span>
                             </p>
+                            <p class="plan-card__text"><span class="single_profile-price">$9.99 </span> / profile </p>
                             <div class="plan-card__image">
                                 <img src="./assets/img/illustrations-for-plan-single.svg" alt="plan-single"
                                      class="img-fluid plan-card__header-single">
                             </div>
-                            <p class="plan-card__text">1 Profile</p>
+                            <p class="plan-card__profile-number">1 Profile</p>
+                            <p class="plan-card__auto-renew plan-card__info">
+                                Auto-renews every <span class="price-renew_duration">month</span>. Charged $ <span class="single-price">9.99</span> each renewal. Cancel anytime.
+                            </p>
                         </div>
                     </div>
-                   <div class="col">
-                       <div class="plan-card">
-                           <h3 class="plan-card_title">Duo</h3>
-                           <p class="plan-card_price">
-                               <span id="duo_regular-year-price" class="plan-card_price-regular">$179.88</span>
-                               <span id="duo_sale-price" class="plan-card_price-sale">$14.99</span>
-                               <span class="plan-card_price-duration">/ month</span>
-                           </p>
-                           <p class="plan-card__text"><span class="duo_profile-price">$7.50 </span> / profile </p>
-                           <div class="plan-card__image">
-                               <img src="./assets/img/illustrations-for-plan-duo.svg" alt="plan-duo"
-                                    class="img-fluid plan-card__header-duo">
-                           </div>
-                           <p class="plan-card__profile-number">2 Profile</p>
-                       </div>
-                   </div>
+                    <div class="col">
+                        <div class="plan-card">
+                            <h3 class="plan-card_title">Duo</h3>
+                            <p class="plan-card_price">
+                                <span id="duo_regular-year-price" class="plan-card_price-regular">$179.88</span>
+                                <span class="plan-card_price-sale"><sup>$</sup> <span id="duo_sale-price">14</span><sup>.99</sup></span>
+                            </p>
+                            <p class="plan-card__text"><span class="duo_profile-price">$7.50 </span> / profile </p>
+                            <div class="plan-card__image">
+                                <img src="./assets/img/illustrations-for-plan-duo.svg" alt="plan-duo"
+                                     class="img-fluid plan-card__header-duo">
+                            </div>
+                            <p class="plan-card__profile-number">2 Profile</p>
+                            <p class="plan-card__auto-renew plan-card__info">
+                                Auto-renews every <span class="price-renew_duration">month</span>. Charged $ <span class="duo-price">14.99</span> each renewal. Cancel anytime.
+                            </p>
+                        </div>
+                    </div>
                     <div class="col">
                         <div class="plan-card">
                             <div class="badge">
@@ -167,25 +173,28 @@
                             <h3 class="plan-card_title">Family</h3>
                             <p class="plan-card_price">
                                 <span id="family_regular-year-price" class="plan-card_price-regular">$239.88</span>
-                                <span id="family_sale-price" class="plan-card_price-sale">$19.99</span>
-                                <span class="plan-card_price-duration">/ month</span>
+                                <span class="plan-card_price-sale"><sup>$</sup><span id="family_sale-price">19</span><sup>.99</sup></span>
                             </p>
-                            <p class="plan-card__text"><span class="family_profile-price">$5</span> / profile</p>
+                            <p class="plan-card__text"><span class="family_profile-price">$5.00</span> / profile</p>
+                            <p class="plan-card__profile-number__additional-price plan-card__info">Add a profile for + $ <span class="additional-price">3</span> per month.</p>
                             <div class="plan-card__image">
                                 <img src="./assets/img/illustrations-for-plan-family.svg" alt="plan-family"
                                      class="img-fluid">
                             </div>
-                            <p class="plan-card__profile-number">4 Profiles
-                                <span class="plan-card__profile-number__additional">Add a profile for + $3 per month.</span>
+                            <p class="plan-card__profile-number">4 Profiles</p>
+                            <p class="plan-card__auto-renew plan-card__info">
+                                Auto-renews every <span class="price-renew_duration">month</span>. Charged $ <span class="family-price">19.99</span> each renewal. Cancel anytime.
                             </p>
                         </div>
                     </div>
                 </div>
                 <a href="/register.html" class="btn btn-warning">
-                    Start your free
-                    7-day trial
+                    Start your free 7-day trial
                 </a>
             </div>
+            <h2 class="plan-cards_section-title">
+                Listen and watch your favorite content- any where, any time, on any device.
+            </h2>
         </div>
         <div class="bg-wrapper">
             <img src="assets/img/bg/hero-bg.svg" alt="bg-img" class="bg-img">
