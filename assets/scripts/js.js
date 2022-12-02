@@ -184,70 +184,73 @@ function playVideo(className, modalId = false) {
 
     function getBannerVideoSrc() {
         let width = window.innerWidth;
-        console.log(width);
         if(width < 520){
             srcBannerPopUp = 'https://stream.mux.com/znoiP3FNgShtpFYevxRj6i02WPOeQ4Guj3rinSkQFN8Y.m3u8';
         } else {
             srcBannerPopUp = 'https://stream.mux.com/LLfwJPTNBmfWU00cWZBBZvBqy7HMzEYI502yMFrZW5u4k.m3u8';
         }
+        processVideos();
     }
 
+    let data = {};
     getBannerVideoSrc();
 
     window.onresize = getBannerVideoSrc;
 
-    data = {
-        'filter-video': {
-            videos: videoFilter,
-            src: srcFilter,
-        },
-        'filter-video2': {
-            videos: document.querySelectorAll('.filter-video2'),
-            src: srcFilter,
-        },
-        'artists-video': {
-            videos: videoArtists,
-            src: srcArtists,
-        },
-        'popup-video': {
-            videos: videoPopUp,
-            src: scrPopUp,
-        },
-        'popup-banner-video': {
-            videos: videoBannerPopUp,
-            src: srcBannerPopUp,
-        }
-    };
-
-    for (let video of data[className].videos) {
-        if (modalId)
-            $('#' + modalId).modal('show').on('hidden.bs.modal', function () {
-                video.pause();
-            });
-        if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
-            // Some browsers (safari and ie edge) support HLS natively
-            video.src = data[className].src;
-        } else if (Hls.isSupported()) {
-            const hls = new Hls();
-            hls.loadSource(data[className].src);
-            hls.attachMedia(video);
-        } else {
-            console.error("This is a legacy browser that doesn't support MSE");
-        }
-        video.play();
-        if (modalId)
-            $('#' + modalId + ' video').click(function () {
-                this.paused ? this.play() : this.pause();
-            });
-        else {
-            $('#' + className + '-play-btn').hide();
+    function processVideos() {
+        data = {
+            'filter-video': {
+                videos: videoFilter,
+                src: srcFilter,
+            },
+            'filter-video2': {
+                videos: document.querySelectorAll('.filter-video2'),
+                src: srcFilter,
+            },
+            'artists-video': {
+                videos: videoArtists,
+                src: srcArtists,
+            },
+            'popup-video': {
+                videos: videoPopUp,
+                src: scrPopUp,
+            },
+            'popup-banner-video': {
+                videos: videoBannerPopUp,
+                src: srcBannerPopUp,
+            }
+        };
+        for (let video of data[className].videos) {
+            if (modalId)
+                $('#' + modalId).modal('show').on('hidden.bs.modal', function () {
+                    video.pause();
+                });
+            if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
+                // Some browsers (safari and ie edge) support HLS natively
+                video.src = data[className].src;
+            } else if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(data[className].src);
+                hls.attachMedia(video);
+            } else {
+                console.error("This is a legacy browser that doesn't support MSE");
+            }
+            video.play();
+            if (modalId)
+                $('#' + modalId + ' video').click(function () {
+                    this.paused ? this.play() : this.pause();
+                });
+            else {
+                $('#' + className + '-play-btn').hide();
+            }
         }
     }
 }
 
-/*Plans switcher*/
-
 $(document).ready(function () {
+
+    /*Plans switcher*/
+
     const planPriceRegular = $('.plan-card_price-regular');
     const planPriceSale = $('.plan-card_price-sale');
     const planSalePriceSingle = $('#single_sale-price');
@@ -304,7 +307,6 @@ $(document).ready(function () {
     })
 });
 
-/*Plans switcher*/
 
 
 
