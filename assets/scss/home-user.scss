@@ -195,7 +195,7 @@ body {
   .btn-wrapper {
     margin-bottom: 2rem;
 
-    .btn-warning, .btn-outline-light {
+    .btn-warning, .btn-outline-light, .btn-light {
       width: 100%;
       margin-bottom: 0.75rem;
     }
@@ -977,10 +977,9 @@ footer {
 @media (min-width: 520px) {
   .hero {
     .btn-wrapper {
-      .btn-warning, .btn-outline-light {
+      .btn-warning, .btn-outline-light, .btn-light {
         width: auto;
-        margin-bottom: 0;
-        margin-right: 1rem;
+        margin-right: 0.5rem;
       }
     }
   }
@@ -1029,8 +1028,18 @@ footer {
     }
 
     .btn-wrapper {
-      .btn-warning, .btn-outline-light {
-        margin-right: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      .btn-warning {
+        order: 1;
+      }
+
+      .btn-outline-light {
+        order: 2;
+      }
+
+      .btn-light {
+        order: 3;
       }
     }
   }
@@ -1378,9 +1387,21 @@ footer {
 
     .btn-wrapper {
       margin-bottom: 3rem;
+      flex-wrap: nowrap;
 
-      .btn-warning, .btn-outline-light {
-        margin-right: 1.875rem;
+      .btn-warning, .btn-outline-light, .btn-light {
+        margin-right: 1rem;
+      }
+      .btn-warning {
+        order: 1;
+      }
+
+      .btn-outline-light {
+        order: 3;
+      }
+
+      .btn-light {
+        order: 2;
       }
     }
 
@@ -1536,18 +1557,21 @@ footer {
   z-index: 1;
 }
 
-.top-ribbon{
-  display: none;
+.top-ribbon {
   background-image: url(../img/banner/ribbon-bg.png);
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #000211;
   padding: 1.25rem 4%;
-  &.active{
-    display: block;
+
+  &.collapsing {
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
   }
 
-  &_name{
+  &_name {
     color: $primary;
     font-size: 1rem;
     text-align: center;
@@ -1555,8 +1579,9 @@ footer {
     margin-bottom: 0;
     text-transform: uppercase;
     margin-right: 1.5rem;
-    .last-name{
-      font-size:1.75rem;
+
+    .last-name {
+      font-size: 1.75rem;
       display: block;
     }
   }
@@ -1617,3 +1642,4 @@ footer {
     }
   }
 }
+

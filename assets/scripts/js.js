@@ -1,14 +1,15 @@
 const navLinks = document.querySelectorAll('.nav-item')
 const menuToggle = document.getElementById('navbarSupportedContent')
-const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false})
-navLinks.forEach((l) => {
-    l.addEventListener('click', () => {
-        setTimeout(() => {
-            bsCollapse.toggle()
-        }, 50);
+if (menuToggle) {
+    const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
+    navLinks.forEach((l) => {
+        l.addEventListener('click', () => {
+            setTimeout(() => {
+                bsCollapse.toggle()
+            }, 50);
+        })
     })
-})
-
+}
 
 // Change navbar background color and hide back link on scroll
 const el = document.getElementById('navbar');
@@ -60,8 +61,10 @@ if (card.length > 0) {
 
 
 //Footer current year
-document.getElementById("year").innerHTML = new Date().getFullYear();
-
+const footerYear = document.getElementById("year");
+if (footerYear) {
+    footerYear.innerHTML = new Date().getFullYear();
+}
 
 //Scroll Animation
 AOS.init({
@@ -184,7 +187,7 @@ function playVideo(className, modalId = false) {
 
     function getBannerVideoSrc() {
         let width = window.innerWidth;
-        if(width < 520){
+        if (width < 520) {
             srcBannerPopUp = 'https://stream.mux.com/znoiP3FNgShtpFYevxRj6i02WPOeQ4Guj3rinSkQFN8Y.m3u8';
         } else {
             srcBannerPopUp = 'https://stream.mux.com/LLfwJPTNBmfWU00cWZBBZvBqy7HMzEYI502yMFrZW5u4k.m3u8';
@@ -248,9 +251,7 @@ function playVideo(className, modalId = false) {
 }
 
 $(document).ready(function () {
-
     /*Plans switcher*/
-
     const planPriceRegular = $('.plan-card_price-regular');
     const planPriceSale = $('.plan-card_price-sale');
     const planSalePriceSingle = $('#single_sale-price');
@@ -267,9 +268,11 @@ $(document).ready(function () {
     planPriceRegular.hide();
     planPriceSale.removeClass('yearly');
 
+    window.payment_frequency = 'monthly';
     $('input:radio[name="plans"]').change(function () {
         planPriceRegular.hide();
         if ($(this).val() === 'yearly') {
+            window.payment_frequency = 'yearly';
             planPriceRegular.show();
             planPriceSale.addClass('yearly');
             planSalePriceSingle.text('99');
@@ -283,6 +286,7 @@ $(document).ready(function () {
             priceRenewFamily.text('199.99');
             priceRenew.text('year');
         } else if ($(this).val() === 'monthly') {
+            window.payment_frequency = 'monthly';
             planSalePriceSingle.text('9');
             planSalePriceDuo.text('14');
             planSalePriceFamily.text('19');
@@ -294,17 +298,76 @@ $(document).ready(function () {
             priceRenewFamily.text('19.99');
             priceRenew.text('month');
         }
-    });
-
-    /*Banner Close*/
-    $('.close').on('click', function () {
-        $('.top-banner').slideToggle(500, function () {
-            AOS.refresh()
-        });
-        $('.top-ribbon').toggleClass('active');
-        $('.banner-container').toggleClass('fixed-top');
-        $('.navbar').toggleClass('banner-visible')
     })
+
+    /*Top Banner*/
+    let topBanner = $('.top-banner');
+    let topBannerHeight = topBanner.height();
+    let toggleButton = $('.banner-container .btn-close');
+    let topRibbon = $('.top-ribbon');
+
+    topBanner.collapse({
+        toggle: false
+    })
+
+    toggleButton.on('click', function () {
+        topBanner.collapse('toggle');
+        AOS.init();
+    })
+
+    function showRibbon() {
+        setTimeout(() => {
+            topRibbon.collapse('show');
+        }, 150)
+
+        $('.banner-container').addClass('fixed-top');
+        $('.navbar').addClass('banner-visible')
+    }
+
+    function hideRibbon() {
+        topRibbon.collapse('hide');
+        $('.banner-container').removeClass('fixed-top');
+        $('.navbar').removeClass('banner-visible')
+    }
+
+    topBanner.on('hide.bs.collapse', function () {
+        showRibbon();
+    })
+
+    topBanner.on('show.bs.collapse', function () {
+        hideRibbon();
+    })
+
+    window.locked = false;
+
+    function showBannerAfterScroll() {
+        toggleButton.on('click', function () {
+            window.locked = true;
+            topBanner.collapse('show');
+            topBanner.show();
+            //hideRibbon();
+            window.scrollTo(0, 0);
+            setTimeout(() => {
+                window.locked = false;
+            }, 550)
+        })
+    }
+
+
+    showBannerAfterScroll()
+
+    // Hide Banner on scroll
+
+    window.onscroll = function () {
+        console.log(window.locked)
+        if (window.locked) return;
+        if (topBanner.hasClass("show") && window.scrollY > topBannerHeight) {
+            console.log('dddd');
+            topBanner.collapse('hide');
+            topBanner.hide();
+            showRibbon();
+        }
+    }
 });
 
 

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>24Six Registration</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon/favicon.svg">
+    <link rel="icon" type="image/png" href="./assets/img/favicon/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/scss/app.css?cb=112422">
+<!--    @include('website.partials.analytics')-->
+    <style>
+        .grecaptcha-badge {
+            visibility: hidden;
+        }
+        body{
+            margin-bottom:0 !important;
+            background: url(./assets/register-bg.jpg)!important;;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+        }
+        .contact-box{
+            width: 480px;
+            max-width: unset;
+            background: #131211;
+            box-shadow: 10px 20px 50px rgb(19 18 17 / 25%);
+            border-radius: 16px;
+            justify-content: center;
+            align-items: center;
+            padding: 48px 64px 64px !important;
+            margin-left: calc(50% - 480px/2);
+            border: 0;
+
+        }
+        body:after {
+            background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.1) 0%, rgba(19, 18, 17, 0.8) 100%) !important;
+        }
+        .modal-form__control{
+            background: #272625 !important;
+            border: 1px solid #4F4C4A !important;
+            border-radius: 8px !important;
+            color: #B5B2B0 !important;
+        }
+
+        #password-helper{
+            /* Auto layout */
+
+
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            padding: 20px;
+            gap: 16px;
+            width: 332px;
+            height: 170px;
+            background: rgba(19, 18, 17, 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+            margin-top: -251px;
+            margin-left: 9px;
+            box-shadow: inset 0 0 3px 1px #817c786e;
+            padding-top: 25px;
+            margin-bottom: 85px;
+
+        }
+
+        #password-helper ul{ list-style: none;}
+
+        #password-helper  ul li::before {
+            content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: #C9C1BC; /* Change the color */
+            font-weight: bold; /* If you want it to be bold */
+            display: inline-block; /* Needed to add space between the bullet and the text */
+            width: 1em; /* Also needed for space (tweak if needed) */
+            margin-left: -1em; /* Also needed for space (tweak if needed) */
+        }
+        #password-helper  ul li.validated::before {
+            color: #81D843;
+        }
+
+        .btn-back{
+            width: 50px !important;
+            background: #c9c1bc;
+            margin-right: 15px;
+        }
+
+        .btn-finish{
+            width: calc(100% - 75px) !important;
+        }
+
+        .register-plans .plan-card__title{
+            width: 50%;
+            float: left;
+        }
+        .register-plans h6{
+            float: right;
+            line-height: 26px;
+        }
+
+        .register-plans .plan-card.selected,  .plan-card.selected small,  .plan-card.selected span{
+            background: #FFB84A !important;
+            color: black !important;
+        }
+        .register-plans  .plan-card__header{
+
+            float: left !important;
+            margin-right: 30px !important;
+            margin-bottom: 13px !important;
+        }
+        .register-plans .plan-card__text{
+            margin-top: 0 !important;
+
+        }
+        .register-plans .plan-card__text.profiles{
+            margin-top: 0.75rem !important;
+
+        }
+
+        .register-plans .plans {
+            padding-bottom: 0 !important;
+        }
+        .register-plans  .plan-card{
+            min-height: auto !important;
+            clear:both;
+
+        }
+
+        .minus, .plus{
+            width: 48px;
+            height: 48px;
+
+            /* black/80 */
+
+            background: #272625;
+            border-radius: 28px;
+            color: #FFB84A;
+            line-height: 48px;
+            text-align: center;
+        }
+
+        .minus.limit, .plus.limit{
+            color: #B5B2B0;
+            background:black;
+        }
+
+        #free{
+
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            color: #FFFFFF;
+        }
+        #then{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            color: #B5B2B0;
+        }
+        #moreProfiles {
+            display: none;
+            padding: 1.25rem;
+            background: #FFB84A !important;
+            color: black !important;
+            border-radius: 1rem;
+            margin: 10px;
+        }
+        #moreProfiles a { color: black !important; }
+        #pluralProfiles{display: none;}
+
+        /* ===== Scrollbar CSS ===== */
+        /* Firefox */
+        .contact-form *{
+            scrollbar-width: thin;
+            scrollbar-color: #ffb84a #272625;
+        }
+
+        /* Chrome, Edge, and Safari */
+        .contact-form *::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .contact-form *::-webkit-scrollbar-track {
+            background: #272625;
+        }
+
+        .contact-form *::-webkit-scrollbar-thumb {
+            background-color: #ffb84a;
+            border-radius: 10px;
+            border: 0px solid #ffffff;
+        }
+    </style>
+</head>
+<body>
+<nav id="navbar" class="navbar navbar-expand-md fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img src="assets/img/logo-horiz-yellow.svg" alt="logo-horiz">
+        </a>
+        <button class="navbar-toggler hamburger hamburger--spring" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item d-md-none">
+                        <a class="nav-link active" href="/#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#plans">Plans</a>
+                    </li>
+                </ul>
+                <div class="d-md-flex align-items-center">
+                    <a href="home-artists.html" class="nav-text d-md-none d-lg-block text-decoration-none text-primary">For
+                        artists & content creators</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid mb-5 mb-md-0">
+    <div class="contact-box">
+        <form action="" class="contact-form modal-form" id="24six-form">
+            <h2 class="section-title">Sign Up</h2>
+            <p class="main-text">By creating an account, you are agreeing to 24Six's
+                <a class="text-warning" href="terms-of-service-users.html">Terms and conditions of use</a>.</p>
+            <div class="mb-3">
+                <label for="firstName" class="modal-form__label">First name</label>
+                <input type="text" class="modal-form__control" id="firstName" required
+                       placeholder="Enter your first name">
+            </div>
+            <div class="mb-3">
+                <label for="lastName" class="modal-form__label">Last name</label>
+                <input type="text" class="modal-form__control" id="lastName" required
+                       placeholder="Enter your last name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="modal-form__label">Email address</label>
+                <input type="email" class="modal-form__control" id="email" required autocomplete=off
+                       placeholder="Enter your email address">
+            </div>
+            <div class="mb-3 position-relative">
+                <label for="password" class="modal-form__label">Password</label>
+                <input type="password" class="modal-form__control" id="password" autocomplete="new-password"
+                       onfocus="$('#password-helper').fadeIn()"
+                       onblur="$('#password-helper').fadeOut()"
+                       onkeyup="validatePassword(this.value)"
+                       placeholder="Create your password">
+                <div id="password-helper">
+                    Password must contain:
+                    <ul style="margin-top: 10px">
+                        <li id="validation1">At least one number</li>
+                        <li id="validation2">At least 8 characters</li>
+                        <li id="validation3">At least one lowercase letter</li>
+                        <li id="validation4">At least one uppercase letter</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button type="submit" onclick="step2()"  class="btn btn-submit-contact btn-warning mt-3 mb-3">Create Account</button>
+
+        </form>
+        <form action="" class="contact-form modal-form" id="24six-form2" style="display: none">
+            <h2 class="section-title">Billing Details</h2>
+            <p class="main-text fs-2">All plans include a <span class="font-weight-bold text-white">7-day free trial</span>. Cancel anytime.</p>
+            <section class="plans register-plans" style="    padding-bottom: 1rem;">
+                <div class="container-fluid2">
+                    <div  id="plans">
+                        <div class="col  mb-3">
+                            <div class="plan-card selected" id="plan1" onclick="setProfiles(1)">
+                                <h4 class="plan-card__title">
+                                    Single
+                                </h4>
+                                <h6 ><strong>$9.99</strong> <span style="color:#C9C1BC">/ monthly</span></h6>
+                                <div style="clear: both"></div>
+                                <div class="plan-card__header">
+                                    <img src="./assets/img/illustrations-for-plan-single.svg" alt="plan-single" class="img-fluid plan-card__header-single">
+                                </div>
+                                <p class="plan-card__text profiles">1 Profile</p>
+                                <p class="plan-card__text"><small>One 24Six Profile</small></p>
+                                <div style="clear: both"></div>
+                            </div>
+                        </div>
+                        <div class="col  mb-3">
+                            <div class="plan-card" id="plan2"  onclick="setProfiles(2)">
+                                <h4 class="plan-card__title">
+                                    Duo
+                                </h4>
+                                <h6 ><strong>$14.99</strong> <span style="color:#C9C1BC">/ monthly</span></h6>
+                                <div style="clear: both"></div>
+                                <div class="plan-card__header">
+                                    <img src="./assets/img/illustrations-for-plan-duo.svg" alt="plan-duo" class="img-fluid plan-card__header-duo">
+                                </div>
+                                <p class="plan-card__text profiles">2 Profiles</p>
+                                <p class="plan-card__text"><small>Up to two 24Six Profiles</small></p>
+                                <div style="clear: both"></div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+
+                            <div class="plan-card" id="plan3"  onclick="setProfiles(4)">
+                                <h4 class="plan-card__title">
+                                    Family
+                                </h4>
+                                <h6 ><strong>$19.99</strong> <span style="color:#C9C1BC">/ monthly</span></h6>
+                                <div style="clear: both"></div>
+                                <div class="plan-card__header">
+                                    <img src="./assets/img/illustrations-for-plan-family.svg" alt="plan-family" class="img-fluid">
+                                </div>
+                                <p class="plan-card__text profiles">4 Profiles</p>
+                                <p class="plan-card__text"><small>Up to four 24Six profiles. Additional profile + $3.00 per profile / monthly</small></p>
+                                <div style="clear: both"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="main-text">Enter card details for monthly billing.
+                    You will not be charged before the end of your trial period which ends on {{now()->addDays(7)->toFormattedDateString()}}.
+                    <br>No commitments. Cancel anytime.</p>
+            </section>
+
+            <div class="mb-3">
+                <label for="ccName" class="modal-form__label">Subscription Plan</label>
+                <div id="planContainer" style="border: 1px solid #4F4C4A; text-align: center;border-radius: 8px;">
+                    <table style="margin: 0 auto" class="mt-3 mb-3"><tr>
+                        <td width="1"><div class="minus limit" onclick="setProfiles(profiles-1)">-</div></td>
+                        <td style="text-align: center; width:150px;"> <span id="profiles">1</span> profile<span id="pluralProfiles">s</span></td>
+                        <td width="1"> <div class="plus"  onclick="setProfiles(profiles+1)">+</div></td>
+                    </tr></table>
+                    <div id="free">Free for 7 days</div>
+                    <div id="then" class="mb-3 mt-1">then <span id="price">$9.99</span> / per month</div>
+                    <div id="moreProfiles" class="mb-3 mt-1" style="display: none">
+                        Please <a href="/contact-us-user.html">contact us</a> if you require more
+                        than 6 profiles.
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="mb-3">
+                <label for="ccName" class="modal-form__label">Cardholder’s name</label>
+                <input type="text" class="modal-form__control" id="ccName" required
+                       placeholder="Enter the name appearing on your credit card">
+            </div>
+            <div class="mb-3">
+                <label for="ccName" class="modal-form__label">Card number</label>
+                <input type="text" class="modal-form__control" id="ccNumber" required
+                       placeholder="Enter a valid credit card number">
+            </div>
+            <div class="mb-3" style="float: left;">
+                <div style="width: 45%; margin-right: 10%; float: left;">
+                    <label for="ccExpiry" class="modal-form__label">Expiry Date</label>
+                    <input type="text" class="modal-form__control" id="ccExpiry" required
+                           placeholder="MM/YY">
+                </div>
+                <div style="float: left;width:45%;">
+                    <label for="ccCVC" class="modal-form__label">CVC/CC</label>
+                    <input type="text" class="modal-form__control" id="ccCVC" required placeholder="***">
+                </div>
+
+            </div>
+            <div class="mb-3">
+                <label for="country" class="modal-form__label">Billing Country</label>
+                <select class="modal-form__control" id="country" onchange="toggleStates(this.value)">
+                    <option></option>
+                    <optgroup label="Popular Countries">
+                        <option value="US">United States</option>
+                        <option value="IL">Israel</option>
+                        <option value="CA">Canada</option>
+                    </optgroup>
+                    <optgroup label="Alphabetical List">
+                        @foreach(\DB::table('countries')
+                        ->orderBy('country_name')
+                        ->pluck('country_name','alpha2_code') as $value=>$label)
+                        <option value="{!! $value !!}">{{$label}}</option>
+                        @endforeach
+                    </optgroup>
+                </select>
+            </div>
+            <div class="mb-3" id="stateHolder" style="display: none">
+                <div style="width: 45%; margin-right: 10%; float: left;">
+                    <label for="state" id="stateLabel" class="modal-form__label"></label>
+                    <select class="modal-form__control" id="state" >
+                        <option></option>
+                        <option class="province" value="AB">Alberta</option>
+                        <option class="province"  value="BC">British Columbia</option>
+                        <option class="province"  value="MB">Manitoba</option>
+                        <option class="province"  value="NB">New Brunswick</option>
+                        <option class="province"  value="NF">Newfoundland</option>
+                        <option class="province"  value="NT">Northwest Territories</option>
+                        <option class="province"  value="NS">Nova Scotia</option>
+                        <option class="province"  value="NU">Nunavut</option>
+                        <option class="province"  value="ON">Ontario</option>
+                        <option class="province"  value="PE">Prince Edward Island</option>
+                        <option class="province"  value="QC">Quebec</option>
+                        <option class="province"  value="SK">Saskatchewan</option>
+                        <option class="province"  value="YT">Yukon Territory</option>
+
+                        <option class="state" value="AK">Alaska</option>
+                        <option class="state" value="AL">Alabama</option>
+                        <option class="state" value="AR">Arkansas</option>
+                        <option class="state" value="AZ">Arizona</option>
+                        <option class="state" value="CA">California</option>
+                        <option class="state" value="CO">Colorado</option>
+                        <option class="state" value="CT">Connecticut</option>
+                        <option class="state" value="DC">District of Columbia</option>
+                        <option class="state" value="DE">Delaware</option>
+                        <option class="state" value="FL">Florida</option>
+                        <option class="state" value="GA">Georgia</option>
+                        <option class="state" value="HI">Hawaii</option>
+                        <option class="state" value="IA">Iowa</option>
+                        <option class="state" value="ID">Idaho</option>
+                        <option class="state" value="IL">Illinois</option>
+                        <option class="state" value="IN">Indiana</option>
+                        <option class="state" value="KS">Kansas</option>
+                        <option class="state" value="KY">Kentucky</option>
+                        <option class="state" value="LA">Louisiana</option>
+                        <option class="state" value="MA">Massachusetts</option>
+                        <option class="state" value="MD">Maryland</option>
+                        <option class="state" value="ME">Maine</option>
+                        <option class="state" value="MI">Michigan</option>
+                        <option class="state" value="MN">Minnesota</option>
+                        <option class="state" value="MO">Missouri</option>
+                        <option class="state" value="MS">Mississippi</option>
+                        <option class="state" value="MT">Montana</option>
+                        <option class="state" value="NC">North Carolina</option>
+                        <option class="state" value="ND">North Dakota</option>
+                        <option class="state" value="NE">Nebraska</option>
+                        <option class="state" value="NH">New Hampshire</option>
+                        <option class="state" value="NJ">New Jersey</option>
+                        <option class="state" value="NM">New Mexico</option>
+                        <option class="state" value="NV">Nevada</option>
+                        <option class="state" value="NY">New York</option>
+                        <option class="state" value="OH">Ohio</option>
+                        <option class="state" value="OK">Oklahoma</option>
+                        <option class="state" value="OR">Oregon</option>
+                        <option class="state" value="PA">Pennsylvania</option>
+                        <option class="state" value="PR">Puerto Rico</option>
+                        <option class="state" value="RI">Rhode Island</option>
+                        <option class="state" value="SC">South Carolina</option>
+                        <option class="state" value="SD">South Dakota</option>
+                        <option class="state" value="TN">Tennessee</option>
+                        <option class="state" value="TX">Texas</option>
+                        <option class="state" value="UT">Utah</option>
+                        <option class="state" value="VA">Virginia</option>
+                        <option class="state" value="VT">Vermont</option>
+                        <option class="state" value="WA">Washington</option>
+                        <option class="state" value="WI">Wisconsin</option>
+                        <option class="state" value="WV">West Virginia</option>
+                        <option class="state" value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <div style="float: left;width:45%;">
+                    <label for="zip" id="zipLabel" class="modal-form__label"></label>
+                    <input type="text" maxlength="10" class="modal-form__control" id="zip" >
+                </div>
+            </div>
+            <button type="button" onclick="step1()"  class="btn btn-submit-contact btn-warning mt-5 mb-3 btn-back">&lsaquo;</button>
+            <button type="button" onclick="signup()"  class="btn btn-submit-contact btn-warning mt-5 mb-3 btn-finish">Start Free Trial</button>
+            <img src="assets/secure.png" class="w-100" >
+        </form>
+        <div id="success" style="display: none">
+
+            <h2 class="section-title">Registration Successful</h2>
+            <div class="main-text mt-3">
+                <p>Download the 24Six app to start listening</p>
+                <a href="https://apps.apple.com/us/app/24six/id6443437246" class="download-link">
+                    <img src="assets/img/download_on_the_app_store_badge.svg" alt="download_on_the_app" class="img-fluid m-2">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=app.tfs.prod" class="download-link">
+                    <img src="assets/img/google_play_store_badge_EN.svg" alt="google_play" class="img-fluid m-2">
+                </a></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
+        integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/scripts/hamburger.js"></script>
+<script src="assets/scripts/swipper.js"></script>
+<script src="https://kit.fontawesome.com/e25968b3b0.js" crossorigin="anonymous"></script>
+<script src="https://www.google.com/recaptcha/api.js?render={{env('RECAPTCHA_KEY')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="assets/scripts/js.js"></script>
+
+<script>
+
+    var profiles = 1;
+
+    function setProfiles(newProfiles){
+        console.log('np',newProfiles,profiles);
+        if(newProfiles < 1)
+            newProfiles = 1;
+        if(newProfiles > 6) {
+            newProfiles = 6;
+        }
+        $('.plan-card.selected').removeClass('selected');
+        planCard = newProfiles;
+        if(planCard > 3)
+            planCard = 3;
+        $('#plan'+planCard).addClass('selected');
+
+        profiles = newProfiles;
+        if(profiles == 1){
+            $('.minus').addClass('limit');
+            $('#pluralProfiles').hide();
+        }
+        else{
+            $('.minus').removeClass('limit');
+            $('#pluralProfiles').css('display','inline');
+        }
+
+        if(profiles == 6){
+            $('.plus').addClass('limit');
+            $('#moreProfiles').slideDown();
+        }
+        else{
+            $('.plus').removeClass('limit');
+            $('#moreProfiles').slideUp();
+        }
+        $('#profiles').html(profiles);
+        if(profiles < 2)
+            price = '$9.99';
+        else if(profiles == 2)
+            price = '$14.99';
+        else if(profiles  < 5)
+            price = '$19.99';
+        else
+            price = '$'+Math.round(100*(19.99+(3*(profiles-4))))/100;
+        $('#price').html(price);
+
+
+    }
+
+    $('#ccNumber').keyup(function() {
+        let val = $(this).val().replace(/\D/g,'');
+        val = val.split("-").join(""); // remove hyphens
+        if (val.length > 0) {
+            val = val.match(new RegExp('.{1,4}', 'g')).join("-");
+        }
+        $(this).val(val);
+    });
+    $('#ccExpiry').keyup(function() {
+        let val = $(this).val().replace(/\D/g,'');
+        val = val.split("/").join(""); // remove hyphens
+        val = val.substring(0,4);
+        if (val.length > 0) {
+            val = val.match(new RegExp('.{1,2}', 'g')).join("/");
+        }
+        $(this).val(val);
+    });
+
+    function validatePassword(password){
+        //numeric
+        if( /\d/.test(password))
+            $('#validation1').addClass('validated');
+        else
+            $('#validation1').removeClass('validated');
+        //min length
+        if(password.length > 7)
+            $('#validation2').addClass('validated');
+        else
+            $('#validation2').removeClass('validated');
+        //lowercase
+        if(  /[a-z]/.test(password))
+            $('#validation3').addClass('validated');
+        else
+            $('#validation3').removeClass('validated');
+        //uppercase
+        if(  /[A-Z]/.test(password))
+            $('#validation4').addClass('validated');
+        else
+            $('#validation4').removeClass('validated');
+
+    }
+    function step2() {
+        if (!$('#firstName')[0].checkValidity() || !$('#lastName')[0].checkValidity() || !$('#email')[0].checkValidity())
+            return;
+        if ($('#password-helper li:not(.validated)').length > 0) {
+            $('#password-helper').fadeIn();
+            return;
+        }
+
+
+        $('#24six-form').hide();
+        $('#24six-form2').show();
+
+    }
+
+    function step1(){
+        $('#24six-form2').hide();
+        $('#24six-form').show();
+    }
+
+    function signup(){
+
+        $('.btn-finish').html("Please Wait ...").attr('disabled', 'true');
+        grecaptcha.execute("{{env('RECAPTCHA_KEY')}}", {action: 'register'}).then(function (token) {
+            $.post('/register.html', {
+                'token': token,
+                'action': 'contact',
+                'firstName': $('#firstName').val(),
+                'lastName': $('#lastName').val(),
+                'email': $('#email').val(),
+                'password': $('#password').val(),
+                'ccName': $('#ccName').val(),
+                'ccNumber': $('#ccNumber').val(),
+                'ccExpiry': $('#ccExpiry').val(),
+                'country': $('#country').val(),
+                'state': $('#state').val(),
+                'zip': $('#zip').val(),
+                'ccCVC': $('#ccCVC').val(),
+                'profiles': profiles,
+                '_token': '{{ csrf_token() }}',
+            }).done(function () {
+                $('#24six-form2').hide();
+                $('#success').fadeIn('slow');
+            }).fail(function (message) {
+                $('.btn-finish').html("Start Free Trial").attr('disabled', false);
+                message = message.responseJSON;
+                if (message.message)
+                    message = message.message;
+
+                alert(message);
+            }, 'json')
+
+        });
+    }
+
+    $('#24six-form').submit(function (evt) {
+        evt.preventDefault();
+    });
+
+
+    function toggleStates(country){
+        if(country == 'US'){
+            $('#stateLabel').html('State');
+            $('#zipLabel').html('Zip Code');
+            $('#state .province').hide();
+            $('#state .state').show();
+            $('#stateHolder').slideDown();
+
+        }
+        else if(country == 'CA'){
+            $('#stateLabel').html('Province');
+            $('#zipLabel').html('Postal Code');
+            $('#state .province').show();
+            $('#state .state').hide();
+            $('#stateHolder').slideDown();
+
+        }
+        else
+            $('#stateHolder').slideUp();
+    }
+</script>
+<script>
+    window.intercomSettings = {
+        api_base: "https://api-iam.intercom.io",
+        app_id: "ktd9ieu3"
+    };
+</script>
+
+<script>
+    // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/ktd9ieu3'
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ktd9ieu3';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+</body>
+</html>

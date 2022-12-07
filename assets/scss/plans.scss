@@ -191,57 +191,64 @@
       }
     }
 
-    //&::after {
-    //  content: url("../img/triangle.svg");
-    //  position: absolute;
-    //  left: 50%;
-    //  top: 99%;
-    //  transform: translateX(-50%);
-    //  opacity: 0;
-    //  transition: opacity 0.3s;
-    //}
+    &::after {
+      content: url("../img/triangle.svg");
+      position: absolute;
+      left: 50%;
+      top: 99%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.8s;
+    }
 
-    //&:hover {
-    //  background-color: $primary;
-    //
-    //  .plan-card_title {
-    //    color: $dark;
-    //  }
-    //
-    //  .plan-card_price {
-    //    color: $dark;
-    //
-    //    &-regular.visible {
-    //      visibility: visible;
-    //    }
-    //
-    //    &-sale {
-    //      color: $dark;
-    //    }
-    //  }
-    //
-    //  .plan-card__text, .plan-card__text span {
-    //    color: $dark;
-    //  }
-    //
-    //  .plan-card__image {
-    //    border-color: transparent;
-    //    background-color: #101011;
-    //  }
-    //
-    //  .plan-card__profile-number, .plan-card__profile-number span {
-    //    color: $dark;
-    //  }
-    //
-    //  .badge {
-    //    background-color: $dark;
-    //    color: $primary;
-    //  }
-    //
-    //  //&::after {
-    //  //  opacity: 1;
-    //  //}
-    //}
+    &.active {
+      background-color: $primary;
+
+      .plan-card_title {
+        color: $dark;
+      }
+
+      .plan-card__info{
+        color: #4F4C4A;
+      }
+
+      .plan-card_price {
+        color: $dark;
+
+        &-regular.visible {
+          visibility: visible;
+        }
+
+        &-sale {
+          color: $dark;
+          &:after{
+            color: #4F4C4A;
+          }
+        }
+      }
+
+      .plan-card__text, .plan-card__text span {
+        color: $dark;
+      }
+
+      .plan-card__image {
+        border-color: transparent;
+        background-color: #101011;
+      }
+
+      .plan-card__profile-number, .plan-card__profile-number span {
+        color: $dark;
+      }
+
+      .badge {
+        background-color: $dark;
+        color: $primary;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
 
   }
 
@@ -259,6 +266,7 @@
   @media (min-width: 768px) {
     .plan-cards {
       padding-top: 7.5rem;
+
       &_section-title {
         max-width: 35rem;
       }
