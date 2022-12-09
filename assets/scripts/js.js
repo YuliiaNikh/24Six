@@ -180,10 +180,12 @@ function playVideo(className, modalId = false) {
     videoArtists = document.querySelectorAll('.artists-video');
     videoPopUp = document.querySelectorAll('.popup-video');
     videoBannerPopUp = document.querySelectorAll('.popup-banner-video');
+    videoFamilyPayer = document.querySelectorAll('.popup-player-video')
 
     srcFilter = 'https://stream.mux.com/9On9MWt9ZA01A3F01hGnzkVNf02s6n2b6HfDgIjyxYeKxg.m3u8';
     srcArtists = 'https://stream.mux.com/UdG6OSov2DVZVCToKw00NbNYgZU3uYopTvOjXtSkjaYc.m3u8';
     scrPopUp = 'https://stream.mux.com/vZaKQBH5FLwKxGkvjEgzX3X02MrqL3yjNmUBhygoxP5c.m3u8';
+    scrFamilyPayer = 'https://stream.mux.com/FIin5wdSWst1Ur7hHlpEawelggycsdccRrxbAjek00Hg.m3u8'
 
     function getBannerVideoSrc() {
         let width = window.innerWidth;
@@ -221,6 +223,10 @@ function playVideo(className, modalId = false) {
             'popup-banner-video': {
                 videos: videoBannerPopUp,
                 src: srcBannerPopUp,
+            },
+            'popup-player-video':{
+                videos: videoFamilyPayer,
+                src: scrFamilyPayer,
             }
         };
         for (let video of data[className].videos) {

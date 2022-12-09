@@ -10,6 +10,8 @@
 @import "contact";
 @import "sign-up";
 @import "plans";
+@import "family-player";
+
 
 html, body{
   width: 100%;
@@ -49,10 +51,3 @@ body {
   color: $primary!important;
 }
 
-
-.ratio-16x9 {
-  --bs-aspect-ratio:  calc(16 / 9 * 100%); // 2x1
-  @media (min-width: 520px){
-    --bs-aspect-ratio: 56.25%; // 16x9
-  }
-}

@@ -129,6 +129,26 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     })
+
+    /*Player page*/
+
+    let swiper5 = new Swiper(".payer-hero__slider-thumbsSlider", {
+        spaceBetween: 32,
+        slidesPerView: 'auto',
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    let swiper6 = new Swiper(".payer-hero__slider", {
+        spaceBetween: 10,
+        thumbs: {
+            swiper: swiper5,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
 });
 
 

@@ -1,0 +1,468 @@
+.family-player {
+  font-family: 'Roboto Flex', sans-serif;
+  background: rgba(18, 19, 22, 1) url("../img/family-player/bg.svg") top right no-repeat;
+
+  &:after {
+    display: none;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+  }
+
+  .hero-section {
+    background: url("../img/family-player/hero-bg.svg") top no-repeat;
+    background-size: 150%;
+    padding-top: 2.5rem;
+    margin-bottom: 4.625rem;
+
+    .payer-hero__slider {
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        height: auto;
+      }
+
+      .devices-hero-img {
+        max-width: 18.25rem;
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .payer-hero__slider-thumbsSlider {
+      .swiper-wrapper{
+        justify-content: center;
+      }
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5rem;
+        width: 5rem;
+        border: 1px solid transparent;
+        border-radius: 6px;
+
+        &.swiper-slide-active {
+          border-color: #FFB84A;
+        }
+
+        &:first-of-type {
+          padding: 0.625rem;
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev{
+      &:after{
+        font-size: 0.875rem;
+        color: $primary;
+      }
+    }
+
+    .hero-title {
+      margin-bottom: 0.75rem;
+      font-size: 2.5rem;
+    }
+
+    .main-text {
+      margin-bottom: 1.25rem;
+      max-width: 31rem;
+    }
+
+    .hero-price {
+      small {
+        display: block;
+        font-size: 1rem;
+        color: $gray;
+        line-height: 2;
+      }
+
+      color: $primary;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+
+    .btn-warning {
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    .hero__text-info {
+      display: flex;
+      align-items: center;
+      color: $gray;
+      font-style: italic;
+      font-size: 0.75rem;
+
+      p {
+        margin-top: 0.125rem;
+      }
+    }
+  }
+
+  .cards-wrapper {
+    position: relative;
+
+    .section-title {
+      max-width: 40rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .lines-bg {
+      position: absolute;
+      width: 100%;
+      top: -20%;
+      right: 0;
+      left: 0;
+      z-index: -1;
+
+    }
+  }
+
+  .card-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6rem;
+    align-items: center;
+    z-index: 1;
+
+    &__img {
+      margin-bottom: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    &__icon {
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    &__title {
+      color: $white;
+      font-size: 2.25rem;
+      line-height: 1.33;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    &__text {
+      color: $gray;
+      font-size: 1.125rem;
+    }
+  }
+
+  .device-features {
+    margin-bottom: 0.75rem;
+
+    .main-text {
+      margin-bottom: 0.75rem;
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      color: $white;
+
+      p {
+        margin-top: 0.75rem;
+        margin-bottom: 0;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .tabs-wrapper {
+    background-color: #1F2023;
+    margin: 0 -1.25rem 3rem -1.25rem;
+    padding: 4rem 0;
+
+    .nav-tabs {
+      padding: 0 1rem;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      border: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .tab-item {
+      flex-shrink: 0;
+      margin-right: 2rem;
+      padding-bottom: 2.5rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    .nav-link {
+      padding: 1rem 2.5rem;
+      background: #272625;
+      border-radius: 0.375rem;
+      border: 1px solid #272625;
+      color: $gray;
+      transition: all 0.3s;
+
+      &.active {
+        border-color: $primary;
+        color: $primary;
+
+        svg path {
+          stroke: $primary;
+        }
+      }
+    }
+
+    .tab-content {
+      padding-top: 2.5rem;
+      margin: 0 1rem;
+      border-top: 1px solid #7B7673;
+    }
+
+    .tab-pane {
+      h3 {
+        font-weight: 600;
+        font-size: 1.875rem;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        color: $white;
+        margin-bottom: 1.5rem;
+      }
+
+      .main-text {
+        a {
+          color: $primary;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .cta-banner {
+    margin-bottom: 5.45rem;
+
+    .section-title {
+      max-width: 42.625rem;
+    }
+
+    img {
+      width: 10rem;
+    }
+
+    .text-info {
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: #7B7673 !important;
+      max-width: 19rem;
+      margin: auto;
+
+      a {
+        color: #7B7673 !important;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hero-section {
+      padding-top: 4.5rem;
+      background-position: left 10%;
+      background-size: 60%;
+    }
+
+    .card-item {
+      flex-direction: row;
+
+      &__content {
+        padding-left: 3rem;
+      }
+
+      &__img {
+        margin-bottom: 0;
+        max-width: 50%;
+      }
+
+      &:nth-of-type(even) {
+        flex-direction: row-reverse;
+
+        .card-item__content {
+          padding-left: 0;
+          padding-right: 3rem;
+        }
+      }
+    }
+
+    .tabs-wrapper {
+      margin: 0 0 4rem 0;
+
+      .tab-pane {
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .cta-banner {
+      margin-bottom: 8.125rem;
+
+      .text-info {
+        max-width: 24.5rem;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-title {
+      margin-bottom: 4rem;
+    }
+    .hero-section {
+      background-size: 50%;
+
+      .hero-img-wrapper {
+        max-width: 28.25rem;
+      }
+
+      .payer-hero__slider {
+        .devices-hero-img {
+          margin: 0;
+        }
+      }
+
+      .hero-title {
+        margin-bottom: 1rem;
+      }
+
+      .btn-warning {
+        margin-bottom: 2.375rem;
+      }
+    }
+
+    .card-item {
+      margin-bottom: 7.875rem;
+
+      &__content {
+        padding-left: 4.5rem;
+      }
+
+      &__img {
+        margin-bottom: 0;
+        max-width: 27.375rem;
+      }
+
+      &:nth-of-type(even) {
+        .card-item__content {
+          padding-left: 0;
+          padding-right: 4rem;
+        }
+      }
+    }
+
+    .device-features {
+      .main-text {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .tabs-wrapper {
+      margin-top: 7.5rem;
+      margin-bottom: 8.75rem;
+
+      .nav-tabs {
+        justify-content: space-between;
+      }
+
+      .tab-item:not(:last-of-type) {
+        margin-right: 1rem;
+      }
+
+      .tab-pane {
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hero-section {
+      background-size: 47%;
+      background-position: top left;
+
+      .hero-price {
+        margin-bottom: 1.5rem;
+      }
+    }
+    .card-item {
+      padding: 3.875rem 5.25rem;
+
+      &__content {
+        padding-left: 6.25rem;
+      }
+
+      &__img {
+        margin-bottom: 0;
+        max-width: 27.375rem;
+      }
+
+      &:nth-of-type(even) {
+        .card-item__content {
+          padding-left: 0;
+          padding-right: 6.25rem;
+        }
+      }
+    }
+    .device-features {
+
+      .testimonial-card {
+        p {
+          font-size: 1.125rem;
+        }
+      }
+    }
+    .tabs-wrapper {
+      .nav-tabs {
+        justify-content: start;
+        padding: 0 7.125rem;
+      }
+
+      .tab-item:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+
+      .tab-content {
+        padding: 2.5rem 7.125rem 0 7.125rem;
+        margin: 0;
+        border-top: 1px solid #7B7673;
+      }
+
+      .tab-pane {
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
