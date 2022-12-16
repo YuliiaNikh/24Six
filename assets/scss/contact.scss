@@ -1,18 +1,13 @@
 .contact {
-  background: rgba(18, 19, 22, 0.9);
-  min-height: 100vh;
-  height: 100%;
-  padding: 9rem 0 3rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  padding-top: 3.875rem;
+  font-family: 'Roboto Flex', sans-serif;
   &-box {
     height: 100%;
     background: #1F2023;
     border: 0.25rem solid #FFB84A;
     border-radius: 1.5rem;
     padding: 3rem 1rem;
+    
   }
 
   .section-title {
@@ -23,7 +18,7 @@
 
   .main-text {
     margin: 0 auto 2rem auto;
-    max-width: 29.125rem;
+    max-width: 27rem;
     text-align: center;
   }
 
@@ -34,22 +29,16 @@
   }
 
   @media (min-width: 768px) {
-    padding: 9rem 0 4rem 0;
     &.artist{
       padding: 14rem 0 4rem 0;
     }
     .contact-box{
-      padding: 4.5rem 0;
+      padding: 4.2rem 0;
     }
   }
   @media (min-width: 990px) {
-    padding: 9.575rem 0 4.375rem 0;
-
-    .contact-box {
-      padding: 5.625rem 0;
-    }
     .section-title {
-      font-size: 3rem;
+      font-size: 2.25rem;
     }
   }
 }

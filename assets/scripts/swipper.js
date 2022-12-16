@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let swiper3 = new Swiper(".features-slider-img", {
         spaceBetween: 10,
+        autoHeight: true,
         mousewheel: {
             forceToAxis: true,
             sensitivity: 1,

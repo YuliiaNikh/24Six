@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>24Six</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon/favicon.svg">
+  <link rel="icon" type="image/png" href="./assets/img/favicon/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link
+          rel="stylesheet"
+          href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/scss/app.css?cb=112422">
+</head>
+<body class="support">
+<nav id="navbar" class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="assets/img/logo-horiz-yellow.svg" alt="logo-horiz">
+    </a>
+    <button class="navbar-toggler hamburger hamburger--spring" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="plans.html">Plans</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="support.html">Support</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="family-player.html">24Six FamilyPlayer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="home-artists.html">For artists</a>
+          </li>
+        </ul>
+        <div class="d-lg-flex align-items-center">
+          <a href="/login" class="btn btn-warning w-100 mt-3 mt-lg-0 me-lg-3">Log in</a>
+          <a href="/register.html" class="btn btn-light mt-4 mt-lg-0 w-100 w-lg-auto">
+            Sign up
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<main class="contact">
+  <div class="container-fluid">
+    <div class="contact-box">
+      <h2 class="section-title">Contact us</h2>
+      <p class="main-text">24Six is here to help you with any issues you may have. Please fill out the form below and we will try to get back
+        to you as soon as possible.</p>
+      <form action="" class="contact-form modal-form">
+        <div class="mb-3">
+          <label for="nameInputContact" class="modal-form__label">First name</label>
+          <input type="text" class="modal-form__control" id="nameInputContact"
+                 placeholder="Enter you first name">
+        </div>
+        <div class="mb-3">
+          <label for="emailInputContact" class="modal-form__label">Email address</label>
+          <input type="email" class="modal-form__control" id="emailInputContact"
+                 placeholder="Enter you email address">
+        </div>
+        <div class="mb-3">
+          <label for="phoneInputContact" class="modal-form__label">Phone number (optional)</label>
+          <input type="tel" class="modal-form__control" id="phoneInputContact"
+                 placeholder="Enter your phone number">
+        </div>
+        <div class="mb-3">
+          <label for="textInputContact" class="modal-form__label">Leave us a message</label>
+          <textarea class="modal-form__control" id="textInputContact" cols="30" rows="10"
+                    placeholder="Enter text here"></textarea>
+        </div>
+        <button type="submit" class="btn btn-warning mt-2">Submit</button>
+      </form>
+    </div>
+  </div>
+  <section id="support" class="section-support position-relative">
+    <div class="container-fluid">
+      <p class="section__above-title">FAQs</p>
+      <h2 class="section-title">Got questions? Find answers here.</h2>
+      <div class="accordion accordion-flush" id="accordionSupport">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              What is 24Six?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+               data-bs-parent="#accordionSupport">
+            <div class="accordion-body">
+              <p>24Six is a groundbreaking media streaming platform for the Jewish family. It gives
+                subscribers access to thousands of songs, videos and podcasts. With features designed to
+                provide you with complete control. Create a custom entertainment experience for your
+                family.</p>
+              <p>
+                Your whole family can listen, watch, collect favorites, create playlists, and stream
+                from
+                anywhere. All approved, kosher content. All for one low monthly fee.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              How do I use 24Six?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+               data-bs-parent="#accordionSupport">
+            <div class="accordion-body">
+              <p>Download the app on your phone or tablet, or login on our website at www.24six.app, then
+                sign up for a free trial. Customize your profile. And start streaming.
+              </p>
+              <p>Enjoy your music, podcasts and videos wherever you go by downloading your favorites.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              How customizable are the filters?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+               data-bs-parent="#accordionSupport">
+            <div class="accordion-body">
+              <p>The 24Six filters were built by the people, for the people. 24Six allows you to determine
+                what’s right for you and your family. You can select one of our age-based filters,
+                public filters created by organizations, yeshivos, schools, etc., or create your own!
+                Curate the experience for each member of your family.
+              </p>
+              <p>Watch this video to see how it works:</p>
+              <div class="ratio ratio-16x9">
+                <div class="play-btn">
+                  <img src="./assets/img/play.svg" alt="play icon">
+                </div>
+                <video
+                        class="filter-video video-box"
+                        controls
+                        style="width: 100%;"
+                        poster="./assets/img/video-thumbnail.png"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Can I cancel my subscription?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+               data-bs-parent="#accordionSupport">
+            <div class="accordion-body">
+              <p>
+                Of course. Subscriptions are month-to-month. You can update or cancel your subscription
+                at any time.
+                Select "Manage my subscription" in your account settings.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Will there be ads?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+               data-bs-parent="#accordionSupport">
+            <div class="accordion-body">
+              <p>
+                Music is the song of the soul — and it will never be interrupted with advertisements. By
+                subscribing to 24Six, you are supporting your favorite Jewish artists and content
+                creators
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              How does offline listening work?
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+               data-bs-parent="#accordionSupport">
+            <div class="accordion-body">
+              <p>You can select your favorite music, videos or podcasts and download them to your device
+                for offline enjoyment. We know that you and your family don’t always have access to
+                Wi-Fi, and we want you to enjoy 24Six, wherever you are!</p>
+
+              <p>Downloading does not give you access to the original file, and you can’t share it. To
+                find your downloads, you need to go to your 24Six app, to the Downloads section. Browse
+                and enjoy your offline content there.</p>
+
+              <p>Downloaded content is accessible for no longer than 30 days. After that, the device needs
+                to reconnect to the internet to confirm your subscription before you can continue to
+                listen offline. If you canceled your plan, you would not be able to listen to the
+                content anymore, even if it’s been downloaded.</p>
+
+              <p>(When you listen to music or podcasts, or watch a video, the artist gets paid. Every time
+                the device connects to the internet, the system collects the listening data so we can
+                properly compensate the artist for their work.)</p>
+
+              <p> What if a listener is going to summer camp for 2 months and wants to enjoy 24Six offline
+                for more than 30 days? New feature coming soon! There will be a special request button
+                to have offline mode work for 60 days instead of 30. Check back in June 2023 for that
+                amazing feature!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer>
+  <div class="container-fluid">
+    <div class="navbar navbar-top">
+      <div class="d-flex justify-content-center justify-content-md-between align-items-center w-100 mb-5 mb-md-3 pb-md-3">
+        <a href="/">
+          <img src="./assets/img/logo-horiz-yellow.svg" alt="logo">
+        </a>
+        <a href="/login" class="btn btn-outline-warning d-none d-md-block">Artist Login</a>
+      </div>
+      <div>
+        <ul class="navbar-list me-lg-auto">
+          <li class="nav-item-footer">
+            <a class="nav-link" href="/">Features</a>
+          </li>
+          <li class="nav-item-footer">
+            <a class="nav-link" href="plans.html">Plans</a>
+          </li>
+          <li class="nav-item-footer">
+            <a class="nav-link" href="support.html">Support</a>
+          </li>
+          <li class="nav-item-footer">
+            <a class="nav-link" href="family-player.html">24Six FamilyPlayer</a>
+          </li>
+          <li class="nav-item-footer">
+            <a class="nav-link" href="home-artists.html">For artists</a>
+          </li>
+          <li class="nav-item-footer">
+            <a class="nav-link" href="contact-us-user.html">Contact us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="text-center">
+        <a href="/login" class="btn btn-outline-warning d-md-none mb-4">Artist Login</a>
+      </div>
+    </div>
+    <div class="navbar navbar-bottom">
+      <p class="mb-4 mb-md-0">
+        <a href="terms-of-service-users.html" class="d-block d-md-inline-block mb-2 mb-md-0 me-md-4">Terms of Use</a>
+        <a href="privacy-policy-users.html" class="d-block d-md-inline-block">Privacy Policy</a>
+      </p>
+      <p>© <span id="year"></span> 24Six, Inc. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
+        integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./assets/scripts/hamburger.js"></script>
+<script src="./assets/scripts/swipper.js"></script>
+<script src="https://kit.fontawesome.com/e25968b3b0.js" crossorigin="anonymous"></script>
+<script src="https://www.google.com/recaptcha/api.js?render={{env('RECAPTCHA_KEY')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

@@ -397,7 +397,7 @@
 
     var profiles = 1;
 
-    function setProfiles(newProfiles, e) {
+    function setProfiles(newProfiles) {
         console.log('np', newProfiles, profiles);
         if (newProfiles < 1)
             newProfiles = 1;
@@ -413,12 +413,17 @@
         $('#plan' + planCard).addClass('active');
 
         profiles = newProfiles;
+
         if (profiles == 1) {
             $('.minus').addClass('limit');
             $('#pluralProfiles').hide();
+            swiper.slideTo(0);
+        } else if ( profiles == 2) {
+            swiper.slideTo(1);
         } else {
             $('.minus').removeClass('limit');
             $('#pluralProfiles').css('display', 'inline');
+            swiper.slideTo(2);
         }
 
         if (profiles == 6) {
@@ -430,9 +435,9 @@
         }
         $('#profiles').html(profiles);
 
-        const paymentFrequency =  $('input:radio[name="plans"]:checked');
+        const paymentFrequency = $('input:radio[name="plans"]:checked');
 
-        function updateProfilePrice(){
+        function updateProfilePrice() {
             if (paymentFrequency.val() === 'yearly') {
                 if (profiles < 2)
                     price = '$99.99';

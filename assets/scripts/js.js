@@ -42,7 +42,6 @@ let dashedLineContainers = document.querySelectorAll('.dashed-line');
 
 function drawDashedLine() {
     let distanceBetweenCards = (card[1].getBoundingClientRect().left - card[0].getBoundingClientRect().right + cardImage[0].offsetLeft);
-
     for (const element of dashedLineContainers) {
         element.style.width = distanceBetweenCards + 'px';
     }
@@ -147,22 +146,22 @@ var startedFilterVideo = false;
 var startedFilterVideo2 = false;
 
 function playVideo(className, modalId = false) {
-    if (className == 'filter-video') {
-        if (startedFilterVideo) {
-            let video = data[className].videos[0];
-            console.log('pausing vid', video, video.paused, className);
-            if (video.paused) {
-                video.play();
-                $('#' + className + '-play-btn').hide();
-            } else {
-                video.pause();
-                $('#' + className + '-play-btn').show();
-            }
-            return;
-        }
-        startedFilterVideo = true;
-    }
-    if (className == 'filter-video2') {
+    // if (className === 'filter-video') {
+    //     if (startedFilterVideo) {
+    //         let video = data[className].videos[0];
+    //         console.log('pausing vid', video, video.paused, className);
+    //         if (video.paused) {
+    //             video.play();
+    //             $('#' + className + '-play-btn').hide();
+    //         } else {
+    //             video.pause();
+    //             $('#' + className + '-play-btn').show();
+    //         }
+    //         return;
+    //     }
+    //     startedFilterVideo = true;
+    // }
+    if (className === 'filter-video2') {
         if (startedFilterVideo2) {
             let video = data[className].videos[0];
             if (video.paused) {
@@ -365,15 +364,26 @@ $(document).ready(function () {
     // Hide Banner on scroll
 
     window.onscroll = function () {
-        console.log(window.locked)
         if (window.locked) return;
         if (topBanner.hasClass("show") && window.scrollY > topBannerHeight) {
-            console.log('dddd');
             topBanner.collapse('hide');
             topBanner.hide();
             showRibbon();
         }
     }
+
+
+
+    //InfiniteScroll
+    $(function(){
+        $('.infiniteslide-ltr').infiniteslide({
+            'speed': 70, //speed this is px/min
+            'direction': 'right', //choose  up/down/left/right
+            'pauseonhover': false, //if true,stop onmouseover
+            'responsive': false, //width/height recalculation on window resize. child element's width/height define %/vw/vh,this set true.
+            'clone': 2 //if child elements are too few (elements can't "infinite"), set 2 or over.
+        });
+    });
 });
 
 

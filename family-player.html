@@ -70,7 +70,8 @@
                                      class="devices-hero-img img-fluid">
                             </div>
                             <div class="swiper-slide">
-                                <a href="javascript:playVideo('popup-player-video','popupPlayerVideoModal')" class="text-decoration-none">
+                                <a href="javascript:playVideo('popup-player-video','popupPlayerVideoModal')"
+                                   class="text-decoration-none">
                                     <img src="./assets/img/family-player/video-preview.png" alt="device"
                                          class="img-fluid" id="family-player-video">
                                 </a>
@@ -99,9 +100,8 @@
                 </h1>
                 <p class="main-text">The first ever, 100% Kosher streaming device. One app, thousands of artists,
                     endless entertainment.</p>
-                <p data-aos-offset="0"
-                   class="hero-price">
-                    <small>$199.99</small>
+                <p class="hero-price">
+                    <small class="text-decoration-line-through">$199.99</small>
                     $149.99 Free shipping*
                 </p>
                 <div class="btn-wrapper">
@@ -129,8 +129,11 @@
                 Change the way you think about Jewish entertainment.
             </h2>
             <div class="card-item">
-                <img src="./assets/img/family-player/yaakov-shwekey.png" alt="card-1"
-                     class="card-item__img img-fluid">
+                <picture class="card-item__img img-fluid">
+                    <source srcset="./assets/img/family-player/yaakov-shwekey.webp" type="image/webp">
+                    <source srcset="./assets/img/family-player/yaakov-shwekey.jpg" type="image/jpg">
+                    <img src="./assets/img/family-player/yaakov-shwekey.jpg" alt="avraham-fried" class="img-fluid">
+                </picture>
                 <div class="card-item__content">
                     <div class="card-item__icon">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,8 +152,11 @@
                 </div>
             </div>
             <div class="card-item">
-                <img src="./assets/img/family-player/avraham-fried.png" alt="card-2"
-                     class="card-item__img img-fluid">
+                <picture class="card-item__img img-fluid">
+                    <source srcset="./assets/img/family-player/avraham-fried.webp" type="image/webp">
+                    <source srcset="./assets/img/family-player/avraham-fried.jpg" type="image/jpg">
+                    <img src="./assets/img/family-player/avraham-fried.jpg" alt="avraham-fried" class="img-fluid">
+                </picture>
                 <div class="card-item__content">
                     <div class="card-item__icon">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,8 +173,11 @@
                 </div>
             </div>
             <div class="card-item">
-                <img src="./assets/img/family-player/shmueli-ungar.png" alt="card-3"
-                     class="card-item__img img-fluid">
+                <picture class="card-item__img img-fluid">
+                    <source srcset="./assets/img/family-player/shmueli-ungar.webp" type="image/webp">
+                    <source srcset="./assets/img/family-player/shmueli-ungar.jpg" type="image/jpg">
+                    <img src="./assets/img/family-player/shmueli-ungar.jpg" alt="avraham-fried" class="img-fluid">
+                </picture>
                 <div class="card-item__content">
                     <div class="card-item__icon">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,6 +198,9 @@
         </div>
         <div class="bg">
             <img src="./assets/img/family-player/lines.svg" alt="lines" class="lines-bg img-fluid">
+            <img src="./assets/img/family-player/bg/ellipse-1.svg" alt="ellipse-1" class="ellipse-bg img-fluid">
+            <img src="./assets/img/family-player/bg/ellipse-2.svg" alt="ellipse-2" class="ellipse-2-bg img-fluid">
+            <img src="./assets/img/family-player/bg/ellipse-3.svg" alt="ellipse-2" class="ellipse-3-bg img-fluid">
         </div>
     </section>
     <section class="device-features">
@@ -242,11 +254,11 @@
                             <div class="testimonial-card">
                                 <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.2986 28.1548H23.6319C25.1047 28.1548 26.2986 26.9609 26.2986 25.4881V12.7071C26.2986 12.3534 26.1581 12.0143 25.908 11.7643L18.6891 4.54531C18.439 4.29526 18.0999 4.15479 17.7463 4.15479H10.2986C8.8258 4.15479 7.6319 5.34869 7.6319 6.82145V25.4881C7.6319 26.9609 8.8258 28.1548 10.2986 28.1548Z"
+                                    <path d="M10.1828 28.4966H23.5161C24.9889 28.4966 26.1828 27.3027 26.1828 25.8299V13.0489C26.1828 12.6952 26.0423 12.3561 25.7923 12.1061L18.5733 4.88711C18.3233 4.63706 17.9841 4.49658 17.6305 4.49658H10.1828C8.71002 4.49658 7.51611 5.69049 7.51611 7.16325V25.8299C7.51611 27.3027 8.71002 28.4966 10.1828 28.4966Z"
                                           stroke="#C9C1BC" stroke-width="1.5" stroke-linecap="round"
                                           stroke-linejoin="round"/>
-                                    <rect x="6.43195" y="1.59475" width="35.0125" height="3.5" rx="1.75"
-                                          transform="rotate(46.9655 6.43195 1.59475)" fill="#C9C1BC" stroke="#1F2023"
+                                    <rect x="6.31616" y="1.93655" width="35.0125" height="3.5" rx="1.75"
+                                          transform="rotate(46.9655 6.31616 1.93655)" fill="#C9C1BC" stroke="#1F2023"
                                           stroke-width="1.5"/>
                                 </svg>
                                 <p>SIM <br> free</p>
@@ -375,18 +387,131 @@
                                 <h3>Specs</h3>
                             </div>
                             <div class="col-12 col-md-9">
-                                <ul class="list-unstyled">
-                                    <li class="main-text">Small but powerful</li>
-                                    <li class="main-text">5.5" screen</li>
-                                    <li class="main-text">Dimensions 6.53*3.05*0.37"</li>
-                                    <li class="main-text">64 GB Internal memory</li>
-                                    <li class="main-text">4 GB RAM</li>
-                                    <li class="main-text">Wi-Fi: 2.4GHz</li>
-                                    <li class="main-text">Bluetooth: 4.0</li>
-                                    <li class="main-text">Powered by Li-Polymer 3000mah lithium battery and our 24SixOS
+                                <div class="spec-list">
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  Product and Brand
+                                            </span>
+                                        </dt>
+                                        <dd>24Six</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  Type
+                                            </span>
+                                        </dt>
+                                        <dd>FamilyPlayer</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  Operating system
+                                            </span>
+                                        </dt>
+                                        <dd>24SixOS</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  Wi-Fi
+                                            </span>
+                                        </dt>
+                                        <dd>2.4CHz</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  Bluetooth
+                                            </span>
+                                        </dt>
+                                        <dd>4.0</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  Voltage
+                                            </span>
+                                        </dt>
+                                        <dd>5V</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  Power Source
+                                            </span>
+                                        </dt>
+                                        <dd>Li-Polymer 3000mah</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  Battery Included
+                                            </span>
+                                        </dt>
+                                        <dd>Yes</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  Audio Jack
+                                            </span>
+                                        </dt>
+                                        <dd>3.5mm</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  Internal Memory
+                                            </span>
+                                        </dt>
+                                        <dd>64 GB</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  RAM
+                                            </span>
+                                        </dt>
+                                        <dd>4 GB</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  SIM
+                                            </span>
+                                        </dt>
+                                        <dd>N/A</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  Product Dimensions
+                                            </span>
+                                        </dt>
+                                        <dd>6.53*3.05*0.37 in.</dd>
+                                    </div>
+                                    <div class="main-text">
+                                        <dt>
+                                            <span>
+                                                  Product Weight
+                                            </span>
+                                        </dt>
+                                        <dd>5.64oz</dd>
+                                    </div>
+                                    <div class="main-text mb-3">
+                                        <dt>
+                                            <span>
+                                                  Screen Size
+                                            </span>
+                                        </dt>
+                                        <dd>5.5"</dd>
+                                    </div>
+                                    <div class="main-text">Powered by Li-Polymer 3000mah lithium battery and our 24SixOS
                                         operating system you will get hours of unlimited, clean entertainment.
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -404,7 +529,8 @@
                                     <li class="main-text">Earbuds</li>
                                     <li class="main-text">Protective Case</li>
                                 </ul>
-                                <p class="main-text">Download the user manual <a href="/family-player-manual.pdf ">here!</a></p>
+                                <p class="main-text">Download the user manual <a
+                                        href="/family-player-manual.pdf ">here!</a></p>
                                 <p class="main-text fst-italic"><small>Offline listening feature coming soon.</small>
                                 </p>
                             </div>
@@ -480,6 +606,9 @@
                 </div>
             </div>
         </div>
+        <div class="bg">
+            <img src="./assets/img/family-player/bg/violet-ellipse.svg" alt="lines" class="violet-bg img-fluid">
+        </div>
     </section>
     <section class="cta-banner">
         <div class="container-fluid">
@@ -491,7 +620,8 @@
                 <a href="#" class="btn btn-warning">Buy now</a>
             </div>
             <p class="text-info text-center">
-                24Six FamilyPlayer does not include a subscription for 24Six. Check out our plans at <a href="/plans">www.24Six.app/plans</a>, and sign up today.
+                24Six FamilyPlayer does not include a subscription for 24Six. Check out our plans at <a href="/plans">www.24Six.app/plans</a>,
+                and sign up today.
             </p>
         </div>
     </section>
@@ -543,8 +673,12 @@
         </div>
     </div>
 </footer>
-
-<div class="modal modal-video fade" id="popupPlayerVideoModal" tabindex="-1" aria-labelledby="popupPlayerVideoModalLabel"
+<div class="bg">
+    <img src="./assets/img/family-player/bg/cta-2.svg" alt="cta" class="cta-bg-mobile img-fluid w-md-100 d-block d-md-none">
+    <img src="./assets/img/family-player/bg/cta-bg.svg" alt="cta" class="cta-bg img-fluid w-md-100 d-none d-md-block w-100">
+</div>
+<div class="modal modal-video fade" id="popupPlayerVideoModal" tabindex="-1"
+     aria-labelledby="popupPlayerVideoModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">

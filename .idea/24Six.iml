@@ -11,5 +11,8 @@
     <orderEntry type="library" name="simple-parallax-js" level="application" />
     <orderEntry type="library" name="rellax" level="application" />
     <orderEntry type="library" name="hls.js" level="application" />
+    <orderEntry type="library" name="infiniteslidev2" level="application" />
+    <orderEntry type="library" name="vanilla-marquee" level="application" />
+    <orderEntry type="library" name="jquery.marquee" level="application" />
   </component>
 </module>

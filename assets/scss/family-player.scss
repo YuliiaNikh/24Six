@@ -1,6 +1,7 @@
 .family-player {
   font-family: 'Roboto Flex', sans-serif;
-  background: rgba(18, 19, 22, 1) url("../img/family-player/bg.svg") top right no-repeat;
+  background: rgba(18, 19, 22, 1) top right no-repeat url("../img/family-player/bg.svg");
+  position: relative;
 
   &:after {
     display: none;
@@ -33,9 +34,10 @@
     }
 
     .payer-hero__slider-thumbsSlider {
-      .swiper-wrapper{
+      .swiper-wrapper {
         justify-content: center;
       }
+
       .swiper-slide {
         display: flex;
         align-items: center;
@@ -45,7 +47,7 @@
         border: 1px solid transparent;
         border-radius: 6px;
 
-        &.swiper-slide-active {
+        &.swiper-slide-thumb-active {
           border-color: #FFB84A;
         }
 
@@ -60,8 +62,8 @@
     }
 
     .swiper-button-next,
-    .swiper-button-prev{
-      &:after{
+    .swiper-button-prev {
+      &:after {
         font-size: 0.875rem;
         color: $primary;
       }
@@ -127,6 +129,27 @@
       z-index: -1;
 
     }
+
+    .ellipse-bg {
+      position: absolute;
+      left: 0;
+      top: -20vw;
+      z-index: -1;
+    }
+
+    .ellipse-2-bg {
+      position: absolute;
+      right: 0;
+      top: 10vw;
+      z-index: -1;
+    }
+
+    .ellipse-3-bg {
+      position: absolute;
+      left: 0;
+      top: 60vw;
+      z-index: -1;
+    }
   }
 
   .card-item {
@@ -138,7 +161,9 @@
 
     &__img {
       margin-bottom: 2rem;
-      border-radius: 0.5rem;
+      border-radius: 0.65rem;
+      overflow: hidden;
+      width: 100%;
     }
 
     &__icon {
@@ -185,6 +210,54 @@
         margin-bottom: 0;
         font-size: 0.875rem;
       }
+    }
+  }
+
+  .device-properties {
+    position: relative;
+
+    .spec-list {
+      .main-text {
+        display: flex;
+        align-items: baseline;
+      }
+
+      dt {
+        width: 40%;
+        position: relative;
+
+        span {
+          background-color: #1F2023;
+          position: relative;
+          padding-right: 1rem;
+        }
+
+        &:before {
+          position: absolute;
+          left: 0;
+          bottom: calc(100% - 1.25rem);
+          display: block;
+          width: 100%;
+          border-bottom: 1px dotted #d2d2d2;
+          content: "";
+        }
+      }
+
+      dd {
+        width: 60%;
+        line-height: 2;
+        padding-left: 1rem;
+        margin: 0;
+      }
+    }
+
+    .violet-bg {
+      position: absolute;
+      top: -50vw;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      width: 100%;
     }
   }
 
@@ -286,6 +359,20 @@
     }
   }
 
+  .cta-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .cta-bg-mobile {
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    z-index: -1;
+  }
+
   @media (min-width: 768px) {
     .hero-section {
       padding-top: 4.5rem;
@@ -317,6 +404,7 @@
 
     .tabs-wrapper {
       margin: 0 0 4rem 0;
+      border-radius: 1.5rem;
 
       .tab-pane {
         h3 {
