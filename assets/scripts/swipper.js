@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
             slideChange: function () {
                 visualisedSlideNumber(this.realIndex);
             },
-            reachEnd: function() {
+            reachEnd: function () {
                 this.snapGrid = [...this.slidesGrid];
             },
         },
@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
             768: {
                 direction: 'vertical',
                 loopFillGroupWithBlank: true,
-                on:{
-                    reachEnd: function() {
+                on: {
+                    reachEnd: function () {
                         this.snapGrid = [...this.slidesGrid];
                     },
                 }
@@ -149,6 +149,67 @@ document.addEventListener("DOMContentLoaded", function () {
             prevEl: ".swiper-button-prev",
         },
     });
+
+
+    /*Marquee*/
+    let SwiperTop = new Swiper('.swiper--top', {
+        grabCursor: false,
+        loop: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        shortSwipes: false,
+        longSwipes: false,
+        allowTouchMove: false,
+        disableOnInteraction: true,
+        autoplay: {
+            delay: 1,
+            reverseDirection: true
+        },
+        spaceBetween: 10,
+        freeMode: true,
+        speed: 3000,
+        breakpoints: {
+            768: {
+                spaceBetween: 20,
+            }
+        }
+    });
+    let isInitialTransition = true;
+
+    let SwiperMiddle = new Swiper('.swiper--middle', {
+        loop: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        autoplay: true,
+        spaceBetween: 20,
+        speed: 700,
+        grabCursor: false,
+        breakpoints: {
+            768: {
+                spaceBetween: 30,
+            }
+        },
+        on: {
+            slideNextTransitionStart: function (swiper) {
+                if (!isInitialTransition) {
+                    $(swiper.slides[swiper.activeIndex]).addClass('transform');
+                    $(swiper.el).find('.swiper-slide').removeClass('transform-initial')
+                }
+                isInitialTransition = false;
+            },
+            slideNextTransitionEnd: function (swiper) {
+                $(swiper.el).find('.swiper-slide-prev').removeClass('transform');
+            }
+        }
+    });
+    let SwiperInfo = new Swiper('.swiper-album_info', {
+        loop: true,
+        slidesPerView: 1,
+        centeredSlides: true,
+        autoplay: true,
+        spaceBetween: 20,
+        speed: 700
+    })
 
 });
 

@@ -1460,8 +1460,100 @@ body::after {
 .home .hero .btn-outline-light {
   order: 2;
 }
-.home .infiniteslide-ltr picture {
-  padding: 0 0.625rem;
+.home .album-animation {
+  position: relative;
+  overflow: hidden;
+  padding-top: 3.5rem;
+}
+.home .swiper--top, .home .swiper--middle {
+  margin-bottom: 1rem;
+  position: inherit;
+  z-index: 0;
+}
+.home .swiper--top .swiper-slide, .home .swiper--middle .swiper-slide {
+  width: 4.625rem;
+  height: 4.625rem;
+}
+.home .swiper--top .swiper-wrapper, .home .swiper--middle .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+.home .swiper--middle {
+  z-index: 1;
+  position: relative;
+}
+.home .swiper--middle:before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 170px;
+  display: block;
+  background: url("../img/home-new/animation/phone-animation/phone-with-player.png") no-repeat;
+  background-size: contain;
+  height: 348px;
+  z-index: 2222;
+}
+.home .swiper--middle:after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  display: block;
+  background: #000;
+  background-size: contain;
+  height: 344px;
+  border-radius: 32px;
+}
+.home .swiper--middle .swiper-slide {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.home .swiper--middle .swiper-slide img {
+  width: 100%;
+}
+.home .swiper--middle .transform-initial {
+  transform: translateY(-60px) scale(1.15);
+}
+.home .swiper--middle .transform {
+  z-index: 3;
+}
+.home .swiper--middle .transform:not(.transform-initial) {
+  animation: 5s swiperTransitionAnimationMobile;
+}
+.home .swiper-album_info {
+  color: #fff;
+  position: absolute;
+  width: 116px;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  top: 250px;
+}
+.home .swiper-album_info_name {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.575rem;
+  margin-bottom: 0;
+  line-height: 1.2;
+  width: 116px;
+  overflow: hidden;
+}
+.home .swiper-album_info_artist-name {
+  color: #C9C1BC;
+  display: block;
+  font-size: 0.45rem;
+  white-space: nowrap;
+  text-transform: capitalize;
+  font-weight: 400;
 }
 .home .favorite-artists .section-title {
   max-width: 45rem;
@@ -1515,6 +1607,10 @@ body::after {
   max-width: 38.25rem;
   display: block;
 }
+.home .phone-image-more-than-music {
+  max-width: 12rem;
+  display: block;
+}
 .home .filters .main-text {
   margin-bottom: 2rem;
   max-width: 25rem;
@@ -1523,6 +1619,34 @@ body::after {
   display: flex;
   justify-content: center;
   margin-bottom: 3rem;
+}
+.home .filters .card-1-control-image {
+  position: absolute;
+  top: 15.7%;
+  max-width: 42.5%;
+  display: block;
+  left: 53%;
+}
+.home .filters .card-2-control-image {
+  position: absolute;
+  top: 45%;
+  max-width: 50%;
+  display: block;
+  left: 9%;
+}
+.home .filters .card-1-more-than-music-image {
+  position: absolute;
+  top: 37%;
+  max-width: 31%;
+  display: block;
+  left: 50%;
+}
+.home .filters .card-2-more-than-music-image {
+  position: absolute;
+  top: 70%;
+  max-width: 37%;
+  display: block;
+  left: 26%;
 }
 .home .family-player-section .section-title {
   font-size: 1.5rem;
@@ -1565,6 +1689,51 @@ body::after {
   .home .hero .btn {
     min-width: 11.5rem;
   }
+  .home .album-animation {
+    padding-top: 4.25rem;
+  }
+  .home .swiper--top, .home .swiper--middle {
+    margin-bottom: 1.25rem;
+  }
+  .home .swiper--top .swiper-slide, .home .swiper--middle .swiper-slide {
+    width: 8.375rem;
+    height: 8.375rem;
+  }
+  .home .swiper--middle:before {
+    top: -200px;
+    width: 300px;
+    height: 700px;
+  }
+  .home .swiper--middle:after {
+    top: -200px;
+    width: 290px;
+    height: 600px;
+    border-radius: 60px;
+  }
+  .home .swiper--middle .swiper-slide {
+    width: 14.0625rem;
+    height: 14.0625rem;
+  }
+  .home .swiper--middle .transform-initial {
+    transform: translateY(-100px) scale(1.15);
+  }
+  .home .swiper--middle .transform:not(.transform-initial) {
+    animation: 5s swiperTransitionAnimation;
+  }
+  .home .swiper-album_info {
+    width: 200px;
+    top: 400px;
+  }
+  .home .swiper-album_info_name {
+    font-size: 0.825rem;
+    margin-bottom: 0;
+    line-height: 1.2;
+    width: 200px;
+    overflow: hidden;
+  }
+  .home .swiper-album_info_artist-name {
+    font-size: 0.625rem;
+  }
   .home .download-link {
     margin-right: 1rem;
     margin-bottom: 0;
@@ -1588,6 +1757,26 @@ body::after {
     display: inline-flex;
     justify-content: start;
     margin-bottom: 0;
+  }
+  .home .filters .card-1-control-image {
+    display: block;
+    left: auto;
+    top: 16%;
+    right: 15px;
+    animation: 3s infinite 0.05s alternate shakeAnimation;
+  }
+  .home .filters .card-2-control-image {
+    top: 46%;
+    max-width: 52%;
+    animation: 3s infinite 0.05s alternate shakeAnimation;
+  }
+  .home .filters .card-1-more-than-music-image {
+    left: 30%;
+    animation: 3s infinite 0.05s alternate shakeAnimation;
+  }
+  .home .filters .card-2-more-than-music-image {
+    left: 0;
+    animation: 3s infinite 0.05s alternate shakeAnimation;
   }
   .home .family-player-section .section-title {
     font-size: 2rem;
@@ -1626,6 +1815,22 @@ body::after {
     max-width: 30rem;
     font-size: 1.5rem;
     margin-bottom: 3rem;
+  }
+  .home .phone-image-more-than-music {
+    max-width: 19rem;
+  }
+  .home .filters .card-1-control-image {
+    right: 20px;
+  }
+  .home .filters .card-1-more-than-music-image {
+    top: 36%;
+    max-width: 36%;
+    left: 29%;
+  }
+  .home .filters .card-2-more-than-music-image {
+    top: 70%;
+    max-width: 37%;
+    left: 0;
   }
   .home .family-player-section .section-title {
     font-size: 2.25rem;
@@ -1675,6 +1880,26 @@ body::after {
   .home .favorite-artists .card-link {
     font-size: 1.5rem;
   }
+  .home .phone-image-more-than-music {
+    max-width: 22rem;
+  }
+  .home .filters .card-1-control-image {
+    max-width: 276px;
+  }
+  .home .filters .card-2-control-image {
+    top: 45%;
+    max-width: 46%;
+    left: 13%;
+  }
+  .home .filters .card-1-more-than-music-image {
+    top: 35%;
+    max-width: 30%;
+    left: 23%;
+  }
+  .home .filters .card-2-more-than-music-image {
+    top: 69.5%;
+    max-width: 33%;
+  }
   .home .family-player-section .section-title {
     font-size: 2.75rem;
   }
@@ -1705,6 +1930,28 @@ body::after {
   }
   to {
     transform: translateY(28px);
+  }
+}
+@keyframes swiperTransitionAnimationMobile {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  20%, 70% {
+    transform: translateY(-60px) scale(1.15);
+  }
+  90% {
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes swiperTransitionAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  20%, 70% {
+    transform: translateY(-100px) scale(1.15);
+  }
+  90% {
+    transform: translateY(0) scale(1);
   }
 }
 .artist {
