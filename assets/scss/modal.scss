@@ -1,5 +1,6 @@
 .modal {
   background: rgba(18, 19, 22, 0.75);
+
   &::-webkit-scrollbar {
     width: 2px;
   }
@@ -191,4 +192,19 @@
       }
     }
   }
+}
+
+#popupSliderVideo .modal-content {
+  background: transparent;
+}
+#popupSliderVideo .modal-dialog {
+  max-width: 100%;
+  width: auto !important;
+  display: flex;
+}
+
+#popupSliderVideo.show{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }

@@ -398,6 +398,22 @@ footer .navbar-bottom a {
   }
 }
 
+#popupSliderVideo .modal-content {
+  background: transparent;
+}
+
+#popupSliderVideo .modal-dialog {
+  max-width: 100%;
+  width: auto !important;
+  display: flex;
+}
+
+#popupSliderVideo.show {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Buttons */
 .btn-warning {
   background: #FFB84A;
