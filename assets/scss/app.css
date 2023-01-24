@@ -414,6 +414,12 @@ footer .navbar-bottom a {
   align-items: center;
 }
 
+.slider-video {
+  width: auto !important;
+  height: auto;
+  max-height: 100vh;
+}
+
 /* Buttons */
 .btn-warning {
   background: #FFB84A;
