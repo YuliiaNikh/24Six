@@ -45,10 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         breakpoints: {
             768: {
+                spaceBetween: 30,
                 direction: 'vertical',
                 autoHeight: false,
                 slidesPerView: 'auto',
                 loopFillGroupWithBlank: true,
+                allowTouchMove: false
             }
         },
 
@@ -66,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
             768: {
                 direction: 'vertical',
                 loopFillGroupWithBlank: true,
+                allowTouchMove: false,
                 on: {
                     reachEnd: function () {
                         this.snapGrid = [...this.slidesGrid];
@@ -160,10 +163,12 @@ document.addEventListener("DOMContentLoaded", function () {
         shortSwipes: false,
         longSwipes: false,
         allowTouchMove: false,
-        disableOnInteraction: true,
+        simulateTouch: false,
         autoplay: {
             delay: 1,
-            reverseDirection: true
+            reverseDirection: true,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
         },
         spaceBetween: 10,
         freeMode: true,
@@ -174,6 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
+
     let isInitialTransition = true;
 
     let SwiperMiddle = new Swiper('.swiper--middle', {
@@ -184,6 +190,9 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 20,
         speed: 700,
         grabCursor: false,
+        allowTouchMove: false,
+        simulateTouch: false,
+        disableOnInteraction: false,
         breakpoints: {
             768: {
                 spaceBetween: 30,
@@ -193,12 +202,13 @@ document.addEventListener("DOMContentLoaded", function () {
             slideNextTransitionStart: function (swiper) {
                 if (!isInitialTransition) {
                     $(swiper.slides[swiper.activeIndex]).addClass('transform');
-                    $(swiper.el).find('.swiper-slide').removeClass('transform-initial')
+                    $(swiper.el).find('.swiper-slide').removeClass('transform-initial');
                 }
                 isInitialTransition = false;
             },
             slideNextTransitionEnd: function (swiper) {
                 $(swiper.el).find('.swiper-slide-prev').removeClass('transform');
+                $(swiper.el).find('.swiper-slide-duplicate-prev').removeClass('transform');
             }
         }
     });
@@ -209,6 +219,28 @@ document.addEventListener("DOMContentLoaded", function () {
         autoplay: true,
         spaceBetween: 20,
         speed: 700
+    })
+
+    /*Favorite Artists*/
+
+    let swiperArtists = new Swiper('.artists-slider', {
+        loop: true,
+        autoHeight: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 2,
+        spaceBetween: 16,
+        breakpoints: {
+            640: {
+                autoHeight: false,
+                centeredSlides: true,
+                centeredSlidesBounds: true,
+                slidesPerView: 'auto',
+                spaceBetween: 24
+            },
+        },
     })
 
 });

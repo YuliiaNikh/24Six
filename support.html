@@ -1,287 +1,1075 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>24Six</title>
-  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon/favicon.svg">
-  <link rel="icon" type="image/png" href="./assets/img/favicon/favicon.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link
-          rel="stylesheet"
-          href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-  />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/scss/app.css?cb=112422">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>24Six</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon/favicon.svg">
+    <link rel="icon" type="image/png" href="./assets/img/favicon/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/scss/app.css?cb=112422">
+
 </head>
 <body class="support">
 <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">
-      <img src="assets/img/logo-horiz-yellow.svg" alt="logo-horiz">
-    </a>
-    <button class="navbar-toggler hamburger hamburger--spring" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img src="assets/img/logo-horiz-yellow.svg" alt="logo-horiz">
+        </a>
+        <button class="navbar-toggler hamburger hamburger--spring" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div>
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="plans.html">Plans</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="support.html">Support</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="family-player.html">24Six FamilyPlayer</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="home-artists.html">For artists</a>
-          </li>
-        </ul>
-        <div class="d-lg-flex align-items-center">
-          <a href="/login" class="btn btn-warning w-100 mt-3 mt-lg-0 me-lg-3">Log in</a>
-          <a href="/register.html" class="btn btn-light mt-4 mt-lg-0 w-100 w-lg-auto">
-            Sign up
-          </a>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="plans.html">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="support.html">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="family-player.html">24Six FamilyPlayer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home-artists.html">For artists</a>
+                    </li>
+                </ul>
+                <div class="d-lg-flex align-items-center">
+                    <a href="/login" class="btn btn-warning w-100 mt-3 mt-lg-0 me-lg-3">Log in</a>
+                    <a href="/register.html" class="btn btn-light mt-4 mt-lg-0 w-100 w-lg-auto">
+                        Sign up
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </nav>
 <main class="contact">
-  <div class="container-fluid">
-    <div class="contact-box">
-      <h2 class="section-title">Contact us</h2>
-      <p class="main-text">24Six is here to help you with any issues you may have. Please fill out the form below and we will try to get back
-        to you as soon as possible.</p>
-      <form action="" class="contact-form modal-form">
-        <div class="mb-3">
-          <label for="nameInputContact" class="modal-form__label">First name</label>
-          <input type="text" class="modal-form__control" id="nameInputContact"
-                 placeholder="Enter you first name">
-        </div>
-        <div class="mb-3">
-          <label for="emailInputContact" class="modal-form__label">Email address</label>
-          <input type="email" class="modal-form__control" id="emailInputContact"
-                 placeholder="Enter you email address">
-        </div>
-        <div class="mb-3">
-          <label for="phoneInputContact" class="modal-form__label">Phone number (optional)</label>
-          <input type="tel" class="modal-form__control" id="phoneInputContact"
-                 placeholder="Enter your phone number">
-        </div>
-        <div class="mb-3">
-          <label for="textInputContact" class="modal-form__label">Leave us a message</label>
-          <textarea class="modal-form__control" id="textInputContact" cols="30" rows="10"
-                    placeholder="Enter text here"></textarea>
-        </div>
-        <button type="submit" class="btn btn-warning mt-2">Submit</button>
-      </form>
-    </div>
-  </div>
-  <section id="support" class="section-support position-relative">
     <div class="container-fluid">
-      <p class="section__above-title">FAQs</p>
-      <h2 class="section-title">Got questions? Find answers here.</h2>
-      <div class="accordion accordion-flush" id="accordionSupport">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              What is 24Six?
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-               data-bs-parent="#accordionSupport">
-            <div class="accordion-body">
-              <p>24Six is a groundbreaking media streaming platform for the Jewish family. It gives
-                subscribers access to thousands of songs, videos and podcasts. With features designed to
-                provide you with complete control. Create a custom entertainment experience for your
-                family.</p>
-              <p>
-                Your whole family can listen, watch, collect favorites, create playlists, and stream
-                from
-                anywhere. All approved, kosher content. All for one low monthly fee.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              How do I use 24Six?
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-               data-bs-parent="#accordionSupport">
-            <div class="accordion-body">
-              <p>Download the app on your phone or tablet, or login on our website at www.24six.app, then
-                sign up for a free trial. Customize your profile. And start streaming.
-              </p>
-              <p>Enjoy your music, podcasts and videos wherever you go by downloading your favorites.</p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              How customizable are the filters?
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-               data-bs-parent="#accordionSupport">
-            <div class="accordion-body">
-              <p>The 24Six filters were built by the people, for the people. 24Six allows you to determine
-                what’s right for you and your family. You can select one of our age-based filters,
-                public filters created by organizations, yeshivos, schools, etc., or create your own!
-                Curate the experience for each member of your family.
-              </p>
-              <p>Watch this video to see how it works:</p>
-              <div class="ratio ratio-16x9">
-                <div class="play-btn">
-                  <img src="./assets/img/play.svg" alt="play icon">
+        <div class="contact-box">
+            <h2 class="section-title">Contact us</h2>
+            <p class="main-text">24Six is here to help you with any issues you may have. Please fill out the form below
+                and we will try to get back
+                to you as soon as possible.</p>
+            <form action="" class="contact-form modal-form">
+                <div class="mb-3">
+                    <label for="nameInputContact" class="modal-form__label">First name</label>
+                    <input type="text" class="modal-form__control" id="nameInputContact"
+                           placeholder="Enter you first name">
                 </div>
-                <video
-                        class="filter-video video-box"
-                        controls
-                        style="width: 100%;"
-                        poster="./assets/img/video-thumbnail.png"></video>
-              </div>
-            </div>
-          </div>
+                <div class="mb-3">
+                    <label for="emailInputContact" class="modal-form__label">Email address</label>
+                    <input type="email" class="modal-form__control" id="emailInputContact"
+                           placeholder="Enter you email address">
+                </div>
+                <div class="mb-3">
+                    <label for="phoneInputContact" class="modal-form__label">Phone number (optional)</label>
+                    <input type="tel" class="modal-form__control" id="phoneInputContact"
+                           placeholder="Enter your phone number">
+                </div>
+                <div class="mb-3">
+                    <label for="textInputContact" class="modal-form__label">Leave us a message</label>
+                    <textarea class="modal-form__control" id="textInputContact" cols="30" rows="10"
+                              placeholder="Enter text here"></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning mt-2">Submit</button>
+            </form>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              Can I cancel my subscription?
-            </button>
-          </h2>
-          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-               data-bs-parent="#accordionSupport">
-            <div class="accordion-body">
-              <p>
-                Of course. Subscriptions are month-to-month. You can update or cancel your subscription
-                at any time.
-                Select "Manage my subscription" in your account settings.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFive">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-              Will there be ads?
-            </button>
-          </h2>
-          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-               data-bs-parent="#accordionSupport">
-            <div class="accordion-body">
-              <p>
-                Music is the song of the soul — and it will never be interrupted with advertisements. By
-                subscribing to 24Six, you are supporting your favorite Jewish artists and content
-                creators
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingSix">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-              How does offline listening work?
-            </button>
-          </h2>
-          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-               data-bs-parent="#accordionSupport">
-            <div class="accordion-body">
-              <p>You can select your favorite music, videos or podcasts and download them to your device
-                for offline enjoyment. We know that you and your family don’t always have access to
-                Wi-Fi, and we want you to enjoy 24Six, wherever you are!</p>
-
-              <p>Downloading does not give you access to the original file, and you can’t share it. To
-                find your downloads, you need to go to your 24Six app, to the Downloads section. Browse
-                and enjoy your offline content there.</p>
-
-              <p>Downloaded content is accessible for no longer than 30 days. After that, the device needs
-                to reconnect to the internet to confirm your subscription before you can continue to
-                listen offline. If you canceled your plan, you would not be able to listen to the
-                content anymore, even if it’s been downloaded.</p>
-
-              <p>(When you listen to music or podcasts, or watch a video, the artist gets paid. Every time
-                the device connects to the internet, the system collects the listening data so we can
-                properly compensate the artist for their work.)</p>
-
-              <p> What if a listener is going to summer camp for 2 months and wants to enjoy 24Six offline
-                for more than 30 days? New feature coming soon! There will be a special request button
-                to have offline mode work for 60 days instead of 30. Check back in June 2023 for that
-                amazing feature!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+    <section id="support" class="section-support position-relative">
+        <div class="container-fluid">
+            <p class="section__above-title">FAQs</p>
+            <h2 class="section-title">Got questions? Find answers here.</h2>
+
+            <section class="device-properties">
+                <div class="tabs-wrapper">
+                    <ul class="nav nav-tabs d-none d-lg-flex" id="supportTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="about-tab" data-bs-toggle="tab"
+                                    data-bs-target="#about-tab-pane" type="button" role="tab"
+                                    aria-controls="about-tab-pane"
+                                    aria-selected="true">
+                                About 24Six
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="account-tab" data-bs-toggle="tab" data-bs-target="#account-tab-pane"
+                                    type="button" role="tab" aria-controls="account-tab-pane" aria-selected="false">
+                                Account Information
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="filters-tab" data-bs-toggle="tab" data-bs-target="#filters-tab-pane"
+                                    type="button" role="tab" aria-controls="filters-tab-pane" aria-selected="false">
+                                Filters
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="content-tab" data-bs-toggle="tab" data-bs-target="#content-tab-pane"
+                                    type="button" role="tab" aria-controls="content-tab-pane" aria-selected="false"> Content
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="technical-tab" data-bs-toggle="tab" data-bs-target="#technical-tab-pane"
+                                    type="button" role="tab" aria-controls="technical-tab-pane" aria-selected="false">Technical Support
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="family-player-tab" data-bs-toggle="tab"
+                                    data-bs-target="#family-player-tab-pane" type="button" role="tab"
+                                    aria-controls="family-player-tab-pane" aria-selected="false"> 24Six FamilyPlayer
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content accordion" id="supportTabContent">
+                        <div class="tab-pane fade show active accordion-item" id="about-tab-pane" role="tabpanel"
+                             aria-labelledby="about-tab" tabindex="0">
+
+                            <h2 class="accordion-header tab-pane-header-mobile d-lg-none" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">About 24Six
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show  d-lg-block" aria-labelledby="headingOne"
+                                 data-bs-parent="#supportTabContent">
+                                <div class="accordion accordion-flush" id="accordionSupportAbout">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOneAbout">
+                                            <button class="accordion-button" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOneAbout" aria-expanded="true"
+                                                    aria-controls="collapseOneAbout">
+                                                What is 24Six?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOneAbout" class="accordion-collapse collapse show"
+                                             aria-labelledby="headingOneAbout"
+                                             data-bs-parent="#accordionSupportAbout">
+                                            <div class="accordion-body">
+                                                <p>24Six is a groundbreaking media streaming platform for the Jewish
+                                                    family. It gives subscribers access to thousands of songs, videos
+                                                    and podcasts. With features designed
+                                                    to provide you with complete control. Create a custom entertainment
+                                                    experience for your family.
+                                                </p>
+                                                <p>
+                                                    Your whole family can listen, watch, collect favorites, create
+                                                    playlists, and stream from anywhere. All approved, kosher content.
+                                                    All for one low monthly fee.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwoAbout">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwoAbout" aria-expanded="false"
+                                                    aria-controls="collapseTwoAbout">
+                                                Who endorses 24Six?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwoAbout" class="accordion-collapse collapse"
+                                             aria-labelledby="headingTwoAbout"
+                                             data-bs-parent="#accordionSupportAbout">
+                                            <div class="accordion-body">
+                                                <p>As per the guidance of our Rabbanim, we are not publicizing any
+                                                    Rabbanim or organizations that have endorsed 24Six. 24Six makes
+                                                    every decision על פי דעת תורה, and we encourage everyone to consult
+                                                    their Rav or Moreh Derech for all Halachic and Hashkafic questions,
+                                                    especially the sensitive topic of technology in the house.
+                                                </p>
+                                                <p> 24Six is designed for you to create the personalized experience that
+                                                    is right for you and your family, under the guidance of your Daas
+                                                    Torah.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThreeAbout">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThreeAbout" aria-expanded="false"
+                                                    aria-controls="collapseThreeAbout">
+                                                Do I need the internet to stream?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThreeAbout" class="accordion-collapse collapse"
+                                             aria-labelledby="headingThreeAbout"
+                                             data-bs-parent="#accordionSupportAbout">
+                                            <div class="accordion-body">
+                                                <p>24Six requires internet connectivity to stream. 24Six will always
+                                                    need some form of Wi-Fi connectivity, even when utilizing the
+                                                    offline mode.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFourAbout">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFourAbout" aria-expanded="false"
+                                                    aria-controls="collapseFourAbout">
+                                                How can I control what everyone in my family has access to?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFourAbout" class="accordion-collapse collapse"
+                                             aria-labelledby="headingFourAbout"
+                                             data-bs-parent="#accordionSupportAbout">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Account management is a “parent level” control. The account has a
+                                                    single password, where you can create profiles, manage permissions,
+                                                    and control all the financials of the account. The children should
+                                                    never get that password. When creating a profile for each child, you
+                                                    can allow them to have their own PIN, which gives them some control
+                                                    and a great feeling. But what they can and cannot do in their
+                                                    profile can only be changed with the account password.
+                                                </p>
+                                                <p>
+                                                    We encourage the use of strong passwords that are hard for your
+                                                    family to figure out!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFiveAbout">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFiveAbout" aria-expanded="false"
+                                                    aria-controls="collapseFiveAbout">
+                                                Can I listen to 24Six without the internet? What is Offline mode?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFiveAbout" class="accordion-collapse collapse"
+                                             aria-labelledby="headingFiveAbout"
+                                             data-bs-parent="#accordionSupportAbout">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Offline mode is a feature we are working hard to complete in the
+                                                    coming weeks, but it is not active yet. It will only be available to
+                                                    use on our mobile apps, not on PCs or Macs. Keep checking back for
+                                                    updates as we constantly update the app with more features! How
+                                                    will it work? You can select your favorite music or podcasts and
+                                                    download them to your device for offline enjoyment. We know that you
+                                                    and your family don’t always have access to Wi-Fi, and we want you
+                                                    to enjoy 24Six, wherever you are! Offline mode will not be available
+                                                    for videos.
+                                                </p>
+
+                                                <p> Downloading does not give you access to the original file, and you
+                                                    can’t share it. To find your downloads, you need to go to your 24Six
+                                                    app Library section, and touch Downloads. Browse and enjoy your
+                                                    offline content there.</p>
+
+                                                <p>Please note that downloaded content will only be accessible for 30
+                                                    days and will only be available offline for the length of your
+                                                    billing cycle.</p>
+
+                                                <p>After that, the device needs to reconnect to the internet to confirm
+                                                    your subscription before you can continue to listen offline.</p>
+
+                                                <p> If you cancel your plan, you will not be able to listen to the
+                                                    downloaded content anymore. It's important to note that when you
+                                                    listen to music, the artist is compensated. Every time you listen to
+                                                    a song, the owner of that song is paid. To properly compensate the
+                                                    artists, the system collects listening data every time the device
+                                                    connects to the internet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingSixAbout">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseSixAbout" aria-expanded="false"
+                                                    aria-controls="collapseSixAbout">
+                                                Does 24Six have phone support?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSixAbout" class="accordion-collapse collapse"
+                                             aria-labelledby="headingSixAbout"
+                                             data-bs-parent="#accordionSupportAbout">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    To best serve all our customers, 24Six is only offering email and
+                                                    chat support at this time. Please email <a href="mailto:info@24six.app"
+                                                                                               class="text-primary">info@24six.app</a>
+                                                    for any
+                                                    further questions.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade accordion-item" id="account-tab-pane" role="tabpanel" aria-labelledby="account-tab"
+                             tabindex="0">
+                            <h2 class="accordion-header tab-pane-header-mobile d-lg-none" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Account Information
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingTwo"
+                                 data-bs-parent="#supportTabContent">
+                                <div class="accordion accordion-flush" id="accordionSupportAccount">
+                                    <div data-aos="fade-left"
+                                         data-aos-duration="500"
+                                         data-aos-easing="ease-in-out"
+                                         data-aos-offset="0"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOneAccount">
+                                            <button class="accordion-button" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOneAccount" aria-expanded="true"
+                                                    aria-controls="collapseOneAccount">
+                                                What are the prices? What plans do you have?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOneAccount" class="accordion-collapse collapse show"
+                                             aria-labelledby="headingOneAccount"
+                                             data-bs-parent="#accordionSupportAccount">
+                                            <div class="accordion-body">
+                                                <p>All 24Six plans start with a free 7-day trial. After that, we offer
+                                                    monthly and yearly plans. Our monthly plans include a Single profile for
+                                                    $9.99 per month, a Duo plan with two profiles for $14.99 per month, and
+                                                    a Family plan with four profiles just for $19.99 per month. If you opt
+                                                    for a yearly plan, you can save even more. A yearly Single profile plan
+                                                    is $99.99, a $20 savings. A yearly Duo plan is $149.99, a $30 savings.
+                                                    And a yearly Family plan is just $199.99, a $50 savings comparing to a
+                                                    monthly Family plan!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="20"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwoAccount">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwoAccount" aria-expanded="false"
+                                                    aria-controls="collapseTwoAccount">
+                                                Can I cancel anytime?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwoAccount" class="accordion-collapse collapse"
+                                             aria-labelledby="headingTwoAccount"
+                                             data-bs-parent="#accordionSupportAccount">
+                                            <div class="accordion-body">
+                                                <p>We don’t think you will ever want to, but if you do choose, you may
+                                                    cancel, and your account will not renew on the next billing cycle. Upon
+                                                    cancellation, your information is removed from our servers.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="40"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThreeAccount">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThreeAccount" aria-expanded="false"
+                                                    aria-controls="collapseThreeAccount">
+                                                How do I cancel my account?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThreeAccount" class="accordion-collapse collapse"
+                                             aria-labelledby="headingThreeAccount"
+                                             data-bs-parent="#accordionSupportAccount">
+                                            <div class="accordion-body">
+                                                <p>There are two ways you can do it. On our website, you can click "Log in"
+                                                    at the top right corner and then cancel. In the app, go to the top right
+                                                    corner and click on your profile icon (next to the search) -> Account
+                                                    settings -> Cancel account.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="60"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFourAccount">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFourAccount" aria-expanded="false"
+                                                    aria-controls="collapseFourAccount">
+                                                Can we share a profile?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFourAccount" class="accordion-collapse collapse"
+                                             aria-labelledby="headingFourAccount"
+                                             data-bs-parent="#accordionSupportAccount">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    24Six supports one profile streaming on one device at a time. You may
+                                                    use as many devices as you would like for that profile. Each family
+                                                    member should have their own profile, their own permission settings,
+                                                    their own library and their own playlists.
+
+                                                </p>
+                                                <p> No two devices can stream at the same time with the same profile.
+                                                </p>
+                                                <p>
+                                                    But you can log in to multiple devices with the same account. Duo plans
+                                                    and Family Plans are a great way to access 24Six for families and save!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="80"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFiveAccount">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFiveAccount" aria-expanded="false"
+                                                    aria-controls="collapseFiveAccount">
+                                                How do I manage my account? Manage profiles?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFiveAccount" class="accordion-collapse collapse"
+                                             aria-labelledby="headingFiveAccount"
+                                             data-bs-parent="#accordionSupportAccount">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Account settings can easily be managed from within the app.
+                                                </p>
+                                                <p>
+                                                    Please go to the top right corner of the app, next to the search icon,
+                                                    and click your profile’s icon to access Settings. If you did not add an
+                                                    icon, there is a black empty space there, touch it, and it will bring
+                                                    you to Settings as well. From Settings, you can manage your account,
+                                                    profiles, and permissions.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="100"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingSixAccount">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseSixAccount" aria-expanded="false"
+                                                    aria-controls="collapseSixAccount">
+                                                I would like to upgrade or downgrade my plan.
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSixAccount" class="accordion-collapse collapse"
+                                             aria-labelledby="headingSixAccount"
+                                             data-bs-parent="#accordionSupportAccount">
+                                            <div class="accordion-body">
+                                                <p>Currently, upgrading or downgrading your plan can only be done by 24Six.
+                                                    Please send us the email address you used to sign up and what plan you
+                                                    would like to switch to, and we will take care of it for you.
+                                                </p>
+                                                <p>You can try the live chat on the bottom of the website, or send an email
+                                                    to <a class="text-primary"
+                                                          href="mailto:info@24Six.app">info@24Six.app</a>. If you are
+                                                    downgrading a plan, first delete any extra
+                                                    profiles you won't be using on the new plan, since we don't know which
+                                                    profile you want to delete. Please delete the extra profiles, and then
+                                                    we can downgrade your plan.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade accordion-item" id="filters-tab-pane" role="tabpanel" aria-labelledby="filters-tab"
+                             tabindex="0">
+                            <h2 class="accordion-header tab-pane-header-mobile d-lg-none" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Filters
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingThree"
+                                 data-bs-parent="#supportTabContent">
+                                <div class="accordion accordion-flush" id="accordionSupportFilters">
+                                    <div data-aos="fade-left"
+                                         data-aos-duration="500"
+                                         data-aos-easing="ease-in-out"
+                                         data-aos-offset="0"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOneFilters">
+                                            <button class="accordion-button" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOneFilters" aria-expanded="true"
+                                                    aria-controls="collapseOneFilters">
+                                                How do filters work?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOneFilters" class="accordion-collapse collapse show"
+                                             aria-labelledby="headingOneFilters"
+                                             data-bs-parent="#accordionSupportFilters">
+                                            <div class="accordion-body">
+                                                <p>As per the guidance of our Daas Torah, 24Six has some built-in filters
+                                                    that are not customizable. Every artist goes through a vetting process,
+                                                    and that is constantly reviewed and adjusted as new content is added.
+                                                    Every user must create a profile, and every profile must have an age and
+                                                    gender.</p>
+
+                                                <p>All content that is deemed exclusively for women, or only appropriate
+                                                    for women, will only be accessible to female profiles. All content that
+                                                    is more suitable for parents/adults, will only be accessible to users
+                                                    whose profile is 18 years of age or older. We understand the need to
+                                                    customize the content according to your own hashkafos.</p>
+
+                                                <p> When creating a profile, you will be asked to select a filter. You can
+                                                    choose to allow all content, use a pre-made filter made by 24Six, use a
+                                                    filter made by a public institution, or create your own. When you create
+                                                    your own filter, you can disable any section of the app (Music, Videos
+                                                    and/or Podcasts), or block any artist or category from each section.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade accordion-item" id="content-tab-pane" role="tabpanel" aria-labelledby="content-tab"
+                             tabindex="0">
+                            <h2 class="accordion-header tab-pane-header-mobile d-lg-none" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Content
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingFour"
+                                 data-bs-parent="#supportTabContent">
+                                <div class="accordion accordion-flush" id="accordionSupportContent">
+                                    <div data-aos="fade-left"
+                                         data-aos-duration="500"
+                                         data-aos-easing="ease-in-out"
+                                         data-aos-offset="0"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOneContent">
+                                            <button class="accordion-button" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOneContent" aria-expanded="true"
+                                                    aria-controls="collapseOneContent">
+                                                Can I see a list of artists and content before I subscribe?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOneContent" class="accordion-collapse collapse show"
+                                             aria-labelledby="headingOneContent"
+                                             data-bs-parent="#accordionSupportContent">
+                                            <div class="accordion-body">
+                                                <p>24Six has tens of thousands of songs, videos, and podcasts from hundreds
+                                                    of artists. Please take advantage of our 7-day free trial to browse our
+                                                    extensive library of music, videos, and podcasts!
+                                                </p>
+                                                <p>
+                                                    During your trial, you can browse the entire catalog and see what all
+                                                    the hype is about!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="20"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwoContent">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwoContent" aria-expanded="false"
+                                                    aria-controls="collapseTwoContent">
+                                                How come my favorite artist is not on 24Six?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwoContent" class="accordion-collapse collapse"
+                                             aria-labelledby="headingTwoContent"
+                                             data-bs-parent="#accordionSupportContent">
+                                            <div class="accordion-body">
+                                                <p>24Six only streams content from artists and content holders with their
+                                                    permission. We are working daily to grow our catalog and include any and
+                                                    every artist that fits our ideals. However, taking someone’s
+                                                    music/videos/podcasts without their permission is illegal and against
+                                                    Halacha. We encourage everyone to reach out to their favorite artists
+                                                    along with us and tell them to join 24Six, and we will gladly add them
+                                                    to our platform.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade accordion-item" id="technical-tab-pane" role="tabpanel"
+                             aria-labelledby="technical-tab" tabindex="0">
+                            <h2 class="accordion-header tab-pane-header-mobile d-lg-none" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Technical Support
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingFive"
+                                 data-bs-parent="#supportTabContent">
+                                <div class="accordion accordion-flush" id="accordionSupportTechnical">
+                                    <div data-aos="fade-left"
+                                         data-aos-duration="500"
+                                         data-aos-easing="ease-in-out"
+                                         data-aos-offset="0"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOneTechnical">
+                                            <button class="accordion-button" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOneTechnical" aria-expanded="true"
+                                                    aria-controls="collapseOneTechnical">
+                                                Can I stream 24Six from my computer?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOneTechnical" class="accordion-collapse collapse show"
+                                             aria-labelledby="headingOneTechnical"
+                                             data-bs-parent="#accordionSupportTechnical">
+                                            <div class="accordion-body">
+                                                <p>24Six currently is available on mobile apps, and it is available in the
+                                                    Mac App Store for Macs that have the M1 Processor. We are working to
+                                                    finish our browser-based version for computer use soon.</p>
+                                                <p>
+                                                    The web version will be a browser version, and there will not be an
+                                                    offline feature on
+                                                    the web. Downloading audio files is illegal and against our terms of
+                                                    service, but the website will be able to stream all your favorite
+                                                    content! Be sure to check back in a few weeks for further updates.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="20"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwoTechnical">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwoTechnical" aria-expanded="false"
+                                                    aria-controls="collapseTwoTechnical">
+                                                I am having trouble logging in.
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwoTechnical" class="accordion-collapse collapse"
+                                             aria-labelledby="headingTwoTechnical"
+                                             data-bs-parent="#accordionSupportTechnical">
+                                            <div class="accordion-body">
+                                                <p>Please make sure to first create your account online at
+                                                    <a href="www.24Six.app/register" class="text-primary" target="_blank">www.24Six.app/register</a>.
+                                                    After creating your account, please go to the
+                                                    app to log in.</p>
+                                                <p>Logging in on our website will not take you to our
+                                                    platform until the web version is ready. If you have an internet filter
+                                                    on your phone, you may need to contact the filter company to open 24Six.
+                                                    Most filters have already worked with us and know how to open up 24Six
+                                                    for you. If you still have trouble, please reach out to us at <a
+                                                            href="mailto:info@24Six.app"
+                                                            class="text-primary">info@24Six.app</a>
+                                                    .</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="40"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThreeTechnical">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThreeTechnical" aria-expanded="false"
+                                                    aria-controls="collapseThreeTechnical">
+                                                I keep getting an error.
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThreeTechnical" class="accordion-collapse collapse"
+                                             aria-labelledby="headingThreeTechnical"
+                                             data-bs-parent="#accordionSupportTechnical">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Please reach out to us by chat or by email at <a
+                                                        href="mailto:info@24Six.app" class="text-primary">info@24Six.app</a>.
+                                                    To best
+                                                    help solve your issue, have the device type, Operating System, and
+                                                    version you are having your issue with.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="80"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFourTechnical">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFourTechnical" aria-expanded="false"
+                                                    aria-controls="collapseFourTechnical">
+                                                Does the app work on an iPad?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFourTechnical" class="accordion-collapse collapse"
+                                             aria-labelledby="headingFourTechnical"
+                                             data-bs-parent="#accordionSupportFamilyPlayer">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Currently, you can install the iPhone version on an iPad, and we are
+                                                    working to optimize our app to take advantage of the full screen iPad,
+                                                    but that feature is not ready yet.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade accordion-item" id="family-player-tab-pane" role="tabpanel"
+                             aria-labelledby="family-player-tab" tabindex="0">
+                            <h2 class="accordion-header tab-pane-header-mobile d-lg-none" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    24Six FamilyPlayer
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingSix"
+                                 data-bs-parent="#supportTabContent">
+                                <div class="accordion accordion-flush" id="accordionSupportFamilyPlayer">
+                                    <div data-aos="fade-left"
+                                         data-aos-duration="500"
+                                         data-aos-easing="ease-in-out"
+                                         data-aos-offset="0"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOneFamilyPlayer">
+                                            <button class="accordion-button" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOneFamilyPlayer" aria-expanded="true"
+                                                    aria-controls="collapseOneFamilyPlayer">
+                                                Does the device require Wi-Fi?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOneFamilyPlayer" class="accordion-collapse collapse show"
+                                             aria-labelledby="headingOneFamilyPlayer"
+                                             data-bs-parent="#accordionSupportFamilyPlayer">
+                                            <div class="accordion-body">
+                                                <p>Yes, the 24Six FamilyPlayer requires Wi-Fi to sign in, stream, and play
+                                                    music and videos.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="20"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwoFamilyPlayer">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwoFamilyPlayer" aria-expanded="false"
+                                                    aria-controls="collapseTwoFamilyPlayer">
+                                                Does the device support download and offline playing?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwoFamilyPlayer" class="accordion-collapse collapse"
+                                             aria-labelledby="headingTwoFamilyPlayer"
+                                             data-bs-parent="#accordionSupportFamilyPlayer">
+                                            <div class="accordion-body">
+                                                <p>Currently, the 24Six player does not support offline mode, but we expect
+                                                    an update to arrive very soon with this functionality. You will still be
+                                                    required to log in once every 30 days to verify that you still have a
+                                                    subscription.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="40"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThreeFamilyPlayer">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThreeFamilyPlayer" aria-expanded="false"
+                                                    aria-controls="collapseThreeFamilyPlayer">
+                                                Does the device require a 24Six subscription?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThreeFamilyPlayer" class="accordion-collapse collapse"
+                                             aria-labelledby="headingThreeFamilyPlayer"
+                                             data-bs-parent="#accordionSupportFamilyPlayer">
+                                            <div class="accordion-body">
+                                                <p>Yes, the device requires an active 24Six subscription and it is not
+                                                    included with the device. You can purchase a subscription at
+                                                    <a href="https://24six.app" class="text-primary" target="_blank">https://24six.app</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="60"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFourFamilyPlayer">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFourFamilyPlayer" aria-expanded="false"
+                                                    aria-controls="collapseFourFamilyPlayer">
+                                                Can I use a public Wi-Fi hotspot for the device?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFourFamilyPlayer" class="accordion-collapse collapse"
+                                             aria-labelledby="headingFourFamilyPlayer"
+                                             data-bs-parent="#accordionSupportFamilyPlayer">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    It depends. Any public Wi-Fi that requires signing in via a webpage will
+                                                    not work as the 24Six FamilyPlayer has our custom 24SixOS with no Web
+                                                    Browser. However, if the public Wi-Fi does not require a login, then it
+                                                    should work.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="80"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFiveFamilyPlayer">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFiveFamilyPlayer" aria-expanded="false"
+                                                    aria-controls="collapseFiveFamilyPlayer">
+                                                Will the device auto-update when new versions of the app come out?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFiveFamilyPlayer" class="accordion-collapse collapse"
+                                             aria-labelledby="headingFiveFamilyPlayer"
+                                             data-bs-parent="#accordionSupportFamilyPlayer">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Yes, the device will auto-update every time a new version of the app
+                                                    comes out. This ensures you will be able to take advantage of the latest
+                                                    features. Updates are performed automatically, and no user action is
+                                                    required.
+                                                </p>
+                                                <p>
+                                                    Upon the first time using the device please wait a few minutes after
+                                                    connecting to Wi-Fi so that the auto-update can complete and update you
+                                                    to the latest version of the app.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="80"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingSixFamilyPlayer">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseSixFamilyPlayer" aria-expanded="false"
+                                                    aria-controls="collapseSixFamilyPlayer">
+                                                My device is not working well, what can I do?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSixFamilyPlayer" class="accordion-collapse collapse"
+                                             aria-labelledby="headingSixFamilyPlayer"
+                                             data-bs-parent="#accordionSupportFamilyPlayer">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    First, try clearing the 24Six app data. You can do this by going to
+                                                    Settings -> Apps -> 24Six
+                                                    -> Storage & Cache -> and clicking "Clear Storage" (Note: You will need
+                                                    to log in again and redownload any music that you have previously
+                                                    downloaded).
+                                                </p>
+                                                <p>
+                                                    If that doesn’t work, you can try to do a full factory reset by going to
+                                                    Settings -> System -> Reset Options -> And clicking "Erase All Data".
+                                                    Please note this will erase all data on the device and require you to
+                                                    log in again when the device restarts.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="80"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingSevenFamilyPlayer">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseSevenFamilyPlayer" aria-expanded="false"
+                                                    aria-controls="collapseSevenFamilyPlayer">
+                                                My device does not turn on, what can I do?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSevenFamilyPlayer" class="accordion-collapse collapse"
+                                             aria-labelledby="headingSevenFamilyPlayer"
+                                             data-bs-parent="#accordionSupportFamilyPlayer">
+                                            <div class="accordion-body">
+                                                <p>Make sure to plug in your device to a known working charger and let it
+                                                    charge overnight.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="80"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingEightFamilyPlayer">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseEightFamilyPlayer" aria-expanded="false"
+                                                    aria-controls="collapseEightFamilyPlayer">
+                                                My device background keeps on changing, is that normal?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseEightFamilyPlayer" class="accordion-collapse collapse"
+                                             aria-labelledby="headingEightFamilyPlayer"
+                                             data-bs-parent="#accordionSupportFamilyPlayer">
+                                            <div class="accordion-body">
+                                                My device background keeps on changing, is that normal?
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="fade-left"
+                                         data-aos-delay="60"
+                                         data-aos-duration="500"
+                                         data-aos-offset="0"
+                                         data-aos-easing="ease-in-out"
+                                         class="accordion-item">
+                                        <h2 class="accordion-header" id="headingNineFamilyPlayer">
+                                            <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseNineFamilyPlayer" aria-expanded="false"
+                                                    aria-controls="collapseNineFamilyPlayer">
+                                                Do you ship overseas?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseNineFamilyPlayer" class="accordion-collapse collapse"
+                                             aria-labelledby="headingNineFamilyPlayer"
+                                             data-bs-parent="#accordionSupportFamilyPlayer">
+                                            <div class="accordion-body">
+                                                <p>Thank you for your interest in purchasing the 24Six FamilyPlayer. At this
+                                                    time, our warehouse is not set up for international shipments. We hope
+                                                    you can find someone in the US to ship to and ask them to forward it to
+                                                    your location.
+                                                </p>
+                                                <p> We are working to add more countries to our shipping list, but in the
+                                                    meantime, we only ship to the continental United States.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
 </main>
 
 
 <footer>
-  <div class="container-fluid">
-    <div class="navbar navbar-top">
-      <div class="d-flex justify-content-center justify-content-md-between align-items-center w-100 mb-5 mb-md-3 pb-md-3">
-        <a href="/">
-          <img src="./assets/img/logo-horiz-yellow.svg" alt="logo">
-        </a>
-        <a href="/login" class="btn btn-outline-warning d-none d-md-block">Artist Login</a>
-      </div>
-      <div>
-        <ul class="navbar-list me-lg-auto">
-          <li class="nav-item-footer">
-            <a class="nav-link" href="/">Features</a>
-          </li>
-          <li class="nav-item-footer">
-            <a class="nav-link" href="plans.html">Plans</a>
-          </li>
-          <li class="nav-item-footer">
-            <a class="nav-link" href="support.html">Support</a>
-          </li>
-          <li class="nav-item-footer">
-            <a class="nav-link" href="family-player.html">24Six FamilyPlayer</a>
-          </li>
-          <li class="nav-item-footer">
-            <a class="nav-link" href="home-artists.html">For artists</a>
-          </li>
-          <li class="nav-item-footer">
-            <a class="nav-link" href="contact-us-user.html">Contact us</a>
-          </li>
-        </ul>
-      </div>
-      <div class="text-center">
-        <a href="/login" class="btn btn-outline-warning d-md-none mb-4">Artist Login</a>
-      </div>
+    <div class="container-fluid">
+        <div class="navbar navbar-top">
+            <div class="d-flex justify-content-center justify-content-md-between align-items-center w-100 mb-5 mb-md-3 pb-md-3">
+                <a href="/">
+                    <img src="./assets/img/logo-horiz-yellow.svg" alt="logo">
+                </a>
+                <a href="/login" class="btn btn-outline-warning d-none d-md-block">Artist Login</a>
+            </div>
+            <div>
+                <ul class="navbar-list me-lg-auto">
+                    <li class="nav-item-footer">
+                        <a class="nav-link" href="/">Features</a>
+                    </li>
+                    <li class="nav-item-footer">
+                        <a class="nav-link" href="plans.html">Plans</a>
+                    </li>
+                    <li class="nav-item-footer">
+                        <a class="nav-link" href="support.html">Support</a>
+                    </li>
+                    <li class="nav-item-footer">
+                        <a class="nav-link" href="family-player.html">24Six FamilyPlayer</a>
+                    </li>
+                    <li class="nav-item-footer">
+                        <a class="nav-link" href="home-artists.html">For artists</a>
+                    </li>
+                    <li class="nav-item-footer">
+                        <a class="nav-link" href="contact-us-user.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center">
+                <a href="/login" class="btn btn-outline-warning d-md-none mb-4">Artist Login</a>
+            </div>
+        </div>
+        <div class="navbar navbar-bottom">
+            <p class="mb-4 mb-md-0">
+                <a href="terms-of-service-users.html" class="d-block d-md-inline-block mb-2 mb-md-0 me-md-4">Terms of
+                    Use</a>
+                <a href="privacy-policy-users.html" class="d-block d-md-inline-block">Privacy Policy</a>
+            </p>
+            <p>© <span id="year"></span> 24Six, Inc. All rights reserved.</p>
+        </div>
     </div>
-    <div class="navbar navbar-bottom">
-      <p class="mb-4 mb-md-0">
-        <a href="terms-of-service-users.html" class="d-block d-md-inline-block mb-2 mb-md-0 me-md-4">Terms of Use</a>
-        <a href="privacy-policy-users.html" class="d-block d-md-inline-block">Privacy Policy</a>
-      </p>
-      <p>© <span id="year"></span> 24Six, Inc. All rights reserved.</p>
-    </div>
-  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -300,5 +1088,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./assets/scripts/js.js"></script>
 </body>
 </html>

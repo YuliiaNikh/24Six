@@ -15,7 +15,7 @@
 @import "features";
 
 
-html, body{
+html, body {
   width: 100%;
   position: relative;
   //overflow-x: hidden!important;
@@ -27,8 +27,8 @@ html {
 
 body {
   font-family: 'SF Pro Display', sans-serif;
-  position:relative;
-  overflow-x:hidden;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .container-fluid {
@@ -49,7 +49,7 @@ body {
   }
 }
 
-.text-primary{
-  color: $primary!important;
+.text-primary {
+  color: $primary !important;
 }
 
