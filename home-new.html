@@ -1044,7 +1044,7 @@
                     </a>
                 </div>
                 <div class="col-12 col-md-6 col-lg-7 col-xxl-8 order-2 order-md-1 position-relative">
-                    <picture class="phone-image-more-than-music phone-image_animation mx-auto me-md-auto ms-md-0">
+                    <picture class="phone-image-more-than-music phone-image_animation mx-auto me-md-auto">
                         <source srcset="./assets/img/home-new/phone-more-than-music.webp" type="image/webp">
                         <source srcset="./assets/img/home-new/phone-more-than-music.png" type="image/png">
                         <img src="./assets/img/home-new/phone-more-than-music.png" alt="banner_desktop" class="img-fluid">
@@ -1088,9 +1088,9 @@
                         <img src="./assets/img/home-new/card-1-control-content.png" alt="banner_desktop" class="img-fluid">
                     </picture>
                     <picture class="card-2-control-image">
-                        <source srcset="./assets/img/home-new/card-2-control-content.webp" type="image/webp">
-                        <source srcset="./assets/img/home-new/card-2-control-content.png" type="image/png">
-                        <img src="./assets/img/home-new/card-2-control-content.png" alt="banner_desktop" class="img-fluid">
+                        <source srcset="./assets/img/home-new/card-2-control-content-new.webp" type="image/webp">
+                        <source srcset="./assets/img/home-new/card-2-control-content-new.png" type="image/png">
+                        <img src="./assets/img/home-new/card-2-control-content-new.png" alt="banner_desktop" class="img-fluid">
                     </picture>
                 </div>
             </div>
@@ -1267,7 +1267,7 @@
      aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
-            <div class="overflow-hidden">
+            <div class="video-container">
                 <video class="slider-video video-box"/>
             </div>
         </div>
@@ -1539,10 +1539,11 @@
         const src = $(e).attr('data-video-url');
         const video = document.querySelector('.slider-video');
 
-        if (modalId)
+        if (modalId){
             $('#' + modalId).modal('show').on('hidden.bs.modal', function () {
                 video.pause();
             });
+        }
         if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
             // Some browsers (safari and ie edge) support HLS natively
             video.src = src;

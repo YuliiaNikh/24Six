@@ -213,4 +213,11 @@
   width: auto!important;
   height: auto;
   max-height: 100vh;
+  max-width: 100%;
+}
+
+#popupSliderVideo .video-container{
+  overflow: hidden;
+  margin:auto;
+  max-width: 90%;
 }
