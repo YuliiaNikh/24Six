@@ -1437,6 +1437,7 @@ body {
   }
 
   .favorite-artists {
+    overflow: hidden;
     .section-title {
       max-width: 45rem;
     }

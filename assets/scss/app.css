@@ -1492,6 +1492,9 @@ body::after {
   text-transform: capitalize;
   font-weight: 400;
 }
+.home .favorite-artists {
+  overflow: hidden;
+}
 .home .favorite-artists .section-title {
   max-width: 45rem;
 }
