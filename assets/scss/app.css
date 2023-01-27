@@ -1492,9 +1492,6 @@ body::after {
   text-transform: capitalize;
   font-weight: 400;
 }
-.home .favorite-artists {
-  overflow: hidden;
-}
 .home .favorite-artists .section-title {
   max-width: 45rem;
 }
@@ -1504,7 +1501,6 @@ body::after {
 .home .favorite-artists .artists-slider {
   padding: 0 1rem;
   margin-top: 3rem;
-  overflow: visible;
 }
 .home .favorite-artists .artists-slider .swiper-slide {
   max-width: 18.375rem;

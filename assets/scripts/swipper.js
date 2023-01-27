@@ -236,12 +236,14 @@ document.addEventListener("DOMContentLoaded", function () {
         observeParents: true,
         breakpoints: {
             640: {
-                autoHeight: false,
                 centeredSlides: true,
                 centeredSlidesBounds: true,
                 slidesPerView: 'auto',
                 spaceBetween: 24
             },
+            1024:{
+                autoHeight: false,
+            }
         },
     })
 
