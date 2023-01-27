@@ -1268,7 +1268,7 @@
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
             <div class="video-container">
-                <video class="slider-video video-box"/>
+                <video class="slider-video"/>
             </div>
         </div>
     </div>
@@ -1534,10 +1534,14 @@
 
 <!--Slider Video-->
 <script>
+    const video = document.querySelector('.slider-video');
+    video.addEventListener('click', function () {
+        video.paused ? video.play() : video.pause();
+    });
     function playSliderVideo(e) {
         const modalId = 'popupSliderVideo'
         const src = $(e).attr('data-video-url');
-        const video = document.querySelector('.slider-video');
+
 
         if (modalId){
             $('#' + modalId).modal('show').on('hidden.bs.modal', function () {
@@ -1555,13 +1559,6 @@
             console.error("This is a legacy browser that doesn't support MSE");
         }
         video.play();
-        if (modalId)
-            $('#' + modalId + ' video').click(function () {
-                this.paused ? this.play() : this.pause();
-            });
-        else {
-            $('#' + className + '-play-btn').hide();
-        }
     }
 </script>
 

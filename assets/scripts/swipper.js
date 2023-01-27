@@ -232,6 +232,8 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         slidesPerView: 2,
         spaceBetween: 16,
+        observer: true,
+        observeParents: true,
         breakpoints: {
             640: {
                 autoHeight: false,

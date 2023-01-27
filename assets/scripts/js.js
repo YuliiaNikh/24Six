@@ -164,7 +164,6 @@ function playVideo(className, modalId = false) {
                 video.pause();
                 $('#' + className + '-play-btn').show();
             }
-            return;
         }
         startedFilterVideo = true;
     }
@@ -178,7 +177,6 @@ function playVideo(className, modalId = false) {
                 video.pause();
                 $('#' + className + '-play-btn').show();
             }
-            return;
         }
         startedFilterVideo2 = true;
     }
