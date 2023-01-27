@@ -1501,6 +1501,7 @@ body::after {
 .home .favorite-artists .artists-slider {
   padding: 0 1rem;
   margin-top: 3rem;
+  overflow: visible;
 }
 .home .favorite-artists .artists-slider .swiper-slide {
   max-width: 18.375rem;
