@@ -225,7 +225,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let swiperArtists = new Swiper('.artists-slider', {
         loop: true,
-        autoHeight: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -243,7 +242,6 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             1024:{
                 slidesPerView: 'auto',
-                autoHeight: false,
                 observer: false,
                 observeParents: false,
                 centeredSlides: true,
