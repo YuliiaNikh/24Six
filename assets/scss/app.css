@@ -1726,7 +1726,7 @@ body::after {
     margin-bottom: 0;
   }
   .home .favorite-artists .swiper-wrapper {
-    margin-left: -160px;
+    margin-left: -161px;
   }
   .home .phone-image_animation {
     animation: 3s infinite alternate shakeAnimation;
