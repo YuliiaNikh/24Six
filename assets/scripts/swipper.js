@@ -242,7 +242,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 spaceBetween: 24
             },
             1024:{
+                slidesPerView: 'auto',
                 autoHeight: false,
+                observer: false,
+                observeParents: false,
+                centeredSlides: true,
+                centeredSlidesBounds: true,
             }
         },
     })
